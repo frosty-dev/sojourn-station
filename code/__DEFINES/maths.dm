@@ -211,6 +211,14 @@
 
 	return list(region_x1 & region_x2, region_y1 & region_y2)
 
+// Performs a linear interpolation between a and b.
+// Note: weight=0 returns a, weight=1 returns b, and weight=0.5 returns the mean of a and b.
+/proc/Interpolate(a, b, weight = 0.5)
+	return a + (b - a) * weight // Equivalent to: a*(1 - weight) + b*weight
+
+/proc/Floor(x)
+	return round(x)
+
 /proc/Mean(...)
 	var/sum = 0
 	for(var/val in args)
