@@ -188,7 +188,7 @@
 #define MINIMUM_VOTE_LIFETIME	15 MINUTES
 /datum/poll/evac
 	choice_types = list(/datum/vote_choice/evac, /datum/vote_choice/noevac)
-	only_admin = TRUE
+	only_admin = FALSE
 	can_revote = TRUE
 	can_unvote = TRUE
 
@@ -199,31 +199,31 @@
 
 	var/mob/M = C.mob
 	if (!M || isghost(M) || isnewplayer(M) || ismouse(M) || isdrone(M))
-		return VOTE_WEIGHT_LOW
+		return VOTE_WEIGHT_NORMAL
 
 	var/datum/mind/mind = M.mind
 	if (!mind)
 		//If you don't have a mind in your mob, you arent really alive
-		return VOTE_WEIGHT_LOW
+		return VOTE_WEIGHT_NORMAL
 
 	//Antags control the story of the round, they should be able to delay evac in order to enact their
 	//fun and interesting plans
 	if (player_is_antag(mind))
-		return VOTE_WEIGHT_HIGH
+		return VOTE_WEIGHT_NORMAL
 
 	//How long has this player been alive
 	//This comes after the antag check because that's more important
 	var/lifetime = world.time - mind.creation_time
 	if (lifetime <= MINIMUM_VOTE_LIFETIME)
 		//If you just spawned for the vote, your weight is still low
-		return VOTE_WEIGHT_LOW
+		return VOTE_WEIGHT_NORMAL
 
 
 	//Heads of staff are in a better position to understand the state of the ship and round,
 	//their vote is more important.
 	//This is after the lifetime check to prevent exploits of instaspawning as a head when a vote is called
 	if (M.is_head_role())
-		return VOTE_WEIGHT_HIGH
+		return VOTE_WEIGHT_NORMAL
 
 
 
