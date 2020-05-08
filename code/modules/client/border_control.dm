@@ -14,7 +14,7 @@ proc/BC_IsKeyAllowedToConnect(var/key)
 		return 1
 	else if (config.borderControl == BORDER_CONTROL_LEARNING)
 		if(!BC_IsKeyWhitelisted(key))
-			log_and_message_admins("[key] has joined and was added to the border whitelist.")
+			//log_and_message_admins("[key] has joined and was added to the border whitelist.")
 			//WHITELIST AUTOJOBBAN
 			var/list/whitelist_jobbs
 			whitelist_jobbs = list("Premier","Steward","Militia Commander","Warrant Officer","Chief Executive Officer",
