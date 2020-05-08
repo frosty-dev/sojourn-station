@@ -443,7 +443,7 @@
 "aiA" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/floor_decal/industrial/warningwhite,/turf/simulated/floor/tiled/white/cyancorner,/area/nadezhda/medical/medeva)
 "aiB" = (/obj/structure/table/rack/shelf,/obj/random/knife,/obj/random/knife,/turf/simulated/floor/tiled/steel/brown_perforated,/area/nadezhda/pros/foreman)
 "aiC" = (/obj/structure/closet/wardrobe/militia,/obj/machinery/camera/network/security{dir = 4},/turf/simulated/floor/tiled/dark/gray_platform,/area/nadezhda/security/tactical)
-"aiD" = (/obj/structure/table/standard,/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled/dark/gray_platform,/area/nadezhda/security/triage)
+"aiD" = (/obj/structure/table/standard,/obj/machinery/light{dir = 8},/obj/item/device/defib_kit,/obj/item/device/defib_kit,/obj/item/weapon/cell/large/high,/obj/item/weapon/cell/large/high,/obj/item/weapon/cell/large/high,/obj/item/weapon/cell/large/high,/turf/simulated/floor/tiled/dark/gray_platform,/area/nadezhda/security/triage)
 "aiE" = (/obj/machinery/atmospherics/unary/vent_pump/on,/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"; pixel_y = 0},/turf/simulated/floor/tiled/white/cyancorner,/area/nadezhda/security/triage)
 "aiF" = (/obj/effect/window_lwall_spawn/reinforced,/obj/machinery/door/blast/regular{id = "Armoury"; name = "Armory Shop"},/turf/simulated/floor/tiled/dark,/area/nadezhda/security/armory)
 "aiG" = (/obj/machinery/hologram/holopad,/turf/simulated/floor/wood,/area/nadezhda/security/armoryshop)
