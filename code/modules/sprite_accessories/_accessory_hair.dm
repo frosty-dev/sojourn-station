@@ -710,63 +710,62 @@
 	name = "Zone Braid"
 	icon_state = "zone"
 
-/*
+
 /datum/sprite_accessory/hair/teshari_default
-	name = "Teshari default"
+	name = "Avali default"
 	icon_state = "teshari_default_s"
 
 /datum/sprite_accessory/hair/teshari_upright
-	name = "Teshari upright"
+	name = "Avali upright"
 	icon_state = "teshari_upright_s"
 
 /datum/sprite_accessory/hair/teshari_burst_short
-	name = "Teshari burst short"
+	name = "Avali burst short"
 	icon_state = "teshari_burst_short_s"
 
 /datum/sprite_accessory/hair/teshari_burst
-	name = "Teshari burst"
+	name = "Avali burst"
 	icon_state = "teshari_burst_s"
 
 /datum/sprite_accessory/hair/teshari_pointy
-	name = "Teshari pointy"
+	name = "Avali pointy"
 	icon_state = "teshari_pointy_s"
 
 /datum/sprite_accessory/hair/teshari_mushroom
-	name = "Teshari mushroom"
+	name = "Avali mushroom"
 	icon_state = "teshari_mushroom_s"
 
 /datum/sprite_accessory/hair/teshari_droopy
-	name = "Teshari droopy"
+	name = "Avali droopy"
 	icon_state = "teshari_droopy_s"
 
 /datum/sprite_accessory/hair/teshari_mane
-	name = "Teshari mane"
+	name = "Avali mane"
 	icon_state = "teshari_mane_s"
 
 /datum/sprite_accessory/hair/teshari_ears
-	name = "Teshari ears"
+	name = "Avali ears"
 	icon_state = "teshari_ears_s"
 
 /datum/sprite_accessory/hair/teshari_spike
-	name = "Teshari spike"
+	name = "Avali spike"
 	icon_state = "teshari_spike_s"
 
 /datum/sprite_accessory/hair/teshari_tight
-	name = "Teshari tight"
+	name = "Avali tight"
 	icon_state = "teshari_tight_s"
 
 /datum/sprite_accessory/hair/teshari_long
-	name = "Teshari long"
+	name = "Avali long"
 	icon_state = "teshari_long_s"
 
 /datum/sprite_accessory/hair/teshari_mohawk
-	name = "Teshari mohawk"
+	name = "Avali mohawk"
 	icon_state = "teshari_mohawk_s"
 
 /datum/sprite_accessory/hair/teshari_spiky
-	name = "Teshari spiky"
+	name = "Avali spiky"
 	icon_state = "teshari_spiky_s"
-*/
 
 /datum/sprite_accessory/hair/una_hood
 	name = "Lizard Hood"
@@ -883,3 +882,123 @@
 /datum/sprite_accessory/hair/marqua_long
 	name = "Mar'Qua Long Headtails"
 	icon_state = "marqua_hair_verylong_s"
+
+/datum/sprite_accessory/hair/tajara_ears1
+	name = "Tajara Ears 1"
+	icon_state = "tajara_ears_plain"
+
+/datum/sprite_accessory/hair/tajara_ears2
+	name = "Tajara Ears 2"
+	icon_state = "tajara_hair_straight"
+
+/datum/sprite_accessory/hair/tajara_ears3
+	name = "Tajara Ears 3"
+	icon_state = "tajara_hair_shaggy"
+
+/datum/sprite_accessory/hair/tajara_ears4
+	name = "Tajara Ears 4"
+	icon_state = "tajara_hair_mohawk"
+
+/datum/sprite_accessory/hair/tajara_ears5
+	name = "Tajara Ears 5"
+	icon_state = "tajara_hair_long"
+
+/datum/sprite_accessory/hair/tajara_ears6
+	name = "Tajara Ears 6"
+	icon_state = "tajara_hair_rattail"
+
+/datum/sprite_accessory/hair/tajara_ears7
+	name = "Tajara Ears 7"
+	icon_state = "tajara_hair_tajspiky"
+
+/datum/sprite_accessory/hair/tajara_ears8
+	name = "Tajara Ears 8"
+	icon_state = "tajara_hair_messy"
+
+/datum/sprite_accessory/hair/tajara_ears9
+	name = "Tajara Ears 9"
+	icon_state = "tajara_hair_bangs"
+
+/datum/sprite_accessory/hair/tajara_ears10
+	name = "Tajara Ears 10"
+	icon_state = "tajara_hair_tbraid"
+
+/datum/sprite_accessory/hair/tajara_ears11
+	name = "Tajara Ears 11"
+	icon_state = "tajara_hair_fingerwave"
+
+/datum/sprite_accessory/hair/tajara_ears12
+	name = "Tajara Ears 12"
+	icon_state = "tajara_hair_sidebraid"
+
+/datum/sprite_accessory/hair/tajara_ears13
+	name = "Tajara Ears 13"
+	icon_state = "tajara_hair_ribbons"
+
+/datum/sprite_accessory/hair/tajara_ears14
+	name = "Tajara Ears 14"
+	icon_state = "tajara_hair_tailedbangs"
+
+/datum/sprite_accessory/hair/tajara_ears15
+	name = "Tajara Ears 15"
+	icon_state = "tajara_hair_longtail"
+
+/datum/sprite_accessory/hair/tajara_ears16
+	name = "Tajara Ears 16"
+	icon_state = "tajara_hair_shy"
+
+/datum/sprite_accessory/hair/tajara_ears17
+	name = "Tajara Ears 17"
+	icon_state = "tajara_hair_ponytail"
+
+/datum/sprite_accessory/hair/tajara_ears18
+	name = "Tajara Ears 18"
+	icon_state = "tajara_hair_overeye"
+
+/datum/sprite_accessory/hair/tajara_ears19
+	name = "Tajara Ears 19"
+	icon_state = "tajara_hair_tough"
+
+/datum/sprite_accessory/hair/tajara_ears20
+	name = "Tajara Ears 20"
+	icon_state = "tajara_hair_dreadlocks"
+
+/datum/sprite_accessory/hair/tajara_ears21
+	name = "Tajara Ears 21"
+	icon_state = "tajara_hair_bangs_s"
+
+/datum/sprite_accessory/hair/tajara_ears22
+	name = "Tajara Ears 22"
+	icon_state = "tajara_hair_fingerwave_s"
+
+/datum/sprite_accessory/hair/tajara_ears23
+	name = "Tajara Ears 23"
+	icon_state = "tajara_hair_ribbons_s"
+
+/datum/sprite_accessory/hair/tajara_ears24
+	name = "Tajara Ears 24"
+	icon_state = "tajara_hair_shy_s"
+
+/datum/sprite_accessory/hair/tajara_ears25
+	name = "Tajara Ears 25"
+	icon_state = "tajara_hair_ponytail_s"
+
+/datum/sprite_accessory/hair/tajara_ears26
+	name = "Tajara Ears 26"
+	icon_state = "tajara_hair_overeye_s"
+
+/datum/sprite_accessory/hair/tajara_ears27
+	name = "Tajara Ears 27"
+	icon_state = "tajara_hair_tough_s"
+
+/datum/sprite_accessory/hair/tajara_ears28
+	name = "Tajara Ears 28"
+	icon_state = "tajara_hair_cuttail_s"
+
+/datum/sprite_accessory/hair/tajara_ears29
+	name = "Tajara Ears 29"
+	icon_state = "tajara_hair_"
+
+/datum/sprite_accessory/hair/tajara_ears30
+	name = "Tajara Ears 30"
+	icon_state = "tajara_hair_karai"
