@@ -14,7 +14,33 @@ proc/BC_IsKeyAllowedToConnect(var/key)
 		return 1
 	else if (config.borderControl == BORDER_CONTROL_LEARNING)
 		if(!BC_IsKeyWhitelisted(key))
-			log_and_message_admins("[key] has joined and was added to the border whitelist.")
+			//log_and_message_admins("[key] has joined and was added to the border whitelist.")
+			//WHITELIST AUTOJOBBAN
+			var/list/whitelist_jobbs
+			whitelist_jobbs = list("Premier","Steward","Militia Commander","Warrant Officer","Chief Executive Officer",
+					"Guild Master","Chief Biolab Overseer","Chief Research Overseer","Prime",
+					"Militia Commander","Warrant Officer","Supply Specialist","Ranger","Corpsman",
+					"Blackshield Trooper","Marshal Officer","Sergeant",
+					"Soteria Psychiatrist", "Vector", "AI", "Robot", "pAI", "Bartender")
+			log_and_message_admins("New player ---[key]--- has joined!")
+			establish_db_connection()
+			if(!dbcon.IsConnected())
+				log_and_message_admins("WHITELIST AUTOJOBBAN: Connection to the database failed!")
+				return 1
+			var/server = "[world.internet_address]:[world.port]"
+			var/bantype_pass = 1
+			var/bantype_str = "JOB_PERMABAN"
+			var/duration = -1
+			var/reason = "WHITELIST AUTOJOBBAN"
+			var/ckey = key
+			var/computerid = null
+			var/ip = null
+			var/target_id = null
+			var/banned_by_id = 0
+			var/DBQuery/query
+			for(var/job in whitelist_jobbs)
+				var/sql = "INSERT INTO bans (target_id, time, server, type, reason, job, duration, expiration_time, cid, ip, banned_by_id) VALUES ([target_id], Now(), '[server]', '[bantype_str]', '[reason]', '[job]', [(duration)?"[duration]":"0"], Now() + INTERVAL [(duration>0) ? duration : 0] MINUTE, '[computerid]', '[ip]', [banned_by_id])"
+				var/DBQuery/query_insert = dbcon.NewQuery(sql)
 		BC_WhitelistKey(key)
 		return 1
 	else
