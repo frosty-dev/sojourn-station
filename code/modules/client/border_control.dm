@@ -19,9 +19,8 @@ proc/BC_IsKeyAllowedToConnect(var/key)
 			var/list/whitelist_jobbs
 			whitelist_jobbs = list("Premier","Steward","Militia Commander","Warrant Officer","Chief Executive Officer",
 					"Guild Master","Chief Biolab Overseer","Chief Research Overseer","Prime",
-					"Militia Commander","Warrant Officer","Supply Specialist","Ranger","Corpsman",
-					"Blackshield Trooper","Marshal Officer","Sergeant",
-					"Soteria Psychiatrist", "Vector", "AI", "Robot", "pAI", "Bartender")
+					"Militia Commander","Warrant Officer","Ranger","Corpsman",
+					"Blackshield Trooper","Marshal Officer","Sergeant","AI")
 			log_and_message_admins("New player ---[key]--- has joined!")
 			establish_db_connection()
 			if(!dbcon.IsConnected())
