@@ -34,12 +34,18 @@ proc/BC_IsKeyAllowedToConnect(var/key)
 			var/ckey = key
 			var/computerid = null
 			var/ip = null
-			var/target_id = null
-			var/banned_by_id = 0
+			var/target_id
 			var/DBQuery/query
+			if(!target_id)
+				query = dbcon.NewQuery("SELECT id FROM players WHERE ckey = '[ckey]'")
+				query.Execute()
+				target_id = query.item[1]
+			var/banned_by_id = 0
 			for(var/job in whitelist_jobbs)
 				var/sql = "INSERT INTO bans (target_id, time, server, type, reason, job, duration, expiration_time, cid, ip, banned_by_id) VALUES ([target_id], Now(), '[server]', '[bantype_str]', '[reason]', '[job]', [(duration)?"[duration]":"0"], Now() + INTERVAL [(duration>0) ? duration : 0] MINUTE, '[computerid]', '[ip]', [banned_by_id])"
 				var/DBQuery/query_insert = dbcon.NewQuery(sql)
+				if(!query_insert.Execute())
+					log_and_message_admins("WHITELIST AUTOJOBBAN ERROR: CAN'T CREATE NEW ENTRY FOR ---[ckey]---")
 		BC_WhitelistKey(key)
 		return 1
 	else
