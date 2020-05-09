@@ -13,3 +13,23 @@
 	recoil_buildup = 30
 	one_hand_penalty = 25
 	fire_sound = 'sound/weapons/guns/fire/deckard_fire.ogg'
+
+/obj/item/weapon/gun/projectile/revolver/deckard/key
+	name = "\"Repli-cant\" magnum"
+	desc = "Another rare magnum like Deckard's gun from the same collection. What's it like to hold the hand of someone you love? Interlinked. Uses .40 Magnum rounds."
+	icon = 'icons/obj/guns/projectile/blaster_key.dmi'
+	icon_state = "key_magnum"
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
+	handle_casings = CYCLE_CASINGS
+	max_shells = 10
+	ammo_type = /obj/item/ammo_casing/magnum
+	fire_sound = 'sound/weapons/guns/fire/magnum_key.ogg'
+	matter = list(MATERIAL_PLASTEEL = 15, MATERIAL_PLASTIC = 6)
+	price_tag = 3200
+	damage_multiplier = 1.95
+	recoil_buildup = 10
+	one_hand_penalty = 20
+	firemodes = list(
+		list(mode_name="fire one barrel at a time", burst=1, icon="semi"),
+		list(mode_name="fire both barrels at once", burst=2, icon="burst"),
+		)
