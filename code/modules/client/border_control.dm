@@ -39,7 +39,7 @@ proc/BC_IsKeyAllowedToConnect(var/key)
 			if(!target_id)
 				query = dbcon.NewQuery("SELECT id FROM players WHERE ckey = '[ckey]'")
 				query.Execute()
-				target_id = query.item[1]
+				target_id = query.item[0]
 			var/banned_by_id = 0
 			for(var/job in whitelist_jobbs)
 				var/sql = "INSERT INTO bans (target_id, time, server, type, reason, job, duration, expiration_time, cid, ip, banned_by_id) VALUES ([target_id], Now(), '[server]', '[bantype_str]', '[reason]', '[job]', [(duration)?"[duration]":"0"], Now() + INTERVAL [(duration>0) ? duration : 0] MINUTE, '[computerid]', '[ip]', [banned_by_id])"
