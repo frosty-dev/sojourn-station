@@ -575,6 +575,11 @@
 	icon_state = "slmagnum_hv"
 	ammo_type = /obj/item/ammo_casing/kurtz/hv
 
+/obj/item/ammo_magazine/slkurtz/key
+	name = "blaster speed loader (.50 Kurtz)"
+	icon_state = "slmagnum_l"
+	max_ammo = 10
+
 
 //////// RIFLE SPEEDLOADERS ////////
 
