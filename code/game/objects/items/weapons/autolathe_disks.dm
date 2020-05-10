@@ -285,7 +285,7 @@
 	)
 
 /obj/item/weapon/computer_hardware/hard_drive/portable/design/conveyors
-	disk_name = "Technomancers LAT-018 Conveyors"
+	disk_name = "Artificer's LAT-018 Conveyors"
 	icon_state = "technomancers"
 
 	license = -1
@@ -294,9 +294,86 @@
 		/datum/design/autolathe/conveyor_switch
 	)
 
-/obj/item/weapon/computer_hardware/hard_drive/portable/design/engineering
-	disk_name = "Artificer's Supply Factory"
+/obj/item/weapon/computer_hardware/hard_drive/portable/design/art_supply
+	disk_name = "Artificer's Supply Factory Part 1"
 	icon_state = "technomancers"
+	desc = "Orange disk with a large stamped inscription: 'Drawings for the Artificer factory - Part 1. To meet the economic needs of the colony'"
+	license = -1
+	designs = list(
+		// Basic Tools
+		/datum/design/autolathe/tool/hatchet,
+		/datum/design/autolathe/tool/minihoe,
+		/datum/design/autolathe/tool/ducttape,
+		/datum/design/autolathe/tool/knife,
+		/datum/design/autolathe/misc/heavyflashlight,
+		/datum/design/autolathe/tool/crowbar,
+		/datum/design/autolathe/tool/screwdriver,
+		/datum/design/autolathe/tool/wirecutters,
+		/datum/design/autolathe/tool/wrench,
+		/datum/design/autolathe/tool/saw,
+		/datum/design/autolathe/tool/multitool,
+		/datum/design/autolathe/tool/pickaxe,
+		/datum/design/autolathe/tool/shovel,
+		/datum/design/autolathe/tool/spade,
+		/datum/design/autolathe/device/t_scanner,
+		/datum/design/autolathe/tool/rcd_ammo,
+		/datum/design/autolathe/tool/weldertool,
+		/datum/design/autolathe/tool/weldinggoggles,
+		/datum/design/autolathe/tool/weldermask,
+		/datum/design/autolathe/device/flamethrower,
+		// Misc
+		/datum/design/autolathe/misc/flashlight,
+		/datum/design/autolathe/tool/ducttape,
+		/datum/design/autolathe/misc/extinguisher,
+		/datum/design/autolathe/misc/radio_headset,
+		/datum/design/autolathe/misc/radio_bounced,
+		/datum/design/autolathe/misc/ashtray,
+		/datum/design/autolathe/container/drinkingglass,
+		/datum/design/autolathe/container/carafe,
+		/datum/design/autolathe/container/insulated_pitcher,
+		/datum/design/autolathe/container/bucket,
+		/datum/design/autolathe/container/jar,
+		/datum/design/autolathe/container/syringe,
+		/datum/design/autolathe/container/vial,
+		/datum/design/autolathe/container/beaker,
+		/datum/design/autolathe/container/beaker_large,
+		/datum/design/autolathe/container/pill_bottle,
+		/datum/design/autolathe/container/spray,
+		/datum/design/autolathe/misc/cane,
+		/datum/design/autolathe/misc/floor_light,
+		/datum/design/autolathe/misc/tube,
+		/datum/design/autolathe/misc/bulb,
+		// Devices
+		/datum/design/autolathe/misc/flashlight,
+		/datum/design/autolathe/device/analyzer,
+		/datum/design/autolathe/device/plant_analyzer,
+		/datum/design/autolathe/device/healthanalyzer,
+		/datum/design/research/item/medical/mass_spectrometer,
+		/datum/design/research/item/medical/reagent_scanner,
+		/datum/design/research/item/medical/robot_scanner,
+		/datum/design/autolathe/device/slime_scanner,
+		/datum/design/autolathe/device/antibody_scanner,
+		/datum/design/autolathe/device/megaphone,
+		/datum/design/autolathe/device/t_scanner,
+		/datum/design/autolathe/device/gps,
+		/datum/design/autolathe/device/destTagger,
+		/datum/design/autolathe/device/export_scanner,
+		/datum/design/autolathe/device/implanter,
+		/datum/design/autolathe/device/hand_labeler,
+		/datum/design/research/item/light_replacer,
+		// Cells
+		/datum/design/autolathe/cell/large,
+		/datum/design/autolathe/cell/large/high,
+		/datum/design/autolathe/cell/medium,
+		/datum/design/autolathe/cell/medium/high,
+		/datum/design/autolathe/cell/small,
+		/datum/design/autolathe/cell/small/high,
+		)
+
+/obj/item/weapon/computer_hardware/hard_drive/portable/design/engineering
+	disk_name = "Artificer's Supply Factory Part 2"
+	icon_state = "technomancers"
+	desc = "Orange disk with a large stamped inscription: 'Drawings for the Artificer factory - Part 2. To meet the basic technical needs of the colony'"
 	license = -1 //Should make this disk infinite.
 	designs = list(
 		// From Components
@@ -328,6 +405,24 @@
 		/datum/design/autolathe/tool/combi_driver,
 		/datum/design/autolathe/tool/armature_cutter,
 		/datum/design/autolathe/tool/weldingtool/advanced,
+		// Medical
+		/datum/design/autolathe/gun/syringe_gun,
+		/datum/design/autolathe/misc/penflashlight,
+		/datum/design/autolathe/tool/scalpel,
+		/datum/design/autolathe/tool/circularsaw,
+		/datum/design/autolathe/tool/surgicaldrill,
+		/datum/design/autolathe/tool/retractor,
+		/datum/design/autolathe/tool/cautery,
+		/datum/design/autolathe/tool/hemostat,
+		/datum/design/autolathe/tool/bonesetter,
+		/datum/design/autolathe/container/syringe,
+		/datum/design/autolathe/container/vial,
+		/datum/design/autolathe/container/beaker,
+		/datum/design/autolathe/container/beaker_large,
+		/datum/design/autolathe/container/pill_bottle,
+		/datum/design/autolathe/container/spray,
+		/datum/design/autolathe/device/implanter,
+		/datum/design/autolathe/container/syringegun_ammo,
 		// From Circuits
 		/datum/design/autolathe/circuit/airlockmodule,
 		/datum/design/autolathe/circuit/airalarm,
@@ -344,6 +439,8 @@
 		/datum/design/autolathe/circuit/helm,
 		/datum/design/autolathe/circuit/nav,
 		/datum/design/autolathe/circuit/centrifuge,
+		/datum/design/autolathe/circuit/electrolyzer,
+		/datum/design/autolathe/circuit/reagentgrinder,
 		// From tool mods
 		/datum/design/autolathe/part/laserguide,
 		/datum/design/autolathe/part/diamondblade,
@@ -366,6 +463,38 @@
 		/datum/design/autolathe/part/expansion,
 		/datum/design/autolathe/part/spikes,
 		/datum/design/autolathe/part/dampener,
+		// From conveyors
+		/datum/design/autolathe/conveyor,
+		/datum/design/autolathe/conveyor_switch,
+		// From Soteria computers
+		/datum/design/autolathe/computer_part/frame_pda,
+		/datum/design/autolathe/computer_part/frame_tablet,
+		/datum/design/autolathe/computer_part/frame_laptop,
+		/datum/design/research/item/computer_part/disk/micro,
+		/datum/design/research/item/computer_part/disk/small,
+		/datum/design/research/item/computer_part/disk/normal,
+		/datum/design/research/item/computer_part/disk/advanced,
+		/datum/design/research/item/computer_part/cpu/basic,
+		/datum/design/research/item/computer_part/cpu/basic/small,
+		/datum/design/research/item/computer_part/cpu/adv,
+		/datum/design/research/item/computer_part/cpu/adv/small,
+		/datum/design/research/item/computer_part/netcard/basic,
+		/datum/design/research/item/computer_part/netcard/advanced,
+		/datum/design/research/item/computer_part/netcard/wired,
+		/datum/design/research/item/computer_part/cardslot,
+		/datum/design/research/item/computer_part/teslalink,
+		/datum/design/research/item/computer_part/portabledrive/basic,
+		/datum/design/research/item/computer_part/portabledrive/normal,
+		/datum/design/research/item/computer_part/printer,
+		/datum/design/research/item/computer_part/led,
+		/datum/design/research/item/computer_part/led/adv,
+		/datum/design/autolathe/computer_part/gps,
+		/datum/design/autolathe/part/heatsink,
+		/datum/design/autolathe/part/motor,
+		/datum/design/autolathe/part/dampener,
+		/datum/design/autolathe/part/cell_mout,
+		/datum/design/autolathe/computer_part/scanner/paper,
+		/datum/design/autolathe/computer_part/scanner/atmos
 		)
 
 
