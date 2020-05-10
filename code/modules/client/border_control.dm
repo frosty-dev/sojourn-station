@@ -34,11 +34,14 @@ proc/BC_IsKeyAllowedToConnect(var/key)
 			var/ckey = key
 			var/computerid = null
 			var/ip = null
-			var/target_id
+			var/target_id = null
 			var/DBQuery/query
 			if(!target_id)
 				query = dbcon.NewQuery("SELECT id FROM players WHERE ckey = '[ckey]'")
 				query.Execute()
+				if(!query.NextRow())
+					log_and_message_admins("WHITELIST AUTOJOBBAN ERROR: CAN'T DO NEXT ROW FOR ---[ckey]---")
+					return
 				target_id = query.item[0]
 			var/banned_by_id = 0
 			for(var/job in whitelist_jobbs)
