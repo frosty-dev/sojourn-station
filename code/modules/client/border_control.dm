@@ -20,7 +20,7 @@ proc/BC_IsKeyAllowedToConnect(var/key)
 			whitelist_jobbs = list("Premier","Steward","Militia Commander","Warrant Officer","Chief Executive Officer",
 					"Guild Master","Chief Biolab Overseer","Chief Research Overseer","Prime",
 					"Militia Commander","Warrant Officer","Ranger","Corpsman",
-					"Blackshield Trooper","Marshal Officer","Sergeant","AI")
+					"Blackshield Trooper","Marshal Officer","Sergeant","AI","Supply Specialist")
 			log_and_message_admins("New player ---[key]--- has joined!")
 			establish_db_connection()
 			if(!dbcon.IsConnected())
