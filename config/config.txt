@@ -16,7 +16,7 @@ ALERT_DELTA The ship's self-destruct mechanism has been engaged. All crew are in
 #ADMIN_LEGACY_SYSTEM
 
 ## Add a # infront of this if you want to use the SQL based banning system. The legacy systems use the files in the data folder. You need to set up your database to use the SQL based system.
-BAN_LEGACY_SYSTEM
+#BAN_LEGACY_SYSTEM
 
 ## Add a # here if you wish to use the setup where jobs have more access. This is intended for servers with low populations - where there are not enough players to fill all roles, so players need to do more than just one job. Also for servers where they don't want people to hide in their own departments.
 JOBS_HAVE_MINIMAL_ACCESS
@@ -176,7 +176,7 @@ GUEST_BAN
 ##USEWHITELIST
 
 ## set a server location for world reboot. Don't include the byond://, just give the address and port.
-SERVER 51.77.185.82:4738
+SERVER ss13.sovietstation.ru:4738
 
 ## Language being used for the server, deals with external links. Use either "En" for ENGLISH, or "Ru" for RUSSIAN. Do not capitalize the second letter.
 LANGUAGE Ru
@@ -221,7 +221,7 @@ TICKLAG 0.33
 SOCKET_TALK 0
 
 ## Uncomment this to ban use of ToR
-#TOR_BAN
+TOR_BAN
 
 ## Comment this out to disable automuting
 #AUTOMUTE_ON
@@ -315,7 +315,7 @@ EMPTY_SERVER_RESTART_TIME 30
 ## 0 Disables Border Control
 ## 1 Puts Border Control into 'learning mode' and will have it automatically whitelist new connections
 ## 2 Puts Border Control into 'enforcing mode' and will have it deny connections that are not already whitelisted.
-BORDER_CONTROL 0
+BORDER_CONTROL 1
 
 ## EMOJI ###
 ## Comment this out if you want to disable emojis

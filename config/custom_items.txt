@@ -44,3 +44,23 @@ ckey: Armolitskiy
 character_name: Blagoslav Petrovic
 item_path: /obj/item/weapon/gun/projectile/mk58/Blagojevic
 }
+{
+ckey: llego_man007
+character_name: Key Perkins
+item_path: /obj/item/clothing/suit/storage/rank/key_coat
+}
+{
+ckey: llego_man007
+character_name: Key Perkins
+item_path: /obj/item/clothing/under/rank/key_turtleneck
+}
+{
+ckey: llego_man007
+character_name: Key Perkins
+item_path: /obj/item/weapon/gun/projectile/revolver/deckard/key
+}
+{
+ckey: llego_man007
+character_name: Key Perkins
+item_path: /obj/item/ammo_magazine/slkurtz/key
+}
