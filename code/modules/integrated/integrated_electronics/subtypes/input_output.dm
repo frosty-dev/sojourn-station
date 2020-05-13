@@ -380,8 +380,9 @@
 	remove_hearing()
 	return ..()
 
-/obj/item/integrated_circuit/input/microphone/hear_talk(mob/living/M, msg, var/verb="says", datum/language/speaking=null, speech_volume)
+/obj/item/integrated_circuit/input/microphone/hear_talk(mob/living/M, msg, verb, datum/language/speaking=null, speech_volume)
 	var/translated = FALSE
+	/*
 	if(M && msg)
 		if(speaking)
 			if(!speaking.machine_understands)
@@ -390,6 +391,13 @@
 				translated = TRUE
 		set_pin_data(IC_OUTPUT, 1, M.GetVoice())
 		set_pin_data(IC_OUTPUT, 2, msg)
+	*/
+	if(!speaking.machine_understands)
+		msg = speaking.scramble(msg)
+	if(!istype(speaking, /datum/language/common))
+		translated = TRUE
+	set_pin_data(IC_OUTPUT, 1, M.GetVoice())
+	set_pin_data(IC_OUTPUT, 2, msg)
 
 	push_data()
 	activate_pin(1)
