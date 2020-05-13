@@ -213,6 +213,7 @@ datum/reagent/medicine/respirodaxon/affect_blood(var/mob/living/carbon/M, var/al
 	description = "Tricordrazine is a highly potent stimulant, originally derived from cordrazine. Can be used to treat a wide range of injuries."
 	taste_description = "grossness"
 	reagent_state = LIQUID
+	overdose = REAGENTS_OVERDOSE * 0.5
 	color = "#8040FF"
 	scannable = 1
 
@@ -221,6 +222,13 @@ datum/reagent/medicine/respirodaxon/affect_blood(var/mob/living/carbon/M, var/al
 	M.heal_organ_damage(0.3 * effect_multiplier, 0.3 * effect_multiplier)
 	M.adjustToxLoss(-0.3 * effect_multiplier)
 	M.add_chemical_effect(CE_BLOODCLOT, 0.1)
+
+/datum/reagent/medicine/tricordrazine/overdose(var/mob/living/carbon/M, var/alien)
+	. = ..()
+	M.adjustToxLoss(10)
+	M.adjustCloneLoss(1)
+	if(M.losebreath < 15)
+		M.losebreath++
 
 /datum/reagent/medicine/cryoxadone
 	name = "Cryoxadone"
