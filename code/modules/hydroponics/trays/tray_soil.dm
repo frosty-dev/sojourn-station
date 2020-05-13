@@ -31,13 +31,14 @@
 	icon = 'icons/obj/seeds.dmi'
 	icon_state = "blank"
 
-/obj/machinery/portable_atmospherics/hydroponics/soil/invisible/New(var/newloc,var/datum/seed/newseed)
+/obj/machinery/portable_atmospherics/hydroponics/soil/invisible/New(var/newloc,var/datum/seed/newseed=null)
 	..()
-	seed = newseed
-	dead = 0
-	age = 1
-	health = seed.get_trait(TRAIT_ENDURANCE)
-	lastcycle = world.time
+	if(newseed != null)
+		seed = newseed
+		dead = 0
+		age = 1
+		health = seed.get_trait(TRAIT_ENDURANCE)
+		lastcycle = world.time
 	pixel_y = rand(-5,5)
 	check_health()
 
