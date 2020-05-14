@@ -8,7 +8,7 @@
 
 	var/was_priest = FALSE
 
-	survive_objective = /datum/objective/escape
+	survive_objective = /datum/objective/survive
 
 	stat_modifiers = list(
 		STAT_TGH = 30,
