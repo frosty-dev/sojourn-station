@@ -5,7 +5,7 @@
 
 	var/objective_quantity = 1 //How many random objectives will we create.
 	var/list/possible_objectives = list()
-	var/survive_objective = /datum/objective/escape
+	var/survive_objective = /datum/objective/survive
 
 	var/datum/mind/owner = null
 
