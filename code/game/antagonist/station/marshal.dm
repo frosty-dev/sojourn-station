@@ -16,6 +16,10 @@
 	Local members of the militia and marshals are unaware of your presence and should remain so if possible, you are to accomplish your objectives \n\
 	discretely and quietly."
 
+/datum/antagonist/marshal/create_objectives(var/survive = FALSE)
+	new /datum/objective/assassinate/marshal(src)
+	new /datum/objective/survive(src)
+
 /datum/antagonist/marshal/can_become_antag(var/datum/mind/M)
 	if(!..())
 		return FALSE
