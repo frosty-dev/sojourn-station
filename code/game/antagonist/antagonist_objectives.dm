@@ -1,6 +1,7 @@
 /datum/antagonist/proc/create_objectives(var/survive = FALSE)
 
 	if(!possible_objectives || !possible_objectives.len)
+		CRASH("/list/possible_objectives is null or empty")
 		return
 	pick_objectives(src, possible_objectives, objective_quantity)
 
