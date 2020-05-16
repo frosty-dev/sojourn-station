@@ -61,6 +61,13 @@
 	if (.)
 		adjustToolHealth(-(rand(40, 150) * degradation))
 
+/obj/item/weapon/gun/make_old()
+	. = ..()
+	fire_delay+=2
+	recoil_buildup+=10
+	damage_multiplier = max(0.2, damage_multiplier-1)
+	penetration_multiplier = max(0.2,  penetration_multiplier-1)
+
 /obj/item/weapon/storage/make_old()
 	.=..()
 	if (.)
