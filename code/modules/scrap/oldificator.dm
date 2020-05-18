@@ -65,8 +65,8 @@
 	. = ..()
 	fire_delay+=2
 	recoil_buildup+=10
-	damage_multiplier = max(0.2, damage_multiplier-1)
-	penetration_multiplier = max(0.2,  penetration_multiplier-1)
+	damage_multiplier = max(0.2, damage_multiplier - rand(0.5, 1))
+	penetration_multiplier = max(0.2, penetration_multiplier - rand(0.5, 1))
 
 /obj/item/weapon/storage/make_old()
 	.=..()
