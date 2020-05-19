@@ -14,7 +14,7 @@
 	/datum/objective/steal = 30,
 	)
 
-	survive_objective = /datum/objective/escape
+	survive_objective = /datum/objective/survive
 	allow_neotheology = FALSE
 
 	stat_modifiers = list(

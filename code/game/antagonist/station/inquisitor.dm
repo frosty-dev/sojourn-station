@@ -8,13 +8,17 @@
 
 	var/was_priest = FALSE
 
-	survive_objective = /datum/objective/escape
+	survive_objective = /datum/objective/survive
 
 	stat_modifiers = list(
 		STAT_TGH = 30,
 		STAT_ROB = 30,
 		STAT_VIG = 10
 	)
+
+/datum/antagonist/marshal/create_objectives(var/survive = FALSE)
+	new /datum/objective/crusade(src)
+	new /datum/objective/survive(src)
 
 /datum/antagonist/inquisitor/can_become_antag(var/datum/mind/M, var/mob/report)
 	if(!..())

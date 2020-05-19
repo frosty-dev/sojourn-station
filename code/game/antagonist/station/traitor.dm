@@ -5,7 +5,13 @@
 	bantype = ROLE_TRAITOR
 	antaghud_indicator = "hudtraitor"
 
-	survive_objective = /datum/objective/escape
+	possible_objectives = list(
+	/datum/objective/assassinate = 60,
+	/datum/objective/steal = 40,
+	/datum/objective/debrain = 10,
+	)
+
+	survive_objective = /datum/objective/survive
 
 	stat_modifiers = list(
 		STAT_ROB = 5,
