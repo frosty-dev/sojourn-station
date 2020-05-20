@@ -169,10 +169,10 @@
 /datum/poll/evac
 	name = "END SHIFT"
 	question = "Do you want to end shift and restart the round?"
-	time = 120
-	minimum_win_percentage = 0.6
-	cooldown = 20 MINUTES
-	next_vote = 20 MINUTES //Minimum round length before it can be called for the first time
+	time = 240
+	minimum_win_percentage = 0.65
+	cooldown = 45 MINUTES
+	next_vote = 150 MINUTES //Minimum round length before it can be called for the first time
 	choice_types = list()
 	only_admin = FALSE
 	description = "You will have more voting power if you are head of staff or antag, less if you are observing or dead."
@@ -185,7 +185,7 @@
 #define VOTE_WEIGHT_LOW	0.3
 #define VOTE_WEIGHT_NORMAL	1
 #define VOTE_WEIGHT_HIGH	2
-#define MINIMUM_VOTE_LIFETIME	15 MINUTES
+#define MINIMUM_VOTE_LIFETIME	45 MINUTES
 /datum/poll/evac
 	choice_types = list(/datum/vote_choice/evac, /datum/vote_choice/noevac)
 	only_admin = FALSE
@@ -204,26 +204,26 @@
 	var/datum/mind/mind = M.mind
 	if (!mind)
 		//If you don't have a mind in your mob, you arent really alive
-		return VOTE_WEIGHT_NORMAL
+		return VOTE_WEIGHT_LOW
 
 	//Antags control the story of the round, they should be able to delay evac in order to enact their
 	//fun and interesting plans
 	if (player_is_antag(mind))
-		return VOTE_WEIGHT_NORMAL
+		return VOTE_WEIGHT_HIGHL
 
 	//How long has this player been alive
 	//This comes after the antag check because that's more important
 	var/lifetime = world.time - mind.creation_time
 	if (lifetime <= MINIMUM_VOTE_LIFETIME)
 		//If you just spawned for the vote, your weight is still low
-		return VOTE_WEIGHT_NORMAL
+		return VOTE_WEIGHT_LOW
 
 
 	//Heads of staff are in a better position to understand the state of the ship and round,
 	//their vote is more important.
 	//This is after the lifetime check to prevent exploits of instaspawning as a head when a vote is called
 	if (M.is_head_role())
-		return VOTE_WEIGHT_NORMAL
+		return VOTE_WEIGHT_HIGH
 
 
 
