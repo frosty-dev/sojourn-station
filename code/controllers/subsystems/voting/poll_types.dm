@@ -209,7 +209,7 @@
 	//Antags control the story of the round, they should be able to delay evac in order to enact their
 	//fun and interesting plans
 	if (player_is_antag(mind))
-		return VOTE_WEIGHT_HIGHL
+		return VOTE_WEIGHT_HIGH
 
 	//How long has this player been alive
 	//This comes after the antag check because that's more important
