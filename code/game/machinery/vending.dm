@@ -986,7 +986,7 @@
 		/obj/item/weapon/tool/screwdriver  = 6,
 		/obj/item/weapon/cartridge/signal = 10)
 	contraband = list(/obj/item/device/debugger = 5)
-	product_ads = "Spark them all!;Everything you need!"
+	product_ads = "Sparks!;Everything you need!"
 	auto_price = FALSE
 
 /obj/machinery/vending/integrated_electronics_cases
@@ -1687,13 +1687,13 @@
 	product_slogans = "Spare tools for your Engineering needs!;Forgot where we keep mesons again, didn't you?;Need a battery?;You need electronics? I got electronics."
 	icon_state = "engivend"
 	icon_deny = "engivend-deny"
-	products = list(/obj/item/clothing/glasses/powered/meson = 2,
-					/obj/item/weapon/tool/multitool = 4,
-					/obj/item/weapon/airlock_electronics = 10,
-					/obj/item/weapon/circuitboard/apc = 10,
-					/obj/item/weapon/airalarm_electronics = 10,
+	products = list(/obj/item/clothing/glasses/powered/meson = 10,
+					/obj/item/weapon/tool/multitool = 5,
+					/obj/item/weapon/airlock_electronics = 20,
+					/obj/item/weapon/circuitboard/apc = 20,
+					/obj/item/weapon/airalarm_electronics = 20,
 					/obj/item/weapon/cell/large/high = 10,
-					/obj/item/weapon/storage/belt/utility = 3)
+					/obj/item/weapon/storage/belt/utility = 5)
 	contraband = list(/obj/item/weapon/cell/large/potato = 3)
 	auto_price = FALSE
 

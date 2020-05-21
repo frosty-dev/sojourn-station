@@ -170,7 +170,7 @@
 	name = "END SHIFT"
 	question = "Do you want to end shift and restart the round?"
 	time = 240
-	minimum_win_percentage = 0.65
+	minimum_win_percentage = 0.5
 	cooldown = 45 MINUTES
 	next_vote = 150 MINUTES //Minimum round length before it can be called for the first time
 	choice_types = list()
