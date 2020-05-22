@@ -186,7 +186,7 @@
 		if (success_quantity > 1)
 			success_percent = success_quantity / target_quantity
 		cancel(severity, success_percent)
-			
+
 		if ( success_quantity > 0 )
 			// At least one antag has spawned
 			return TRUE
@@ -202,7 +202,10 @@
 		possible_candidates = candidates_list(role_id, report)
 
 	if (possible_candidates.len > 0)
-		return TRUE
+		if(GLOB.player_list.len / 3 > possible_candidates.len)
+			return TRUE
+		else
+			return FALSE
 	if (report) to_chat(report, SPAN_NOTICE("Failure: No candidates found"))
 	return FALSE
 
