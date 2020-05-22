@@ -1927,7 +1927,7 @@
 
 /datum/chemical_reaction/vomitol
 	result = "vomitol"
-	required_reagents = list("carbon" = 1, "sugar" = 1, "acetone" = 1)
+	required_reagents = list("carbon" = 1, "hclacid" = 1, "acetone" = 1)
 	result_amount = 3
 
 /datum/chemical_reaction/arectine
