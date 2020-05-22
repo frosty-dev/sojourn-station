@@ -26,7 +26,8 @@
 	fire_sound = 'sound/weapons/guns/fire/magnum_key.ogg'
 	matter = list(MATERIAL_PLASTEEL = 15, MATERIAL_PLASTIC = 6)
 	price_tag = 3200
-	damage_multiplier = 1.95
+	damage_multiplier = 1.5
+	penetration_multiplier = 1.5
 	recoil_buildup = 10
 	one_hand_penalty = 20
 	firemodes = list(
