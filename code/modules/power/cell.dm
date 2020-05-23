@@ -162,6 +162,7 @@
  * 15000-cell	explosion(T, -1, 2, 4, 4)
  * */
 	if (charge==0)
+		rigged = 0
 		return
 	var/devastation_range = -1 //round(charge/11000)
 	var/heavy_impact_range = round(sqrt(charge)/60)
@@ -181,8 +182,12 @@
 	explosion(T, devastation_range, heavy_impact_range, light_impact_range, flash_range)
 
 /obj/item/weapon/cell/proc/corrupt()
-	charge /= 2
-	maxcharge /= 2
+	if(charge<2)
+		charge = 0
+		return
+	else
+		charge = charge/2
+		maxcharge = maxcharge/2
 	if (prob(10))
 		rigged = 1 //broken batterys are dangerous
 
