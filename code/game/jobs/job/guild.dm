@@ -134,7 +134,7 @@
 
 
 	stat_modifiers = list(
-		STAT_ROB = 15,
+		STAT_ROB = 25,
 		STAT_TGH = 15,
 		STAT_VIG = 15,
 		STAT_MEC = 15
