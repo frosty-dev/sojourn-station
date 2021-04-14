@@ -6,10 +6,8 @@
 ######################################################################
 
 # somerussians - host
-FighterX2500 - Host
-BigRage - Secretary
-Fray2 - Vice Host
-Grekhem520 - Game Admin
-Xarag - Trial Admin
-Egorium - Trial Admin
-maximum123 - Game Admin
+iWuna - Host
+Stalkeros - Game Admin
+Fanxelt - Vice Host
+alot - Game Admin
+XupyprKZ - Trial Admin
