@@ -1,5 +1,5 @@
-﻿## Server name: This appears at the top of the screen in-game. In this case it will read "tgstation: station_name" where station_name is the randomly generated name of the station for the round. Remove the # infront of SERVERNAME and replace 'spacestation13' with the name of your choice
-SERVERNAME [RU] SOVIET STATION [100% NEW] — COLONY MEDIUM RP
+## Server name: This appears at the top of the screen in-game. In this case it will read "tgstation: station_name" where station_name is the randomly generated name of the station for the round. Remove the # infront of SERVERNAME and replace 'spacestation13' with the name of your choice
+SERVERNAME [RU] Navarro Colony — MEDIUM RP
 
 ## Hub visiblity - uncomment to make visible on the HUB
 HUB_VISIBLE
@@ -155,7 +155,6 @@ ANTAG_HUD_RESTRICTED
 ## allow AI job
 ALLOW_AI
 
-
 ## disable abandon mob
 # NORESPAWN
 
@@ -163,7 +162,7 @@ ALLOW_AI
 # DONT_DEL_NEWMOB
 
 ## set a hosted by name for unix platforms
-HOSTEDBY FighterX2500
+HOSTEDBY Valtos
 
 ## Set to jobban "Guest-" accounts from Captain, HoS, HoP, CE, RD, CMO, Warden, Security, Detective, and AI positions.
 ## Set to 1 to jobban them from those positions, set to 0 to allow them.
@@ -176,18 +175,18 @@ GUEST_BAN
 ##USEWHITELIST
 
 ## set a server location for world reboot. Don't include the byond://, just give the address and port.
-SERVER ss13.sovietstation.ru:4738
+#SERVER IP
 
 ## Language being used for the server, deals with external links. Use either "En" for ENGLISH, or "Ru" for RUSSIAN. Do not capitalize the second letter.
 LANGUAGE Ru
  
 ## forum address
-FORUMURL https://sovietstation.ru
+#FORUMURL https://sovietstation.ru
 
 ## Wiki address
-WIKIURL https://wiki.sovietstation.ru
+#WIKIURL https://wiki.sovietstation.ru
 
-DISCORDURL https://discord.gg/FH3q5t7
+DISCORDURL https://discord.gg/Y8hug6HH8v
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
 BANAPPEALS http://sovietstation.ru
@@ -328,4 +327,4 @@ EMOJIS
 WEBHOOK_URL http://localhost:44303/webhook/en
 WEBHOOK_KEY testkey
 
-RULES https://wiki.sovietstation.ru/index.php/Rules
+#RULES https://wiki.sovietstation.ru/index.php/Rules
