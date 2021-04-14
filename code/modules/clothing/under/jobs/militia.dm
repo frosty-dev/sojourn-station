@@ -62,7 +62,7 @@
 	desc = "Show 'em your war face."
 	icon_state = "instructor"
 	item_state = "instructor"
-/
+
 /*
  * Militia Commander
  */

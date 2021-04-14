@@ -118,7 +118,7 @@
 
 			var/itemBackgroundWidth = round(minBackgroundWidth * itemStorageCost/max(max_storage_space, 1))
 			itemBackground.setPosition(totalWidth,0)
-			//itemBackground.scaleToSize(itemBackgroundWidth)
+			itemBackground.scaleToSize(itemBackgroundWidth)
 			itemBackground.setAlignment(HUD_NO_ALIGNMENT,HUD_CENTER_ALIGNMENT) //vertical center
 
 			setupItemBackground(itemBackground,I)

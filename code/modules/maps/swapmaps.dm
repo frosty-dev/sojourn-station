@@ -487,13 +487,6 @@ atom
 			contents+=l
 			qdel(l)
 
-
-// set this up (at runtime) as follows:
-// list(\
-//     'player.dmi'="player",\
-//     'monster.dmi'="monster",\
-//     ...
-//     'item.dmi'="item")
 var/list/swapmaps_iconcache
 
 // preferred mode; sav or text
