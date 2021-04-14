@@ -28,7 +28,13 @@
 //		'sound/music/lobby/Duke_Gneiss-Exploring.ogg'
 //		)
 
+/datum/lobbyscreen/navarro
+	image_file = 'icons/title_screens/navarro.gif'
+	possibleMusic = list(
+		'sound/music/lobby/cyberpunk.ogg'
+		)
 
+/*
 /datum/lobbyscreen/enroute
 	image_file = 'icons/title_screens/transit.png'
 	possibleMusic = list(
@@ -42,7 +48,7 @@
 		'sound/music/lobby/Duke_Gneiss-The_Runner_in_motion.ogg',
 		'sound/music/lobby/Duke_Gneiss-Metropolis.ogg'
 		)
-
+*/
 
 //datum/lobbyscreen/onestar
 //	image_file = 'icons/title_screens/onestar.png'
