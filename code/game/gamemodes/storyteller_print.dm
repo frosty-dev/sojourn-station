@@ -76,7 +76,7 @@
 	data += "<br>Science: [sci] "
 	if(debug_mode)
 		data += "<a href='?src=\ref[src];edit_sci=1'>\[EDIT\]</a>"
-	data += "<br>NT Disciples: [disciples.len] "
+	data += "<br>ARA Disciples: [disciples.len] "
 	data += "<br><b>Total: [crew]</b> "
 	if(debug_mode)
 		data += "<a href='?src=\ref[src];edit_crew=1'>\[EDIT\]</a>"

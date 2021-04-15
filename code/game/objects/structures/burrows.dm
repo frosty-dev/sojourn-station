@@ -30,7 +30,7 @@
 	//Ones located outside of maint are much less likely to be picked for migration
 	var/maintenance = FALSE
 
-	//If true, this burrow is located near NT obelisk.
+	//If true, this burrow is located near ARA obelisk.
 	//those are much less likely to be picked for migration due cool NT magic
 	var/obelisk_around = null
 

@@ -201,7 +201,7 @@
 	add_field(/datum/report_field/pencode_text, "Classification")
 	add_field(/datum/report_field/instruction, "On completion of this form and form approval, the foreman should fax the form to both the chief research overseer and the soteria owner, Nakharan Mkne , as well as keep a copy on file in their office alongside other mission reports.")
 
-//NT reports, mostly for liason but can be used by any NT personnel.
+//ARA reports, mostly for liason but can be used by any ARA personnel.
 
 /datum/computer_file/report/recipient/nt
 	logo = "\[logo\]"

@@ -88,7 +88,7 @@
 	icon_state = "lover_fem_s"
 
 /datum/category_item/underwear/undershirt/shirt_nt
-	name = "Shirt, NT"
+	name = "Shirt, ARA"
 	icon_state = "shirt_nano_s"
 
 /datum/category_item/underwear/undershirt/shirt_love_nt

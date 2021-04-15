@@ -75,7 +75,7 @@
 
 /datum/poster/furry16
 	name = "Rebels Unite"
-	desc = "A poster urging the viewer to rebel against Nanotrasen."
+	desc = "A poster urging the viewer to rebel against Arasaka."
 	icon_state = "poster23"
 
 /datum/poster/furry17
@@ -90,7 +90,7 @@
 
 /datum/poster/furry19
 	name = "RIP Badger"
-	desc = "This seditious poster references Nanotrasen's genocide of a space station full of badgers."
+	desc = "This seditious poster references Arasaka's genocide of a colony full of badgers."
 	icon_state = "poster11"
 
 /datum/poster/furry20
@@ -139,8 +139,8 @@
 	icon_state = "poster1_legit"
 
 /datum/poster/furry29
-	name = "Nanotrasen Logo"
-	desc = "A poster depicting the Nanotrasen logo."
+	name = "Arasaka Logo"
+	desc = "Постер изображающий эмблему Арасаки."
 	icon_state = "poster2_legit"
 
 /datum/poster/furry30
@@ -260,7 +260,7 @@
 
 /datum/poster/furry53
 	name = "50th Anniversary Vintage Reprint"
-	desc = "A reprint of a poster from 2505, commemorating the 50th Anniversary of Nanoposters Manufacturing, a subsidiary of Nanotrasen."
+	desc = "A reprint of a poster from 2505, commemorating the 50th Anniversary of Nanoposters Manufacturing, a subsidiary of Arasaka."
 	icon_state = "poster26_legit"
 
 /datum/poster/furry54
@@ -270,12 +270,12 @@
 
 /datum/poster/furry55
 	name = "PDA Ad"
-	desc = "A poster advertising the latest PDA from Nanotrasen suppliers."
+	desc = "A poster advertising the latest PDA from Arasaka suppliers."
 	icon_state = "poster28_legit"
 
 /datum/poster/furry56
 	name = "Enlist"
-	desc = "Enlist in the Nanotrasen Deathsquadron reserves today!"
+	desc = "Enlist in the Arasaka Deathsquadron reserves today!"
 	icon_state = "poster29_legit"
 
 /datum/poster/furry57
@@ -300,7 +300,7 @@
 
 /datum/poster/furry61
 	name = "No ERP"
-	desc = "This poster reminds the crew that Eroticism, Rape and Pornography are banned on Nanotrasen stations."
+	desc = "This poster reminds the crew that Eroticism, Rape and Pornography are banned on Arasaka colonies."
 	icon_state = "poster34_legit"
 
 /datum/poster/furry62

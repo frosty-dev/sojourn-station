@@ -72,10 +72,10 @@
 	desc = "A decaying sign depicting the insignia of Excelsior, the communist cult."
 	icon_state = "excelsior-old"
 
-/obj/structure/sign/faction/nanotrasen
-	name = "\improper NanoTrasen"
-	desc = "An old metal sign which reads 'NanoTrasen'."
-	icon_state = "NT"
+/obj/structure/sign/faction/arasaka
+	name = "\improper Arasaka"
+	desc = "An old metal sign which reads 'Arasaka'."
+	icon_state = "ARA"
 
 /obj/structure/sign/faction/solgov
 	name = "\improper Sol Federation"

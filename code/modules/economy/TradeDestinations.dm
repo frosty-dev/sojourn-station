@@ -19,7 +19,7 @@ var/list/weighted_mundaneevent_locations = list()
 //distance is measured in AU and co-relates to travel time
 /datum/trade_destination/centcomm
 	name = "CentComm"
-	description = "NanoTrasen's administrative centre for Tau Ceti."
+	description = "Arasaka's administrative centre for Tau Ceti."
 	distance = 1.2
 	willing_to_buy = list()
 	willing_to_sell = list()
@@ -28,7 +28,7 @@ var/list/weighted_mundaneevent_locations = list()
 
 /datum/trade_destination/anansi
 	name = "NSS Anansi"
-	description = "Medical station ran by Second Red Cross (but owned by NT) for handling emergency cases from nearby colonies."
+	description = "Medical station ran by Trauma Team (but owned by ARA) for handling emergency cases from nearby colonies."
 	distance = 1.7
 	willing_to_buy = list()
 	willing_to_sell = list()
@@ -66,7 +66,7 @@ var/list/weighted_mundaneevent_locations = list()
 
 /datum/trade_destination/beltway
 	name = "Beltway mining chain"
-	description = "A co-operative effort between Beltway and NanoTrasen to exploit the rich outer asteroid belt of the Tau Ceti system."
+	description = "A co-operative effort between Beltway and Arasaka to exploit the rich outer asteroid belt of the Tau Ceti system."
 	distance = 7.5
 	willing_to_buy = list()
 	willing_to_sell = list()
@@ -75,7 +75,7 @@ var/list/weighted_mundaneevent_locations = list()
 
 /datum/trade_destination/biesel
 	name = "Biesel"
-	description = "Large ship yards, strong economy and a stable, well-educated populace, Biesel largely owes allegiance to Sol / Vessel Contracting and begrudgingly tolerates NT. Capital is Lowell City."
+	description = "Large ship yards, strong economy and a stable, well-educated populace, Biesel largely owes allegiance to Sol / Vessel Contracting and begrudgingly tolerates ARA. Capital is Lowell City."
 	distance = 2.3
 	willing_to_buy = list()
 	willing_to_sell = list()
@@ -84,7 +84,7 @@ var/list/weighted_mundaneevent_locations = list()
 
 /datum/trade_destination/new_gibson
 	name = "New Gibson"
-	description = "Heavily industrialised rocky planet containing the majority of the planet-bound resources in the system, New Gibson is torn by unrest and has very little wealth to call it's own except in the hands of the corporations who jostle with NT for control."
+	description = "Heavily industrialised rocky planet containing the majority of the planet-bound resources in the system, New Gibson is torn by unrest and has very little wealth to call it's own except in the hands of the corporations who jostle with ARA for control."
 	distance = 6.6
 	willing_to_buy = list()
 	willing_to_sell = list()
@@ -93,7 +93,7 @@ var/list/weighted_mundaneevent_locations = list()
 
 /datum/trade_destination/luthien
 	name = "Luthien"
-	description = "A small colony established on a feral, untamed world (largely jungle). Savages and wild beasts attack the outpost regularly, although NT maintains tight military control."
+	description = "A small colony established on a feral, untamed world (largely jungle). Savages and wild beasts attack the outpost regularly, although ARA maintains tight military control."
 	distance = 8.9
 	willing_to_buy = list()
 	willing_to_sell = list()
@@ -102,7 +102,7 @@ var/list/weighted_mundaneevent_locations = list()
 
 /datum/trade_destination/reade
 	name = "Reade"
-	description = "A cold, metal-deficient world, NT maintains large pastures in whatever available space in an attempt to salvage something from this profitless colony."
+	description = "A cold, metal-deficient world, ARA maintains large pastures in whatever available space in an attempt to salvage something from this profitless colony."
 	distance = 7.5
 	willing_to_buy = list()
 	willing_to_sell = list()

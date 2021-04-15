@@ -319,6 +319,14 @@
 	icon_open = "leather_jacket2_open"
 	icon_closed = "leather_jacket2"
 
+/obj/item/clothing/suit/storage/toggle/leather/hvisjacket
+	name = "high visible jacket"
+	desc = "Куртка в которой вас точно заметят."
+	icon_state = "hivis_jacket"
+	item_state = "brown_jacket"
+	icon_open = "hivis_jacket_open"
+	icon_closed = "hivis_jacket"
+
 /obj/item/clothing/suit/storage/toggle/leather/blackvest
 	name = "black leather vest"
 	desc = "A sturdy black leather vest made out of synthetic leather."

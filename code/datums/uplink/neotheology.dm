@@ -7,7 +7,7 @@ A small pool of thematically appropriate religious items that are generally chea
 */
 
 
-//Lets make sure only appropriately ranked NT Church members can see this category
+//Lets make sure only appropriately ranked ARA Church members can see this category
 //We do this by setting canview conditions on the individual items like this.
 //These are checked by the category, and also in other places
 /datum/uplink_item/item/neotheology/can_view(obj/item/device/uplink/U)

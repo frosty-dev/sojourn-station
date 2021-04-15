@@ -92,8 +92,8 @@
 		return
 	..()
 
-/obj/item/weapon/soap/nanotrasen
-	desc = "A NanoTrasen-brand bar of soap. Smells of plasma."
+/obj/item/weapon/soap/arasaka
+	desc = "A Arasaka-brand bar of soap. Smells of plasma."
 	icon_state = "soapnt"
 
 /obj/item/weapon/soap/deluxe

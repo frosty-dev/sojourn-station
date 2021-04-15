@@ -619,7 +619,7 @@ ADMIN_VERB_ADD(/client/proc/cmd_admin_dress_old, R_FUN, FALSE)
 		if("syndicate commando")
 			commandos.equip(M)*/
 
-		if("nanotrasen representative")
+		if("arasaka representative")
 			//M.equip_to_slot_or_del(new /obj/item/clothing/under/rank/centcom(M), slot_w_uniform)
 			M.equip_to_slot_or_del(new /obj/item/clothing/shoes/reinforced(M), slot_shoes)
 			M.equip_to_slot_or_del(new /obj/item/clothing/gloves/color(M), slot_gloves)
@@ -637,11 +637,11 @@ ADMIN_VERB_ADD(/client/proc/cmd_admin_dress_old, R_FUN, FALSE)
 			W.item_state = "id_inv"
 			W.access = get_all_station_access()
 			W.access += list("VIP Guest","Custodian","Thunderdome Overseer","Intel Officer","Medical Officer","Death Commando","Research Officer")
-			W.assignment = "NanoTrasen Navy Representative"
+			W.assignment = "Arasaka Navy Representative"
 			W.registered_name = M.real_name
 			M.equip_to_slot_or_del(W, slot_wear_id)
 
-		if("nanotrasen officer")
+		if("arasaka officer")
 			//M.equip_to_slot_or_del(new /obj/item/clothing/under/rank/centcom_officer(M), slot_w_uniform)
 			M.equip_to_slot_or_del(new /obj/item/clothing/shoes/reinforced(M), slot_shoes)
 			M.equip_to_slot_or_del(new /obj/item/clothing/gloves/color(M), slot_gloves)
@@ -657,12 +657,12 @@ ADMIN_VERB_ADD(/client/proc/cmd_admin_dress_old, R_FUN, FALSE)
 			W.name = "[M.real_name]'s ID Card"
 			W.access = get_all_station_access()
 			W.access += get_all_centcom_access()
-			W.assignment = "NanoTrasen Navy Officer"
+			W.assignment = "Arasaka Navy Officer"
 			W.registered_name = M.real_name
 			M.equip_to_slot_or_del(W, slot_wear_id)
 
 
-		if("nanotrasen captain")
+		if("arasaka captain")
 			//M.equip_to_slot_or_del(new /obj/item/clothing/under/rank/centcom_captain(M), slot_w_uniform)
 			M.equip_to_slot_or_del(new /obj/item/clothing/shoes/reinforced(M), slot_shoes)
 			M.equip_to_slot_or_del(new /obj/item/clothing/gloves/color(M), slot_gloves)
@@ -678,7 +678,7 @@ ADMIN_VERB_ADD(/client/proc/cmd_admin_dress_old, R_FUN, FALSE)
 			W.name = "[M.real_name]'s ID Card"
 			W.access = get_all_station_access()
 			W.access += get_all_centcom_access()
-			W.assignment = "NanoTrasen Navy Captain"
+			W.assignment = "Arasaka Navy Captain"
 			W.registered_name = M.real_name
 			M.equip_to_slot_or_del(W, slot_wear_id)
 

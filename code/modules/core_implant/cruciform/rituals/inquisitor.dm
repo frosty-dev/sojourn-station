@@ -135,7 +135,7 @@
 
 /*
 	Succour
-	Heals another person, quite powerfully. Only works on NT disciples
+	Heals another person, quite powerfully. Only works on AR disciples
 */
 /datum/ritual/cruciform/inquisitor/heal_other
 	name = "Succour"

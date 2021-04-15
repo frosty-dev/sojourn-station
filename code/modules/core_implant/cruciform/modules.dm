@@ -23,7 +23,7 @@
 
 
 /*
-	Traitor uplink hidden inside cruciform. Used for inquisitors and maybe other NT antags
+	Traitor uplink hidden inside cruciform. Used for inquisitors and maybe other ARA antags
 */
 /*
 /datum/core_module/cruciform/uplink

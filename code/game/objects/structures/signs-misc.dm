@@ -14,8 +14,8 @@
 	icon_state = "enlist"
 
 /obj/structure/sign/misc/ntmining
-	name = "nanotrasen mining sign"
-	desc = "A rugged sign highlighting an old Nanotrasen mining claim."
+	name = "arasaka mining sign"
+	desc = "A rugged sign highlighting an old arasaka mining claim."
 	icon_state = "ntpod"
 
 /obj/structure/sign/misc/shelter

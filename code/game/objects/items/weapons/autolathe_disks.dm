@@ -666,7 +666,7 @@
 		/datum/design/bioprinter/bioimplant/omuscle,
 	)
 
-// Same as the other NT disk, minus the medical designs. Spawns in public access bioprinters.
+// Same as the other ARA disk, minus the medical designs. Spawns in public access bioprinters.
 /obj/item/weapon/computer_hardware/hard_drive/portable/design/nt_bioprinter_public
 	disk_name = "Church of Absolute Public Bioprinter Pack"
 	icon_state = "neotheology"
@@ -825,7 +825,7 @@
 
 
 
-// Same as the other NT disk, minus the medical designs. Spawns in public access bioprinters.
+// Same as the other ARA disk, minus the medical designs. Spawns in public access bioprinters.
 /obj/item/weapon/computer_hardware/hard_drive/portable/design/nt_bioprinter_public
 	disk_name = "Church of Absolute Basic Bioprinter Pack"
 	icon_state = "neotheology"
@@ -1524,7 +1524,7 @@
 
 	license = 8
 	designs = list(
-		/datum/design/autolathe/gun/grenade_launcher, // "NT GL \"Protector\""
+		/datum/design/autolathe/gun/grenade_launcher, // "ARA GL \"Protector\""
 	)
 
 obj/item/weapon/computer_hardware/hard_drive/portable/design/guns/lenar

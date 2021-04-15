@@ -67,7 +67,7 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 
 Radio:
 1459 - standard radio chat
-1364 - NT department
+1364 - ARA department
 1351 - Science
 1353 - Command
 1355 - Medical

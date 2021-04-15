@@ -2,8 +2,8 @@
 #define MODE_TRANSMIT 1
 
 /obj/item/weapon/bluespace_harpoon
-	name = "NT BSD \"Harpoon\""
-	desc = "One of the last things developed by old Nanotrasen, this harpoon serves as a tool for short and accurate teleportation of cargo and personnel through bluespace."
+	name = "AR BSD \"Harpoon\""
+	desc = "One of the last things developed by old Arasaka, this harpoon serves as a tool for short and accurate teleportation of cargo and personnel through bluespace."
 	icon_state = "harpoon-1"
 	icon = 'icons/obj/items.dmi'
 	w_class = ITEM_SIZE_NORMAL

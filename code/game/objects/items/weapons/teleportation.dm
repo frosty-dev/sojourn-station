@@ -123,7 +123,7 @@ Frequency:
  * Hand-tele
  */
 /obj/item/weapon/hand_tele
-	name = "NT BSD \"Jumper\""
+	name = "ARA BSD \"Jumper\""
 	desc = "Also known as a hand teleporter. This is an old and unreliable way to create stable blue-space portals. It was originally popular due its portable size and low energy consumption."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "hand_tele"

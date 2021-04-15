@@ -34,7 +34,7 @@ var/datum/hivemind/hive_mind_ai
 
 /datum/hivemind/New()
 	..()
-	name = pick("Von Neumann", "Lazarus", "Abattoir", "Auto-Surgeon", "NanoTrasen",
+	name = pick("Von Neumann", "Lazarus", "Abattoir", "Auto-Surgeon", "Arasaka",
 				"NanoNurse", "Vivisector", "Ex Costa", "Apostasy", "Gnosis", "Balaam", "Ophite",
 				"Sarif", "VersaLife", "Slylandro", "SHODAN")
 

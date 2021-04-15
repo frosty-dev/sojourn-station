@@ -6,10 +6,10 @@
 	var/about
 
 /datum/corporation/nt
-	name = "Nanotrasen Corporation"
+	name = "Arasaka Corporation"
 	textcolor = "blue"
 	icon_state = "nt"
-	about = "Nanotrasen is a minor corporation having a monopoly on computer networks and various random production assets."
+	about = "Arasaka is a minor corporation having a monopoly on computer networks and various random production assets."
 
 /datum/corporation/ironhammer
 	name = "Ironhammer Security"

@@ -99,7 +99,7 @@
 /obj/item/weapon/computer_hardware/hard_drive/diagnostics(var/mob/user)
 	..()
 	// 999 is a byond limit that is in place. It's unlikely someone will reach that many files anyway, since you would sooner run out of space.
-	to_chat(user, "NT-NFS File Table Status: [stored_files.len]/999")
+	to_chat(user, "ARA-NFS File Table Status: [stored_files.len]/999")
 	to_chat(user, "Storage capacity: [used_capacity]/[max_capacity]GQ")
 
 /obj/item/weapon/computer_hardware/hard_drive/disabled()

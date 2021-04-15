@@ -325,7 +325,7 @@
 
 /obj/item/weapon/contraband/poster/placed/generic/rip_badger
 	name = "RIP Badger"
-	desc = "This seditious poster references Nanotrasen's genocide of a space station full of badgers."
+	desc = "This seditious poster references Arasaka's genocide of a space station full of badgers."
 	icon_state = "poster11"
 
 /obj/item/weapon/contraband/poster/placed/generic/space_cube
@@ -445,7 +445,7 @@
 
 /obj/item/weapon/contraband/poster/placed/generic/anniversary_vintage_reprint
 	name = "50th Anniversary Vintage Reprint"
-	desc = "A reprint of a poster from 2505, commemorating the 50th Anniversary of Nanoposters Manufacturing, a subsidiary of Nanotrasen."
+	desc = "A reprint of a poster from 2505, commemorating the 50th Anniversary of Nanoposters Manufacturing, a subsidiary of Arasaka."
 	icon_state = "poster26_legit"
 
 /obj/item/weapon/contraband/poster/placed/generic/fruit_bowl
@@ -465,7 +465,7 @@
 
 /obj/item/weapon/contraband/poster/placed/generic/no_erp
 	name = "No ERP"
-	desc = "This poster reminds the crew that Eroticism, Rape and Pornography are banned on Nanotrasen stations."
+	desc = "This poster reminds the crew that Eroticism, Rape and Pornography are banned on Arasaka colonies."
 	icon_state = "poster34_legit"
 
 /obj/item/weapon/contraband/poster/placed/generic/carbondioxide
@@ -522,7 +522,7 @@
 
 /obj/item/weapon/contraband/poster/placed/advertisement/pda
 	name = "PDA Ad"
-	desc = "A poster advertising the latest PDA from Nanotrasen suppliers."
+	desc = "A poster advertising the latest PDA from Arasaka suppliers."
 	icon_state = "poster28_legit"
 
 /obj/item/weapon/contraband/poster/placed/advertisement/donutcorp
@@ -763,9 +763,9 @@
 	desc = "A poster depicting a communist symbol."
 	icon_state = "poster18"
 
-/obj/item/weapon/contraband/poster/placed/recruitment/nanotrasen
-	name = "nanotrasen poster"
-	desc = "A poster depicting the Nanotrasen logo."
+/obj/item/weapon/contraband/poster/placed/recruitment/arasaka
+	name = "arasaka poster"
+	desc = "Постер изображающий эмблему Арасаки."
 	icon_state = "poster2_legit"
 
 /obj/item/weapon/contraband/poster/placed/recruitment/rebels

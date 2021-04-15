@@ -36,10 +36,10 @@
 
 /datum/poster/tg_9
 	name = "Missing Gloves"
-	desc = "This poster is about the uproar that followed Nanotrasen's financial cuts towards insulated-glove purchases."
+	desc = "This poster is about the uproar that followed Arasaka's financial cuts towards insulated-glove purchases."
 	icon_state="poster9"
 
 /datum/poster/tg_10
 	name = "Hacking Guide"
-	desc = "This poster details the internal workings of the common Nanotrasen airlock."
+	desc = "This poster details the internal workings of the common Arasaka airlock."
 	icon_state="poster10"

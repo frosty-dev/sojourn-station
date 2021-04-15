@@ -1,5 +1,5 @@
 /obj/item/weapon/grenade/explosive
-    name = "NT OBG \"Cracker\""
+    name = "ARA OBG \"Cracker\""
     desc = "A military-grade offensive blast grenade, designed to be thrown by assaulting troops."
     icon_state = "explosive"
     loadable = TRUE
