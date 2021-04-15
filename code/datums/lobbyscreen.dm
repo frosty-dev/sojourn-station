@@ -31,7 +31,21 @@
 /datum/lobbyscreen/navarro
 	image_file = 'icons/title_screens/navarro.gif'
 	possibleMusic = list(
+		'sound/music/lobby/cyberpunk.ogg',
+		'sound/music/EveryDayIsNight.ogg',
+		'sound/music/GoGoStreamingChan.ogg',
+		'sound/music/ponponshit.ogg',
+		'sound/music/lobby/Duke_Gneiss-The_Runner_in_motion.ogg'
+		)
+
+/datum/lobbyscreen/navarro2
+	image_file = 'icons/title_screens/navarro2.gif'
+	possibleMusic = list(
 		'sound/music/lobby/cyberpunk.ogg'
+		'sound/music/EveryDayIsNight.ogg',
+		'sound/music/lobby/Duke_Gneiss-Metropolis.ogg',
+		'sound/music/lobby/Duke_Gneiss-Bluespace.ogg',
+		'sound/music/lobby/Duke_Gneiss-Neotheology.ogg'
 		)
 
 /*
