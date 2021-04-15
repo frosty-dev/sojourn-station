@@ -211,7 +211,9 @@ SUBSYSTEM_DEF(overlays)
 			cut_overlays()
 		return
 
-	var/list/cached_other = other.our_overlays
+	var/list/cached_other
+	if(other.our_overlays)
+		cached_other = other.our_overlays
 	if(cached_other)
 		if(cut_old || !LAZYLEN(our_overlays))
 			our_overlays = cached_other.Copy()
