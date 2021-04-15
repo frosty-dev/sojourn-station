@@ -41,7 +41,7 @@
 /datum/lobbyscreen/navarro2
 	image_file = 'icons/title_screens/navarro2.gif'
 	possibleMusic = list(
-		'sound/music/lobby/cyberpunk.ogg'
+		'sound/music/lobby/cyberpunk.ogg',
 		'sound/music/EveryDayIsNight.ogg',
 		'sound/music/lobby/Duke_Gneiss-Metropolis.ogg',
 		'sound/music/lobby/Duke_Gneiss-Bluespace.ogg',
