@@ -23,16 +23,18 @@
 
 Admin Observer
 Moderator		+MOD +FUN
-Mentor          +MENTOR
+Mentor          	+MENTOR
 
-Admin Candidate	+ADMIN
+Admin Candidate		+ADMIN
 Trial Admin		+@ +BAN
 Badmin			+@ +SERVER +FUN +SOUND
-Game Admin		+@ +DEBUG +PERMISSIONS
+Game Admin		+@ +PERMISSIONS
 Game Master		+EVERYTHING
 Head Admin		+EVERYTHING
-Retired Admin	+ADMIN
+Retired Admin		+ADMIN
 
+Vice Host		+EVERYTHING
+Secretary 		+EVERYTHING
 Host			+EVERYTHING
 
 Developer		+DEBUG +SERVER

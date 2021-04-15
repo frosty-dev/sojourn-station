@@ -42,15 +42,18 @@
 /obj/item/weapon/reagent_containers/glass/beaker/vial/random/New()
 	..()
 
-	var/list/picked_reagents = pickweight(random_reagent_list)
-	for(var/reagent in picked_reagents)
-		reagents.add_reagent(reagent, picked_reagents[reagent])
+	if(reagents)
+		var/list/picked_reagents = pickweight(random_reagent_list)
+		for(var/reagent in picked_reagents)
+			reagents.add_reagent(reagent, picked_reagents[reagent])
 
-	var/list/names = new
-	for(var/datum/reagent/R in reagents.reagent_list)
-		names += R.name
+		var/list/names = new
+		for(var/datum/reagent/R in reagents.reagent_list)
+			names += R.name
 
-	desc = "Contains [english_list(names)]."
+		desc = "Contains [english_list(names)]."
+	else
+		desc = "Contains nothing."
 
 	if(!has_lid())
 		toggle_lid()

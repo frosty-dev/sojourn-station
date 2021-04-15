@@ -133,12 +133,13 @@ This file contains the underlying code for stash datums
 		//If we're using landmark spawning then we do that
 		var/obj/landmark/storyevent/midgame_stash_spawn/S = pick_landmark(/obj/landmark/storyevent/midgame_stash_spawn)
 
-		stash_location = S.get_loc()
-		//Take the string that tells us where to find this landmark
-		create_direction_string(S)
+		if(S)
+			stash_location = S.get_loc()
+			//Take the string that tells us where to find this landmark
+			create_direction_string(S)
 
-		//And delete the landmark so it doesn't get used again in future for other stashes
-		qdel(S)
+			//And delete the landmark so it doesn't get used again in future for other stashes
+			qdel(S)
 	else
 		//For any other spawning method, we pick our own location
 		//200 tries for safety. It's quite likely to pick turfs without floor tiles

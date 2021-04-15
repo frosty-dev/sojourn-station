@@ -193,21 +193,6 @@
 
 #define HEAT_MOBIGNITE_THRESHOLD 530 //minimum amount of heat an object needs to ignite a mob when it hits the mob
 
-
-// Sojourn Additions Start
-
-#undef VIS_COUNT
-
-#define VIS_CH_STATUS_R		22
-#define VIS_CH_HEALTH_VR	23
-#define VIS_CH_BACKUP		24
-#define VIS_CH_VANTAG		25
-
-#define VIS_AUGMENTED		26
-
-#define VIS_COUNT			26
-
-
 //------------------------------ Stuff from Vore which may need Porting ------------------------------//
 
 // Used to seperate simple animals by ""intelligence"".
@@ -248,7 +233,16 @@
 #define VIS_OBJS			20
 #define VIS_MOBS			21
 
-#define VIS_COUNT			21 //Must be highest number from above.
+// Sojourn Additions Start
+
+#define VIS_CH_STATUS_R		22
+#define VIS_CH_HEALTH_VR	23
+#define VIS_CH_BACKUP		24
+#define VIS_CH_VANTAG		25
+
+#define VIS_AUGMENTED		26
+
+#define VIS_COUNT			27 //Must be highest number from above.
 
 //Some mob icon layering defines
 #define BODY_LAYER		-100
@@ -276,7 +270,7 @@
 #define EXAMINE_SKIPARMS			0x0020
 #define EXAMINE_SKIPHANDS			0x0040
 #define EXAMINE_SKIPLEGS			0x0080
-#define EXAMINE_SKIPFEET			0x0100#define SPECIES_HUMAN       "Human"
+#define EXAMINE_SKIPFEET			0x0100
 
 // Sojourn Additions End
 

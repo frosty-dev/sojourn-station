@@ -6,3 +6,8 @@
 ######################################################################
 
 # somerussians - host
+iWuna - Host
+Stalkeros - Game Admin
+Fanxelt - Vice Host
+alot - Game Admin
+XupyprKZ - Trial Admin

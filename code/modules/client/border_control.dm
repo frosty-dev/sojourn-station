@@ -27,7 +27,6 @@ proc/BC_IsKeyAllowedToConnect(var/key)
 				log_and_message_admins("WHITELIST AUTOJOBBAN: Connection to the database failed!")
 				return 1
 			var/server = "[world.internet_address]:[world.port]"
-			var/bantype_pass = 1
 			var/bantype_str = "JOB_PERMABAN"
 			var/duration = -1
 			var/reason = "WHITELIST AUTOJOBBAN"

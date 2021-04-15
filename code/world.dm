@@ -68,7 +68,7 @@ var/game_id = null
 	// Begin loading of extools DLL and components
 	extools_initialize()
 	maptick_initialize()
-	debugger_initialize()
+	//debugger_initialize()
 	// End extools
 	//logs
 	start_time = world.realtime
