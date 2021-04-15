@@ -21,3 +21,15 @@
 	desc = "Prosthesis with minimalist black and red casing."
 	force_icon = 'icons/mob/human_races/cyberlimbs/xion.dmi'
 	model = "xion"
+
+/obj/item/organ/external/robotic/einstein
+	name = "Einstein"
+	desc = "Пожалуй, самые дешёвые киберконечности, это чуть ли не штыри..."
+	force_icon = 'icons/mob/human_races/cyberlimbs/einstein.dmi'
+	model = "einstein"
+
+/obj/item/organ/external/robotic/wardtakahashi
+	name = "Wardtakahashi"
+	desc = "Стильные белые киберконечности класса люкс."
+	force_icon = 'icons/mob/human_races/cyberlimbs/wardtakahashi.dmi'
+	model = "wardtakahashi"
