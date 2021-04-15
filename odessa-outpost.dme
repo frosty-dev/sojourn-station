@@ -325,6 +325,7 @@
 #include "code\datums\music_tracks\_music_track.dm"
 #include "code\datums\music_tracks\ascention.dm"
 #include "code\datums\music_tracks\comet_haley.dm"
+#include "code\datums\music_tracks\cyberpunk.dm"
 #include "code\datums\music_tracks\downtown.dm"
 #include "code\datums\music_tracks\elevator.dm"
 #include "code\datums\music_tracks\europa.dm"

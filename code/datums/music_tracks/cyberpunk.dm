@@ -1,10 +1,10 @@
 /music_track/edin
 	artist = "Garoad"
-	title = "Metropolis"
+	title = "Every Day Is Night"
 	album = "VA-11 HALL-A"
 	song = 'sound/music/EveryDayIsNight.ogg'
 
-/music_track/bluespace
+/music_track/gogostream
 	artist = "Garoad"
 	title = "Go! Go! Streaming Chan!"
 	album = "VA-11 HALL-A"
