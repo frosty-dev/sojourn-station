@@ -92,7 +92,7 @@
 	//storage space based items
 	if((storage_slots == null) && !display_contents_with_number)
 		var/baseline_max_storage_space = 16 //should be equal to default backpack capacity
-		//var/minBackgroundWidth = min( round( 224 * max_storage_space/baseline_max_storage_space ,1) ,260) //in pixels
+		var/minBackgroundWidth = min( round( 224 * max_storage_space/baseline_max_storage_space ,1) ,260) //in pixels
 
 		var/HUD_element/threePartBox/storageBackground/storageBackground = new()
 		main.add(storageBackground)
@@ -116,9 +116,9 @@
 			var/HUD_element/threePartBox/storedItemBackground/itemBackground = new()
 			storageBackground.add(itemBackground)
 
-			//var/itemBackgroundWidth = round(minBackgroundWidth * itemStorageCost/max(max_storage_space, 1))
+			var/itemBackgroundWidth = round(minBackgroundWidth * itemStorageCost/max_storage_space)
 			itemBackground.setPosition(totalWidth,0)
-			//itemBackground.scaleToSize(itemBackgroundWidth)
+			itemBackground.scaleToSize(itemBackgroundWidth)
 			itemBackground.setAlignment(HUD_NO_ALIGNMENT,HUD_CENTER_ALIGNMENT) //vertical center
 
 			setupItemBackground(itemBackground,I)
@@ -132,7 +132,7 @@
 		if (remainingStorage)
 			remainingStorage += 2 //in pixels, creates a small area where items can be put
 
-		//storageBackground.scaleToSize(max(totalWidth + remainingStorage, minBackgroundWidth) + paddingSides)
+		storageBackground.scaleToSize(max(totalWidth + remainingStorage, minBackgroundWidth) + paddingSides)
 
 		storageBackground.add(closeButton)
 		closeButton.setAlignment(HUD_HORIZONTAL_EAST_OUTSIDE_ALIGNMENT,HUD_CENTER_ALIGNMENT) //east of parent, center
@@ -262,6 +262,15 @@
 /obj/item/weapon/storage/proc/close_all()
 	for (var/mob/M in is_seeing)
 		close(M)
+
+/obj/item/weapon/storage/AltClick(mob/user)
+	if(user.incapacitated())
+		to_chat(user, SPAN_WARNING("You can't do that right now!"))
+		return
+	if(!in_range(src, user))
+		return
+	else
+		src.open(user)
 
 /obj/item/weapon/storage/proc/refresh_all()
 	for (var/mob/M in is_seeing)
