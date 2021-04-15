@@ -27,8 +27,8 @@
 	active_power_usage = 100
 
 	var/playing = 0
-	var/volume = 20 // TODO: Adjustable volume
-	var/range = 7
+	var/volume = 50 // TODO: Adjustable volume
+	var/range = 15
 
 	var/sound_id
 	var/datum/sound_token/sound_token

@@ -24,7 +24,11 @@ GLOBAL_LIST_INIT(music_tracks, list(
 	"Exploring" = /music_track/exploring,
 	"The Runner in Motion" = /music_track/runner,
 	"Neotheology" = /music_track/neotheology,
-	"Downtown 2" = /music_track/downtown
+	"Downtown 2" = /music_track/downtown,
+	"Every Day Is Night" = /music_track/edin,
+	"Go! Go! Streaming Chan!" = /music_track/gogostream,
+	"Ponpon shit" = /music_track/ponponshit,
+	"Chippin’ In by SAMURAI" = /music_track/chippinin
 ))
 
 /proc/setup_music_tracks(var/list/tracks)
