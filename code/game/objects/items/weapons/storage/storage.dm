@@ -92,7 +92,7 @@
 	//storage space based items
 	if((storage_slots == null) && !display_contents_with_number)
 		var/baseline_max_storage_space = 16 //should be equal to default backpack capacity
-		var/minBackgroundWidth = min( round( 224 * max_storage_space/baseline_max_storage_space ,1) ,260) //in pixels
+		//var/minBackgroundWidth = min( round( 224 * max_storage_space/baseline_max_storage_space ,1) ,260) //in pixels
 
 		var/HUD_element/threePartBox/storageBackground/storageBackground = new()
 		main.add(storageBackground)
@@ -132,7 +132,7 @@
 		if (remainingStorage)
 			remainingStorage += 2 //in pixels, creates a small area where items can be put
 
-		storageBackground.scaleToSize(max(totalWidth + remainingStorage, minBackgroundWidth) + paddingSides)
+		//storageBackground.scaleToSize(max(totalWidth + remainingStorage, minBackgroundWidth) + paddingSides)
 
 		storageBackground.add(closeButton)
 		closeButton.setAlignment(HUD_HORIZONTAL_EAST_OUTSIDE_ALIGNMENT,HUD_CENTER_ALIGNMENT) //east of parent, center
