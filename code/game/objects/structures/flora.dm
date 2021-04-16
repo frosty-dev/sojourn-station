@@ -52,7 +52,7 @@
 /obj/structure/flora/grass
 	name = "grass"
 	icon = 'icons/obj/flora/snowflora.dmi'
-	anchored = 1
+	anchored = TRUE
 
 /obj/structure/flora/grass/brown
 	icon_state = "snowgrass1bb"
@@ -82,7 +82,7 @@
 	name = "bush"
 	icon = 'icons/obj/flora/snowflora.dmi'
 	icon_state = "snowbush1"
-	anchored = 1
+	anchored = TRUE
 
 /obj/structure/flora/bush/New()
 	..()
@@ -248,6 +248,7 @@
 	icon = 'icons/obj/flora/ausflora.dmi'
 	icon_state = "firstbush_1"
 	anchored = 1
+	layer = LOW_OBJ_LAYER
 
 /obj/structure/flora/ausbushes/New()
 	..()
@@ -317,6 +318,7 @@
 	icon_state = "pointybush_[rand(1, 4)]"
 
 /obj/structure/flora/ausbushes/lavendergrass
+	name = "lavender"
 	icon_state = "lavendergrass_1"
 
 /obj/structure/flora/ausbushes/lavendergrass/New()
@@ -324,6 +326,7 @@
 	icon_state = "lavendergrass_[rand(1, 4)]"
 
 /obj/structure/flora/ausbushes/ywflowers
+	name = "flowers"
 	icon_state = "ywflowers_1"
 
 /obj/structure/flora/ausbushes/ywflowers/New()
@@ -331,6 +334,7 @@
 	icon_state = "ywflowers_[rand(1, 3)]"
 
 /obj/structure/flora/ausbushes/brflowers
+	name = "flowers"
 	icon_state = "brflowers_1"
 
 /obj/structure/flora/ausbushes/brflowers/New()
@@ -338,6 +342,7 @@
 	icon_state = "brflowers_[rand(1, 3)]"
 
 /obj/structure/flora/ausbushes/ppflowers
+	name = "flowers"
 	icon_state = "ppflowers_1"
 
 /obj/structure/flora/ausbushes/ppflowers/New()
@@ -345,6 +350,7 @@
 	icon_state = "ppflowers_[rand(1, 4)]"
 
 /obj/structure/flora/ausbushes/sparsegrass
+	name = "sparse grass"
 	icon_state = "sparsegrass_1"
 
 /obj/structure/flora/ausbushes/sparsegrass/New()
@@ -352,6 +358,7 @@
 	icon_state = "sparsegrass_[rand(1, 3)]"
 
 /obj/structure/flora/ausbushes/fullgrass
+	name = "full grass"
 	icon_state = "fullgrass_1"
 
 /obj/structure/flora/ausbushes/fullgrass/New()
@@ -369,6 +376,7 @@
 	icon_state = "palm1"
 
 /obj/structure/flora/tree/jungle
+	name = "tree"
 	icon = 'icons/obj/flora/jungletree.dmi'
 	icon_state = "tree"
 	pixel_x = -45
@@ -441,123 +449,150 @@
 	pixel_y = -16
 
 /obj/structure/flora/small/rock1
+	name = "rocks"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "rock1"
 
 /obj/structure/flora/small/rock2
+	name = "rocks"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "rock2"
 
 /obj/structure/flora/small/rock3
+	name = "rocks"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "rock3"
 
 /obj/structure/flora/small/rock4
+	name = "rocks"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "rock4"
 
 /obj/structure/flora/small/rock5
+	name = "rocks"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "rock5"
 
 /obj/structure/flora/small/trailrocka1
+	name = "rocks"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "trailrock1"
 	name = "rocks"
 
 /obj/structure/flora/small/trailrocka2
+	name = "rocks"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "trailrock2"
 	name = "rocks"
 
 /obj/structure/flora/small/trailrocka3
+	name = "rocks"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "trailrock3"
 	name = "rocks"
 
 /obj/structure/flora/small/trailrocka4
+	name = "rocks"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "trailrock4"
 	name = "rocks"
 
 /obj/structure/flora/small/trailrocka5
+	name = "rocks"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "trailrock5"
 	name = "rocks"
 
 /obj/structure/flora/small/trailrockb1
+	name = "rocks"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "trailrockbig1"
 	name = "rocks"
 
 /obj/structure/flora/small/trailrockb2
+	name = "rocks"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "trailrockbig2"
 	name = "rocks"
 
 /obj/structure/flora/small/trailrockb3
+	name = "rocks"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "trailrockbig3"
 	name = "rocks"
 
 /obj/structure/flora/small/trailrockb4
+	name = "rocks"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "trailrockbig4"
 	name = "rocks"
 
 /obj/structure/flora/small/trailrockb5
+	name = "rocks"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "trailrockbig5"
 	name = "rocks"
 
 /obj/structure/flora/small/lavarock1
+	name = "black rocks"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "lavarocks1"
 	name = "rocks"
 
 /obj/structure/flora/small/lavarock2
+	name = "black rocks"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "lavarocks2"
 	name = "rocks"
 
 /obj/structure/flora/small/lavarock3
+	name = "black rocks"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "lavarocks3"
 	name = "rocks"
 
 /obj/structure/flora/small/busha1
+	name = "bush"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "busha1"
 
 /obj/structure/flora/small/busha2
+	name = "bush"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "busha2"
 
 /obj/structure/flora/small/busha3
+	name = "bush"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "busha3"
 
 /obj/structure/flora/small/bushb1
+	name = "bush"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "bushb1"
 
 /obj/structure/flora/small/bushb2
+	name = "bush"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "bushb2"
 
 /obj/structure/flora/small/bushb3
+	name = "bush"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "bushb3"
 
 /obj/structure/flora/small/bushc1
+	name = "bush"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "bushc1"
 
 /obj/structure/flora/small/bushc2
+	name = "bush"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "bushc2"
 
 /obj/structure/flora/small/bushc3
+	name = "bush"
 	icon = 'icons/obj/flora/jungleflora.dmi'
 	icon_state = "bushc3"
 
@@ -602,7 +637,9 @@
 	icon_state = "grassb5"
 
 /obj/structure/flora/big
+	name = "big bush"
 	layer = ABOVE_MOB_LAYER
+	anchored = 1
 
 /obj/structure/flora/big/bush1
 	icon = 'icons/obj/flora/largejungleflora.dmi'
@@ -617,16 +654,19 @@
 	icon_state = "bush3"
 
 /obj/structure/flora/big/rocks1
+	name = "rock pile"
 	icon = 'icons/obj/flora/largejungleflora.dmi'
 	icon_state = "rocks1"
 	layer = PROJECTILE_HIT_THRESHHOLD_LAYER
 
 /obj/structure/flora/big/rocks2
+	name = "rock pile"
 	icon = 'icons/obj/flora/largejungleflora.dmi'
 	icon_state = "rocks2"
 	layer = PROJECTILE_HIT_THRESHHOLD_LAYER
 
 /obj/structure/flora/big/rocks3
+	name = "rock pile"
 	icon = 'icons/obj/flora/largejungleflora.dmi'
 	icon_state = "rocks3"
 	layer = PROJECTILE_HIT_THRESHHOLD_LAYER
@@ -677,19 +717,19 @@
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "basalt1"
 	desc = "A dull and sturdy rock."
-	anchored = 1
-	density = 1
+	anchored = TRUE
+	density = TRUE
 
 /obj/structure/flora/rock/variant1
 	name = "rock"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "basalt2"
 	desc = "A dull and sturdy rock."
-	anchored = 1
+	anchored = TRUE
 
 /obj/structure/flora/rock/variant2
 	name = "rock"
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "basalt3"
 	desc = "A dull and sturdy rock."
-	anchored = 1
+	anchored = TRUE

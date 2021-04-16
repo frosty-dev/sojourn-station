@@ -191,3 +191,11 @@
 	containertype = /obj/structure/closet/crate/secure
 	crate_name = "wall shield generators crate"
 	group = "Security"
+
+/datum/supply_pack/littlecomet
+	name = "Little Comet Sidearm Crate"
+	contains = list(/obj/item/weapon/gun/projectile/revolver/little_comet)
+	cost = 12000
+	containertype = /obj/structure/closet/crate/serbcrate_gray
+	crate_name = "Little Comet Sidearm Crate"
+	group = "Security"

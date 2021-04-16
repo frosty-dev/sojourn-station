@@ -56,7 +56,7 @@
 	//Animation
 	var/max_shake_intensity = 20
 
-	var/reinforcements = 2 //Maximum number of times this burrow may recieve reinforcements
+	var/reinforcements = 10 //Maximum number of times this burrow may recieve reinforcements
 
 /obj/structure/burrow/New(var/loc, var/turf/anchor)
 	.=..()

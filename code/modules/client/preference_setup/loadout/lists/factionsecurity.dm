@@ -94,6 +94,13 @@
 	slot = slot_w_uniform
 	sort_category = "Faction: Security"
 
+/datum/gear/factionsecurity/gorkasecuritypants
+	display_name = "gorka pants, security"
+	path = /obj/item/clothing/under/rank/security/gorkapantsih
+	allowed_roles = list("Militia Commander","Warrant Officer","Supply Specialist","Ranger","Corpsman","Blackshield Trooper","Marshal Officer")
+	slot = slot_w_uniform
+	sort_category = "Faction: Security"
+
 /datum/gear/factionsecurity/gorkasecuritymed
 	display_name = "gorka blue med jumpsuit, security"
 	path = /obj/item/clothing/under/rank/medspec/gorka_ih_med_b
