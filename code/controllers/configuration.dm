@@ -219,6 +219,9 @@ GLOBAL_LIST_EMPTY(storyteller_cache)
 	var/webhook_url
 	var/webhook_key
 
+	var/cumhook_url
+	var/cumhook_key
+
 /datum/configuration/New()
 	fill_storyevents_list()
 
@@ -705,6 +708,12 @@ GLOBAL_LIST_EMPTY(storyteller_cache)
 
 				if("webhook_key")
 					config.webhook_key = value
+
+				if("cumhook_url")
+					config.cumhook_url = value
+
+				if("cumhook_key")
+					config.cumhook_key = value
 
 				if("webhook_url")
 					config.webhook_url = value

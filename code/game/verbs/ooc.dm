@@ -59,6 +59,7 @@
 				to_chat(target, "<span class='ooc'><span class='[ooc_style]'>" + create_text_tag("ooc", "OOC:", target) + " <font color='[src.prefs.ooccolor]'><EM>[display_name]:</EM> <span class='message'>[msg]</span></font></span></span>")
 			else
 				to_chat(target, "<span class='ooc'><span class='[ooc_style]'>" + create_text_tag("ooc", "OOC:", target) + " <EM>[display_name]:</EM> <span class='message'>[msg]</span></span></span>")
+	webhook_send_ooc(key, msg)
 
 /client/verb/looc(msg as text)
 	set name = "LOOC"

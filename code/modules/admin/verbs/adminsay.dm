@@ -9,6 +9,7 @@ ADMIN_VERB_ADD(/client/proc/cmd_admin_say, R_ADMIN, TRUE)
 	msg = sanitize(msg)
 	if(!msg)	return
 
+	webhook_send_asay(key_name(src), msg)
 	log_admin("ADMIN: [key_name(src)] : [msg]")
 
 	msg = emoji_parse(msg)

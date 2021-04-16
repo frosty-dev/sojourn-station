@@ -208,6 +208,7 @@
 	if(config && config.log_runtime)
 		runtime_diary << text	//save to it
 	world.log << text	//do that
+	webhook_send_runtime(text)
 
 
 // Helper proc for building detailed log lines

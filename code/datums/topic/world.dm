@@ -245,3 +245,97 @@
 			to_chat(A, amessage)
 
 	return "Message Successful"
+
+
+/datum/world_topic/players
+	keyword = "players"
+	log = FALSE
+
+/datum/world_topic/players/Run(list/input)
+	return GLOB.player_list.len
+
+/datum/world_topic/adminwho
+	keyword = "adminwho"
+	log = FALSE
+
+/datum/world_topic/adminwho/Run(list/input)
+	var/msg = "Педали:\n"
+	for(var/client/C in admins)
+		if(!C.holder.fakekey)
+			msg += "\t[C] - [C.holder.rank]"
+			msg += "\n"
+	return msg
+
+/datum/world_topic/who
+	keyword = "who"
+	log = FALSE
+
+/datum/world_topic/who/Run(list/input)
+	var/msg = "Текущие игроки:\n"
+	var/n = 0
+	for(var/client/C in clients)
+		n++
+		if(C.holder && C.holder.fakekey)
+			msg += "\t[C.holder.fakekey]\n"
+		else
+			msg += "\t[C.key]\n"
+	msg += "Всего: [n]"
+	return msg
+
+/datum/world_topic/asay
+	keyword = "asay"
+	require_comms_key = TRUE
+
+/datum/world_topic/asay/Run(list/input)
+	for(var/client/C in admins)
+		if(R_ADMIN & C.holder.rights)
+			to_chat(C, "<span class='admin_channel'>" + create_text_tag("admin", "ADMIN:", C) + " <span class='name'>[input["admin"]]</span>(DISCORD): <span class='message'>[copytext_char(input["asay"], 23, -7)]</span></span>")
+
+/datum/world_topic/ooc
+	keyword = "ooc"
+	require_comms_key = TRUE
+
+/datum/world_topic/ooc/Run(list/input)
+	if(!config.ooc_allowed && !input["isadmin"])
+		return "globally muted"
+
+	for(var/client/C in clients)
+		to_chat(C, "<span class='ooc'><span class='everyone'>" + create_text_tag("dooc", "DOOC:", C) + " <EM>[input["ckey"]]:</EM> <span class='message'>[input["ooc"]]</span></span></span>")
+
+/datum/world_topic/ahelp
+	keyword = "adminhelp"
+	require_comms_key = TRUE
+
+/datum/world_topic/ahelp/Run(list/input)
+	if(!key_valid)
+		if(abs(world_topic_spam_protect_time - world.time) < 50)
+			sleep(50)
+			world_topic_spam_protect_time = world.time
+			return "Bad Key (Throttled)"
+		world_topic_spam_protect_time = world.time
+		return "Bad Key"
+
+	var/client/C
+	var/req_ckey = ckey(input["ckey"])
+
+	for(var/client/K in clients)
+		if(K.ckey == req_ckey)
+			C = K
+			break
+	if(!C)
+		return "No client with that name on server"
+
+	var/rank = "Discord Admin"
+	var/response = html_encode(input["response"])
+
+	var/message = "<font color='red'>[rank] PM from <b>[input["admin"]]</b>: [response]</font>"
+	var/amessage =  "<span class='info'>[rank] PM from [input["admin"]] to <b>[key_name(C)]</b> : [response])]</span>"
+	webhook_send_ahelp("[input["admin"]] -> [req_ckey]", response)
+
+	sound_to(C, sound('sound/effects/adminhelp.ogg'))
+	to_chat(C, message)
+
+	for(var/client/A in admins)
+		if(A != C)
+			to_chat(A, amessage)
+	return "Message Successful"

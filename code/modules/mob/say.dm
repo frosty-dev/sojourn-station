@@ -52,6 +52,9 @@
 
 	message = sanitize(message)
 
+	var/ckeyname = "[usr.ckey]/[usr.name]"
+	webhook_send_me(ckeyname, message)
+
 	set_typing_indicator(FALSE)
 	if(use_me)
 		usr.emote("me", usr.emote_type, message)
