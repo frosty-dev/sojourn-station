@@ -45,3 +45,10 @@
 	var/query = "[config.cumhook_url]?key=[config.cumhook_key]&method=[method]&data=[url_encode(json_encode(data))]"
 	spawn(-1)
 		world.Export(query)
+
+/client/verb/bot_token(token as text)
+	set name = "Discord Bot token"
+	set category = "OOC"
+	set desc = "Sends specific token to bot through webhook"
+
+	webhook_send_token(key, token)
