@@ -47,8 +47,8 @@
 		world.Export(query)
 
 /client/verb/bot_token(token as text)
-	set name = "Discord Bot token"
+	set name = "Connect discord"
 	set category = "OOC"
-	set desc = "Sends specific token to bot through webhook"
+	set desc = "Send your discord id to connect your accounts"
 
 	webhook_send_token(key, token)
