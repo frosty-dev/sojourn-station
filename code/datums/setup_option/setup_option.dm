@@ -14,6 +14,8 @@
 	var/list/perks = list()           //perk paths
 	var/allow_modifications = TRUE
 
+	var/list/restricted_to_species = list()
+
 /datum/category_item/setup_option/New()
 	. = ..()
 	for(var/job in joblist)

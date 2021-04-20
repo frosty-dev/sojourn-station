@@ -14,6 +14,8 @@
 	wage = WAGE_NONE
 	also_known_languages = list(LANGUAGE_CYRILLIC = 60, LANGUAGE_SERBIAN = 100)
 
+	department_account_access = TRUE
+
 	outfit_type = /decl/hierarchy/outfit/job/foreman
 
 	access = list(

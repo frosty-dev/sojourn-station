@@ -144,6 +144,7 @@
 		"med" = filtered_nano_crew_manifest(medical_positions),\
 		"sup" = filtered_nano_crew_manifest(cargo_positions),\
 		"chr" = filtered_nano_crew_manifest(church_positions),\
+		"pro" = filtered_nano_crew_manifest(prospector_positions),\
 		"bot" = silicon_nano_crew_manifest(nonhuman_positions),\
 		"civ" = filtered_nano_crew_manifest(civilian_positions)\
 		)

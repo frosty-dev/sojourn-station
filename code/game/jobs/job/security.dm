@@ -15,6 +15,7 @@
 	also_known_languages = list(LANGUAGE_CYRILLIC = 60, LANGUAGE_SERBIAN = 60)
 	ideal_character_age = 40
 	minimum_character_age = 30
+	department_account_access = TRUE
 
 	outfit_type = /decl/hierarchy/outfit/job/security/smc
 
@@ -71,6 +72,7 @@
 	also_known_languages = list(LANGUAGE_CYRILLIC = 60, LANGUAGE_SERBIAN = 60)
 	ideal_character_age = 40
 	minimum_character_age = 30
+	department_account_access = TRUE
 
 	outfit_type = /decl/hierarchy/outfit/job/security/swo
 
