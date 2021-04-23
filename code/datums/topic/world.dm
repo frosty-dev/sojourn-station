@@ -54,6 +54,18 @@
 	s["shiptime"] = stationtime2text()
 	s["roundduration"] = roundduration2text()
 
+	s["stationname"] = station_name
+	s["storyteller"] = "[get_storyteller() ? get_storyteller().name : "None. Somehow."]"
+
+	var/decl/security_state/security_state = decls_repository.get_decl(maps_data.security_state)
+	s["securitylevel"] = "[security_state.current_security_level.name]" 
+
+	var/shuttle_time = evacuation_controller.get_eta()
+	var/shuttle_status = "[evacuation_controller.is_on_cooldown() ? "Returning" : (evacuation_controller.is_arriving() ? "ETA" : (evacuation_controller.is_prepared() ? "ETD" : "Idle"))]"
+	s["evac"] = "shuttle_status [ shuttle_status != "Idle" ? "[add_zero(num2text((shuttle_time / 60) % 60),2)]:[add_zero(num2text(shuttle_time % 60), 2)]" : "" ]"
+	
+
+
 	if(input["status"] == "2")
 		var/list/players = list()
 		var/list/admins = list()
