@@ -60,10 +60,25 @@
 	var/decl/security_state/security_state = decls_repository.get_decl(maps_data.security_state)
 	s["securitylevel"] = "[security_state.current_security_level.name]" 
 
-	var/shuttle_time = evacuation_controller.get_eta()
-	var/shuttle_status = "[evacuation_controller.is_on_cooldown() ? "Returning" : (evacuation_controller.is_arriving() ? "ETA" : (evacuation_controller.is_prepared() ? "ETD" : "Idle"))]"
-	s["evac"] = "shuttle_status [ shuttle_status != "Idle" ? "[add_zero(num2text((shuttle_time / 60) % 60),2)]:[add_zero(num2text(shuttle_time % 60), 2)]" : "" ]"
-	
+	//this entire part is dedicated to getting shuttle status and ETA.
+	//It could've been a one-liner, but it would be an unreadable mess.
+	var/shuttle_status = "Idle"
+	if(evacuation_controller.has_eta())
+		if(evacuation_controller.is_arriving())
+			shuttle_status = "ETA:"
+		else if(evacuation_controller.is_prepared())
+			shuttle_status = "ETD:"
+		else if(evacuation_controller.is_in_transit())
+			shuttle_status = "ESC:"
+		else if(evacuation_controller.is_on_cooldown())
+			shuttle_status = "RCL:"
+	var/raw_shuttle_time = evacuation_controller.get_eta()
+	var/shuttle_time = 0
+	if(shuttle_status!="Idle")
+		shuttle_time = "[add_zero(num2text((raw_shuttle_time / 60) % 60),2)]:[add_zero(num2text(raw_shuttle_time % 60), 2)]"
+	else
+		shuttle_time = ""
+	s["evac"] = "[shuttle_status] [shuttle_time]"
 
 
 	if(input["status"] == "2")
