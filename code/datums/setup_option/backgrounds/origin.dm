@@ -1,7 +1,7 @@
 //As a general rule, all origin backrounds must have summ of +0 of stat values
 
 /datum/category_group/setup_option_category/background/origin
-	name = "Origin"
+	name = "Происхождение"
 	category_item_type = /datum/category_item/setup_option/background/origin
 
 /datum/category_item/setup_option/background/origin

@@ -161,7 +161,7 @@
 		return TRUE
 
 	if(minimum_character_age && (prefs.age < minimum_character_age))
-		to_chat(feedback, "<span class='boldannounce'>Not old enough. Minimum character age is [minimum_character_age].</span>")
+		to_chat(feedback, "<span class='boldannounce'>Недостаточно стары. Минимальный возраст персонажа [minimum_character_age].</span>")
 		return TRUE
 
 	return FALSE
@@ -190,19 +190,19 @@
 	var/job_desc = ""
 	//Here's the actual content of the description
 	if (description)
-		job_desc += "<h1>Overview:</h1>"
+		job_desc += "<h1>Предосмотр:</h1>"
 		job_desc += "<hr>"
 		job_desc += description
 		job_desc += "<br>"
 
 	if (duties)
-		job_desc += "<h1>Duties:</h1>"
+		job_desc += "<h1>Задачи:</h1>"
 		job_desc += "<hr>"
 		job_desc += duties
 		job_desc += "<br>"
 
 	if (loyalties)
-		job_desc += "<h1>Loyalties:</h1>"
+		job_desc += "<h1>Лояльность:</h1>"
 		job_desc += "<hr>"
 		job_desc += loyalties
 		job_desc += "<br>"

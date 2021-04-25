@@ -8,7 +8,7 @@
 	spawn_positions = 1
 	selection_color = "#b5b7cb"
 	supervisors = "your laws and the Soteria Research Overseer"
-	difficulty = "Extremely Hard."
+	difficulty = "Гипер сложно."
 	req_admin_notify = 1
 	account_allowed = 0
 	wage = WAGE_NONE
@@ -50,7 +50,7 @@
 	spawn_positions = 4
 	//alt_titles = list("Drone", "Cyborg")
 	supervisors = "your laws and the AI"
-	difficulty = "Medium to Hard."
+	difficulty = "Средне."
 	selection_color = "#cdcfe0"
 	account_allowed = 0
 	wage = WAGE_NONE

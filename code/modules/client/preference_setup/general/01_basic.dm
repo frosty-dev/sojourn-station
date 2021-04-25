@@ -100,20 +100,20 @@
 	. = list()
 	. += "<style>span.color_holder_box{display: inline-block; width: 20px; height: 8px; border:1px solid #000; padding: 0px;}</style>"
 	. += "<span class='info' style='color:#0000cc;background-color:#ffffff;padding:5px;'> This is <b>[pref.real_name]</b>, <b><font color='[pref.species_color]'>a[pref.species_aan] [pref.custom_species]</font></b>!</span> <br>"
-	. += "<b>Name:</b> "
+	. += "<b>Имя:</b> "
 	. += "<a href='?src=\ref[src];rename=1'><b>[pref.real_name]</b></a><br>"
-	. += "<a href='?src=\ref[src];random_name=1'>Randomize Name</A><br>"
-	. += "<a href='?src=\ref[src];always_random_name=1'>Always Random Name: [pref.be_random_name ? "Yes" : "No"]</a>"
+	. += "<a href='?src=\ref[src];random_name=1'>Случайное</A><br>"
+	. += "<a href='?src=\ref[src];always_random_name=1'>Всегда случайное: [pref.be_random_name ? "Да" : "Нет"]</a>"
 	. += "<hr>"
-	. += "<b>Species Name:</b> <a href='?src=\ref[src];species_aan=1'>A[pref.species_aan]</a><a href='?src=\ref[src];species_name=1'>[pref.custom_species]</a>"
+	. += "<b>Название расы:</b> <a href='?src=\ref[src];species_aan=1'>A[pref.species_aan]</a><a href='?src=\ref[src];species_name=1'>[pref.custom_species]</a>"
 	. += "<a href='?src=\ref[src];species_name_color=1'><span class='color_holder_box' style='background-color:[pref.species_color]'></span></a><br>"
 
-	. += "<b>Sex:</b> <a href='?src=\ref[src];gender=1'>[gender2text(pref.gender)]</a><br>"
-	. += "<b>Gender Identity:</b> <a href='?src=\ref[src];gender_identity=1'>[pref.gender_identity ? gender2text(pref.gender_identity) : "Default"]</a><br>"
-	. += "<b>Age:</b> <a href='?src=\ref[src];age=1'>[pref.age]</a><br>"
-	. += "<b>Blood Type:</b> <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
-	. += "<b>Needs Glasses:</b> <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
-	. += "<b>Spawn Point</b>: <a href='?src=\ref[src];spawnpoint=1'>[pref.spawnpoint]</a><br>"
+	. += "<b>Пол:</b> <a href='?src=\ref[src];gender=1'>[gender2text(pref.gender)]</a><br>"
+	. += "<b>Гендер:</b> <a href='?src=\ref[src];gender_identity=1'>[pref.gender_identity ? gender2text(pref.gender_identity) : "Default"]</a><br>"
+	. += "<b>Возраст:</b> <a href='?src=\ref[src];age=1'>[pref.age]</a><br>"
+	. += "<b>Группа крови:</b> <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
+	. += "<b>Очки:</b> <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Да" : "Нет"]</b></a><br>"
+	. += "<b>Место появления</b>: <a href='?src=\ref[src];spawnpoint=1'>[pref.spawnpoint]</a><br>"
 
 	. = jointext(.,null)
 
@@ -121,7 +121,7 @@
 	var/datum/species/S = all_species[pref.species]
 
 	if(href_list["rename"])
-		var/raw_name = input(user, "Choose your character's name:", "Character Name", pref.real_name)  as text|null
+		var/raw_name = input(user, "Прижумайте имя персонажа:", "Имя персонажа", pref.real_name)  as text|null
 		if (!isnull(raw_name) && CanUseTopic(user))
 			var/new_name = sanitizeName(raw_name)
 			if(new_name)
@@ -140,14 +140,14 @@
 		return TOPIC_REFRESH
 
 	else if(href_list["gender"])
-		var/new_gender = input(user, "Choose your character's gender:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.gender) as null|anything in S.genders
+		var/new_gender = input(user, "Выберите пол:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.gender) as null|anything in S.genders
 		S = all_species[pref.species]
 		if(new_gender && CanUseTopic(user) && (new_gender in S.genders))
 			pref.gender = new_gender
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["gender_identity"])
-		var/new_gender = input(user, "Choose your character's gender identity:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.gender_identity ? pref.gender_identity : "Default") as null|anything in (list("Default" = "") + GLOB.gender_datums)
+		var/new_gender = input(user, "Выберите гендерное самоопределение:", CHARACTER_PREFERENCE_INPUT_TITLE, pref.gender_identity ? pref.gender_identity : "Default") as null|anything in (list("Default" = "") + GLOB.gender_datums)
 		if(new_gender && CanUseTopic(user) && (new_gender in (list("Default" = "") + GLOB.gender_datums)))
 			if(new_gender == "Default")
 				pref.gender_identity = null
@@ -156,14 +156,14 @@
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
 	else if(href_list["age"])
-		var/new_age = input(user, "Choose your character's age:\n([S.min_age]-[S.max_age])", CHARACTER_PREFERENCE_INPUT_TITLE, pref.age) as num|null
+		var/new_age = input(user, "Выберите возраст персонажа:\n([S.min_age]-[S.max_age])", CHARACTER_PREFERENCE_INPUT_TITLE, pref.age) as num|null
 		if(new_age && CanUseTopic(user))
 			pref.age = max(min(round(text2num(new_age)), S.max_age), S.min_age)
 			//pref.skills_allocated = pref.sanitize_skills(pref.skills_allocated)		// The age may invalidate skill loadouts
 			return TOPIC_REFRESH
 
 	else if(href_list["blood_type"])
-		var/new_b_type = input(user, "Choose your character's blood-type:", CHARACTER_PREFERENCE_INPUT_TITLE) as null|anything in valid_bloodtypes
+		var/new_b_type = input(user, "Выберите группу крови персонажа:", CHARACTER_PREFERENCE_INPUT_TITLE) as null|anything in valid_bloodtypes
 		if(new_b_type && CanUseTopic(user))
 			pref.b_type = new_b_type
 			return TOPIC_REFRESH

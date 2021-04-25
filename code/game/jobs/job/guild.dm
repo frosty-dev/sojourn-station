@@ -9,7 +9,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Nadezhda Council"
-	difficulty = "Medium."
+	difficulty = "Средне."
 	selection_color = "#b3a68c"
 	wage = WAGE_NONE	//Guild merchant draws a salary from the guild account
 	also_known_languages = list(LANGUAGE_CYRILLIC = 80, LANGUAGE_SERBIAN = 100, LANGUAGE_JIVE = 80)
@@ -63,7 +63,7 @@
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "the Chief Executive Officer"
-	difficulty = "Easy."
+	difficulty = "Легко."
 	selection_color = "#c3b9a6"
 	wage = WAGE_LABOUR_DUMB
 	department_account_access = TRUE
@@ -111,7 +111,7 @@
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "the Chief Executive Officer"
-	difficulty = "Easy."
+	difficulty = "Легко."
 	selection_color = "#c3b9a6"
 	wage = WAGE_LABOUR_HAZARD //The miners union is stubborn
 	also_known_languages = list(LANGUAGE_CYRILLIC = 15, LANGUAGE_SERBIAN = 5, LANGUAGE_JIVE = 80)

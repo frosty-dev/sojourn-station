@@ -8,7 +8,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Nadezhda Council"
-	difficulty = "Hard."
+	difficulty = "Сложно."
 	selection_color = "#94a87f"
 	req_admin_notify = 1
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10, LANGUAGE_SERBIAN = 5)
@@ -64,7 +64,7 @@
 	total_positions = 5
 	spawn_positions = 5
 	supervisors = "the Chief Biolab Overseer"
-	difficulty = "Medium."
+	difficulty = "Средне."
 	selection_color = "#a8b69a"
 	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10)
@@ -110,7 +110,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Chief Biolab Overseer"
-	difficulty = "Medium."
+	difficulty = "Средне."
 	selection_color = "#a8b69a"
 	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10)
@@ -157,7 +157,7 @@
 	spawn_positions = 1
 	wage = WAGE_PROFESSIONAL
 	supervisors = "the Soteria Biolab Overseer"
-	difficulty = "Easy To Medium."
+	difficulty = "Легко."
 	selection_color = "#a8b69a"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10)
 
@@ -201,7 +201,7 @@
 	total_positions = 3
 	spawn_positions = 3
 	supervisors = "the Soteria Biolab Overseer"
-	difficulty = "Medium."
+	difficulty = "Средне."
 	selection_color = "#a8b69a"
 	wage = WAGE_LABOUR_HAZARD
 	also_known_languages = list(LANGUAGE_CYRILLIC = 20, LANGUAGE_SERBIAN = 15)

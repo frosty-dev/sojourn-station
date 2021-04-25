@@ -320,15 +320,15 @@
 	job_desc += "<hr>"
 
 	//Here we have a right-floating textbox that shows user's stats
-	job_desc +="<div style='border: 1px solid grey; float: right; margin-right: 20px; padding: 8px; line-height: 120%;'> <h1 style='padding: 0px;'>Stats:</h1>"
+	job_desc +="<div style='border: 1px solid grey; float: right; margin-right: 20px; padding: 8px; line-height: 120%;'> <h1 style='padding: 0px;'>Навыки:</h1>"
 	if (job.stat_modifiers.len)
 		job_desc += "<ul>"
 		for (var/a in job.stat_modifiers)
 			job_desc += "<li>[a]: [job.stat_modifiers[a]]</li>"
 		job_desc += "</ul>"
 	else
-		job_desc += "None"
-	job_desc += "<h1 style='padding: 0px;'>Perks:</h1>"
+		job_desc += "Нет"
+	job_desc += "<h1 style='padding: 0px;'>Перки:</h1>"
 	if (job.perks.len)
 		job_desc += "<ul>"
 		for (var/a in job.perks)
@@ -336,17 +336,17 @@
 			job_desc += "<li>[initial(P.name)]</li>"
 		job_desc += "</ul>"
 	else
-		job_desc += "None"
+		job_desc += "Нет"
 	job_desc +="</div>"
 
 	if(job.alt_titles)
-		job_desc += "<i><b>Alternative titles:</b> [english_list(job.alt_titles)].</i>"
+		job_desc += "<i><b>Альтернативные названия:</b> [english_list(job.alt_titles)].</i>"
 	if(job.department)
-		job_desc += "<b>Department:</b> [job.department]. <b>Difficulty:</b> [job.difficulty]<br>"
+		job_desc += "<b>Отдел:</b> [job.department]. <b>Сложность:</b> [job.difficulty]<br>"
 		if(job.head_position)
 			job_desc += "You are in charge of this department."
 	job_desc += "<br>"
-	job_desc += "You answer to <b>[job.supervisors]</b> normally."
+	job_desc += "Вы подчиняетесь <b>[job.supervisors]</b>."
 
 
 
