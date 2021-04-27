@@ -106,19 +106,19 @@
 	var/money_amount = one_time_payment(species_modifier)
 	var/datum/money_account/M = create_account(H.real_name, money_amount, null)
 	if(H.mind)
-		var/remembered_info = ""
-		remembered_info += "<b>Your account number is:</b> #[M.account_number]<br>"
-		remembered_info += "<b>Your account pin is:</b> [M.remote_access_pin]<br>"
-		remembered_info += "<b>Your account funds are:</b> [M.money][CREDS]<br>"
+		var/remembered_info = "<meta charset=UTF-8>"
+		remembered_info += "<b>Номер вашего счёта:</b> #[M.account_number]<br>"
+		remembered_info += "<b>Пинкод вашего счёта:</b> [M.remote_access_pin]<br>"
+		remembered_info += "<b>На вашем счёте:</b> [M.money][CREDS]<br>"
 
 		if(M.transaction_log.len)
 			var/datum/transaction/T = M.transaction_log[1]
-			remembered_info += "<b>Your account was created:</b> [T.time], [T.date] at [T.source_terminal]<br>"
+			remembered_info += "<b>Ваш аккаунт создан:</b> [T.time], [T.date] at [T.source_terminal]<br>"
 		H.mind.store_memory(remembered_info)
 
 		H.mind.initial_account = M
 
-	to_chat(H, SPAN_NOTICE("<b>Your account number is: [M.account_number], your account pin is: [M.remote_access_pin]</b>"))
+	to_chat(H, SPAN_NOTICE("<b>Номер вашего счёта: [M.account_number], пинкод: [M.remote_access_pin]</b>"))
 
 // overrideable separately so AIs/borgs can have cardborg hats without unneccessary new()/qdel()
 /datum/job/proc/equip_preview(mob/living/carbon/human/H, var/alt_title, var/datum/branch, var/additional_skips)

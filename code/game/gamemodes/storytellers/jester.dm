@@ -1,6 +1,6 @@
 /datum/storyteller/jester
 	config_tag = "jester"
-	name = "The Jester"
+	name = "Джокер"
 	welcome = "Welcome to the house of fun. We're all mad here!"
 	description = "Aggressive and chaotic storyteller who generates a larger quantity of random events."
 

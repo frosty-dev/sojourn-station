@@ -533,7 +533,7 @@
 		return ..()
 	if(!proximity || !O.is_refillable())
 		return
-	to_chat(user, "You crack \the [src] into \the [O].")
+	to_chat(user, "Вы разбили [src] в [O].")
 	reagents.trans_to(O, reagents.total_volume)
 	user.drop_from_inventory(src)
 	qdel(src)
