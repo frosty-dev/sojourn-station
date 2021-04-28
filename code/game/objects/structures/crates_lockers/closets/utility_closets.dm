@@ -148,6 +148,6 @@
 
 /obj/structure/closet/bombcloset/security/populate_contents()
 	new /obj/item/clothing/suit/space/bomb/security(src)
-	new /obj/item/clothing/under/rank/security(src)
+	new /obj/item/clothing/under/rank/miltech_agent(src)
 	new /obj/item/clothing/shoes/color/brown(src)
 	new /obj/item/clothing/head/helmet/space/bomb/security(src)

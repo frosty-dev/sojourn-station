@@ -258,6 +258,12 @@
 	icon_state = "platecarrier_ih"
 	item_state = "platecarrier_ih"
 
+/obj/item/clothing/suit/armor/platecarrier/miltech
+	name = "plate carrier"
+	desc = "An armored vest carrying trauma plates and light ballistic meshes, in security colors."
+	icon_state = "miltech_carrier"
+	item_state = "miltech_carrier"
+
 /obj/item/clothing/suit/armor/platecarrier/militia
 	name = "militia plate carrier"
 	desc = "An armored vest carrying trauma plates and light ballistic meshes, this one ears the distinct IFF stripes of the Blackshield Militia."

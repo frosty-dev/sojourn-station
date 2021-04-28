@@ -21,3 +21,9 @@
 	title = "Chippin’ In by SAMURAI"
 	album = "Cyberpunk"
 	song = 'sound/music/chip.ogg'
+
+/music_track/cyberia
+	artist = "Serial Experiments Lain"
+	title = "Cyberia Theme"
+	album = "Cyberpunk"
+	song = 'sound/music/cyberia.ogg'

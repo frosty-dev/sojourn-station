@@ -193,9 +193,9 @@
 	icon_door = "blue"
 
 /obj/structure/closet/wardrobe/job/sec/populate_contents()
-	new /obj/item/clothing/under/rank/security(src)
-	new /obj/item/clothing/under/rank/security(src)
-	new /obj/item/clothing/under/rank/security(src)
+	new /obj/item/clothing/under/rank/miltech_agent(src)
+	new /obj/item/clothing/under/rank/miltech_agent(src)
+	new /obj/item/clothing/under/rank/miltech_agent(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/clothing/shoes/jackboots(src)
 	new /obj/item/clothing/shoes/jackboots(src)

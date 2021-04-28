@@ -4,7 +4,7 @@
 /datum/category_group/setup_option_category
 
 /datum/category_item/setup_option
-	name = "None"
+	name = "Нет"
 	var/desc = ""
 	var/restricted_depts = 0          //department_flag
 	var/allowed_depts = 0
