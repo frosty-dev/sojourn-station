@@ -250,7 +250,7 @@
 //Trust me I'm an engineer
 //I think we'll put this shit right here
 var/list/rank_prefix = list(\
-	"Marshal Officer" = "Officer",\
+	"Marshal Officer" = "Agent",\
 	"Ranger" = "Ranger",\
 	"Supply Specialist" = "Specialist",\
 	"Sergeant" = "Sergeant",\

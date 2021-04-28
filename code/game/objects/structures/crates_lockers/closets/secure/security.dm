@@ -9,7 +9,7 @@
 	new /obj/item/clothing/head/rank/captain/cap(src)
 	new /obj/item/clothing/under/rank/captain(src)
 	new /obj/item/clothing/suit/armor/vest(src)
-	new /obj/item/clothing/head/helmet(src)
+	new /obj/item/clothing/head/helmet/ballistic(src)
 	new /obj/item/clothing/shoes/color/brown(src)
 	new /obj/item/device/radio/headset/heads/captain(src)
 	new /obj/item/clothing/gloves/captain(src)
@@ -169,7 +169,7 @@
 	new /obj/item/clothing/suit/armor/platecarrier/miltech(src)
 	new /obj/item/taperoll/police(src)
 	new /obj/item/clothing/head/seccap(src)
-	new /obj/item/clothing/suit/armor/commander/marshal_coat(src)
+	new /obj/item/clothing/head/helmet/ballistic(src)
 
 /obj/structure/closet/secure_closet/medspec
 	name = "corpsman's locker"
