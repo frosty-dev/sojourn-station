@@ -54,9 +54,9 @@
 			// TODO: reimplement database interaction
 			var/DBQuery/query = dbcon.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = \"[ckey]\") AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = \"[ckey]\")")
 			query.Execute()
-			var/newpoll = 0
+			//var/newpoll = 0
 			while(query.NextRow())
-				newpoll = 1
+				//newpoll = 1
 				break
 
 /*
