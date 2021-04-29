@@ -22,7 +22,7 @@
 
 /datum/category_item/player_setup_item/background/languages/content()
 	. = list()
-	. += "<b>Languages</b><br>"
+	. += "<b>Языки</b><br>"
 	var/list/show_langs = get_language_text()
 	if(LAZYLEN(show_langs))
 		for(var/lang in show_langs)
@@ -115,11 +115,11 @@
 		for(var/i = 1 to pref.alternate_languages.len)
 			var/lang = pref.alternate_languages[i]
 			if(free_languages[lang])
-				LAZYADD(., "- [lang] (required).<br>")
+				LAZYADD(., "- [lang] (обязателен).<br>")
 			else
-				LAZYADD(., "- [lang] <a href='?src=\ref[src];remove_language=[i]'>Remove.</a><br>")
+				LAZYADD(., "- [lang] <a href='?src=\ref[src];remove_language=[i]'>Убрать.</a><br>")
 	if(pref.alternate_languages.len < MAX_LANGUAGES)
 		var/remaining_langs = MAX_LANGUAGES - pref.alternate_languages.len
-		LAZYADD(., "- <a href='?src=\ref[src];add_language=1'>add</a> ([remaining_langs] remaining)<br>")
+		LAZYADD(., "- <a href='?src=\ref[src];add_language=1'>добавить</a> ([remaining_langs] осталось)<br>")
 
 #undef MAX_LANGUAGES

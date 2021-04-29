@@ -125,16 +125,16 @@
 		. += "<a href='?src=\ref[src];job_info=[rank]'>\[?\]</a>"
 		var/bad_message = ""
 		if(job.total_positions == 0 && job.spawn_positions == 0)
-			bad_message = "<b> \[UNAVAILABLE]</b>"
+			bad_message = "<b> \[НЕДОСТУПНО]</b>"
 		else if(jobban_isbanned(user, rank))
-			bad_message = "<b> \[BANNED]</b>"
+			bad_message = "<b> \[БАН]</b>"
 		/*else if(!job.player_old_enough(user.client))
 			var/available_in_days = job.available_in_days(user.client)
 			bad_message = "\[IN [(available_in_days)] DAYS]"*/
 		else if(job.minimum_character_age && user.client && (user.client.prefs.age < job.minimum_character_age))
-			bad_message = "\[MINIMUM CHARACTER AGE: [job.minimum_character_age]]"
+			bad_message = "\[МИНИМАЛЬНЫЙ ВОЗРАСТ: [job.minimum_character_age]]"
 		else if(user.client && job.is_setup_restricted(user.client.prefs.setup_options))
-			bad_message = "\[SETUP RESTRICTED]"
+			bad_message = "\[НЕДОСТУПНО]"
 
 		if(("Assistant" in pref.job_low) && (rank != "Assistant"))
 			. += "<a href='?src=\ref[src];set_skills=[rank]'><font color=grey>[rank]</font></a></td><td></td></tr>"
@@ -154,17 +154,17 @@
 
 		if(rank == "Assistant")//Assistant is special
 			. += "<a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_LOW]'>"
-			. += "[(rank in pref.job_low) ? "<font color=#55cc55>" : ""]\[Yes\][(rank in pref.job_low) ? "</font>" : ""]"
+			. += "[(rank in pref.job_low) ? "<font color=#55cc55>" : ""]\[Да\][(rank in pref.job_low) ? "</font>" : ""]"
 			//. += "\[Yes\]"
 			. += "</a>"
 			. += "<a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_NEVER]'>"
-			. += "[!(rank in pref.job_low) ? "<font color=black>" : ""]\[No\][!(rank in pref.job_low) ? "</font>" : ""]"
+			. += "[!(rank in pref.job_low) ? "<font color=black>" : ""]\[Нет\][!(rank in pref.job_low) ? "</font>" : ""]"
 			. += "</a>"
 		else
-			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_HIGH]'>[current_level == JOB_LEVEL_HIGH ? "<font color=55cc55>" : ""]\[High][current_level == JOB_LEVEL_HIGH ? "</font>" : ""]</a>"
-			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_MEDIUM]'>[current_level == JOB_LEVEL_MEDIUM ? "<font color=eecc22>" : ""]\[Medium][current_level == JOB_LEVEL_MEDIUM ? "</font>" : ""]</a>"
-			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_LOW]'>[current_level == JOB_LEVEL_LOW ? "<font color=cc5555>" : ""]\[Low][current_level == JOB_LEVEL_LOW ? "</font>" : ""]</a>"
-			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_NEVER]'>[current_level == JOB_LEVEL_NEVER ? "<font color=black>" : ""]\[NEVER][current_level == JOB_LEVEL_NEVER ? "</font>" : ""]</a>"
+			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_HIGH]'>[current_level == JOB_LEVEL_HIGH ? "<font color=55cc55>" : ""]\[Высокий][current_level == JOB_LEVEL_HIGH ? "</font>" : ""]</a>"
+			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_MEDIUM]'>[current_level == JOB_LEVEL_MEDIUM ? "<font color=eecc22>" : ""]\[Средний][current_level == JOB_LEVEL_MEDIUM ? "</font>" : ""]</a>"
+			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_LOW]'>[current_level == JOB_LEVEL_LOW ? "<font color=cc5555>" : ""]\[Низкий][current_level == JOB_LEVEL_LOW ? "</font>" : ""]</a>"
+			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_NEVER]'>[current_level == JOB_LEVEL_NEVER ? "<font color=black>" : ""]\[НИКОГДА][current_level == JOB_LEVEL_NEVER ? "</font>" : ""]</a>"
 
 		if(job.alt_titles)
 			. += "</td></tr><tr bgcolor='[lastJob.selection_color]'><td width='40%' align='center'>&nbsp</td><td><a href='?src=\ref[src];select_alt_title=\ref[job]'>\[[pref.GetPlayerAltTitle(job)]\]</a></td></tr>"

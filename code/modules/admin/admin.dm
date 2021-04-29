@@ -76,14 +76,14 @@ ADMIN_VERB_ADD(/datum/admins/proc/show_player_panel, null, TRUE)
 		to_chat(usr, "Error: you are not an admin!")
 		return
 
-	var/body = "<html><head><title>Options for [M.key]</title></head>"
-	body += "<body>Options panel for <b>[M]</b>"
+	var/body = "<meta charset=UTF-8><html><head><title>Опции для [M.key]</title></head>"
+	body += "<body>Панель опций для <b>[M]</b>"
 
 	if(M.client)
-		body += " played by <b><a href='http://byond.com/members/[M.client.ckey]'>[M.client]</b></a> "
-		body += "\[<A href='?src=\ref[src];editrights=show'>[M.client.holder ? M.client.holder.rank : "Player"]</A>\]<br>"
-		body += "<b>Registration date:</b> [M.client.registration_date ? M.client.registration_date : "Unknown"]<br>"
-		body += "<b>IP:</b> [M.client.address ? M.client.address : "Unknown"]<br>"
+		body += " за которого играет <b><a href='http://byond.com/members/[M.client.ckey]'>[M.client]</b></a> "
+		body += "\[<A href='?src=\ref[src];editrights=show'>[M.client.holder ? M.client.holder.rank : "Игрок"]</A>\]<br>"
+		body += "<b>Дата регистрации:</b> [M.client.registration_date ? M.client.registration_date : "Неизвестно"]<br>"
+		body += "<b>IP:</b> [M.client.address ? M.client.address : "Неизвестно"]<br>"
 
 		var/country = M.client.country
 		var/country_code = M.client.country_code
@@ -91,13 +91,13 @@ ADMIN_VERB_ADD(/datum/admins/proc/show_player_panel, null, TRUE)
 			// TODO (28.07.17): uncomment after flag icons resize
 			// <img src=\"flag_[country_code].png\">
 			// usr << browse_rsc(icon('icons/country_flags.dmi', country_code), "flag_[country_code].png")
-			body += "<b>Country:</b> [country]<br><br>"
+			body += "<b>Страна:</b> [country]<br><br>"
 
 
 	if(isnewplayer(M))
-		body += " <B>Hasn't Entered Game</B> "
+		body += " <B>Ещё не в игре</B> "
 	else
-		body += " \[<A href='?src=\ref[src];revive=\ref[M]'>Heal</A>\] "
+		body += " \[<A href='?src=\ref[src];revive=\ref[M]'>Лечить</A>\] "
 
 	body += {"
 		<br><br>\[
@@ -107,32 +107,32 @@ ADMIN_VERB_ADD(/datum/admins/proc/show_player_panel, null, TRUE)
 		<a href='?src=\ref[src];subtlemessage=\ref[M]'>SM</a> -
 		[admin_jump_link(M, src)] -
 		<a href='?src=\ref[src];viewlogs=\ref[M]'>LOGS</a>\] <br>
-		<b>Mob type</b> = [M.type]<br><br>
-		<A href='?src=\ref[src];boot2=\ref[M]'>Kick</A> |
-		<A href='?_src_=holder;warn=[M.ckey]'>Warn</A> |
-		<A href='?src=\ref[src];newban=\ref[M]'>Ban</A> |
-		<A href='?src=\ref[src];jobban2=\ref[M]'>Jobban</A> |
-		<A href='?src=\ref[src];notes=show;mob=\ref[M]'>Notes</A> |
-		<A href='?src=\ref[src];adminpmhistory=\ref[M]'>AdminPM History</A>
+		<b>Тип моба</b> = [M.type]<br><br>
+		<A href='?src=\ref[src];boot2=\ref[M]'>Кикнуть</A> |
+		<A href='?_src_=holder;warn=[M.ckey]'>Варн</A> |
+		<A href='?src=\ref[src];newban=\ref[M]'>Бан</A> |
+		<A href='?src=\ref[src];jobban2=\ref[M]'>Джоббан</A> |
+		<A href='?src=\ref[src];notes=show;mob=\ref[M]'>Заметки</A> |
+		<A href='?src=\ref[src];adminpmhistory=\ref[M]'>Имтория ПС</A>
 
 	"}
 
 	if(M.client)
 		var/muted = M.client.prefs.muted
-		body += {"<br><b>Mute: </b>
+		body += {"<br><b>Мут: </b>
 			\[<A href='?src=\ref[src];mute=\ref[M];mute_type=[MUTE_IC]'><font color='[(muted & MUTE_IC)?"red":"blue"]'>IC</font></a> |
 			<A href='?src=\ref[src];mute=\ref[M];mute_type=[MUTE_OOC]'><font color='[(muted & MUTE_OOC)?"red":"blue"]'>OOC</font></a> |
 			<A href='?src=\ref[src];mute=\ref[M];mute_type=[MUTE_PRAY]'><font color='[(muted & MUTE_PRAY)?"red":"blue"]'>PRAY</font></a> |
 			<A href='?src=\ref[src];mute=\ref[M];mute_type=[MUTE_ADMINHELP]'><font color='[(muted & MUTE_ADMINHELP)?"red":"blue"]'>ADMINHELP</font></a> |
 			<A href='?src=\ref[src];mute=\ref[M];mute_type=[MUTE_DEADCHAT]'><font color='[(muted & MUTE_DEADCHAT)?"red":"blue"]'>DEADCHAT</font></a>\]
-			(<A href='?src=\ref[src];mute=\ref[M];mute_type=[MUTE_ALL]'><font color='[(muted & MUTE_ALL)?"red":"blue"]'>toggle all</font></a>)
+			(<A href='?src=\ref[src];mute=\ref[M];mute_type=[MUTE_ALL]'><font color='[(muted & MUTE_ALL)?"red":"blue"]'>переключить всё</font></a>)
 		"}
 
 	body += {"<br><br>
 		<A href='?src=\ref[src];jumpto=\ref[M]'><b>Jump to</b></A> |
 		<A href='?src=\ref[src];getmob=\ref[M]'>Get</A>
 		<br><br>
-		[check_rights(R_ADMIN|R_MOD,0) ? "<A href='?src=\ref[src];traitor=\ref[M]'>Traitor panel</A> | " : "" ]
+		[check_rights(R_ADMIN|R_MOD,0) ? "<A href='?src=\ref[src];traitor=\ref[M]'>Панель спец.ролей</A> | " : "" ]
 		<A href='?src=\ref[src];narrateto=\ref[M]'>Narrate to</A> |
 		<A href='?src=\ref[src];subtlemessage=\ref[M]'>Subtle message</A>
 	"}
@@ -140,41 +140,41 @@ ADMIN_VERB_ADD(/datum/admins/proc/show_player_panel, null, TRUE)
 	if (M.client)
 		if(!isnewplayer(M))
 			body += "<br><br>"
-			body += "<b>Transformation:</b>"
+			body += "<b>Трансформация:</b>"
 			body += "<br>"
 
 			//Monkey
 			if(issmall(M))
-				body += "<B>Monkeyized</B> | "
+				body += "<B>Уже мартышка</B> | "
 			else
-				body += "<A href='?src=\ref[src];monkeyone=\ref[M]'>Monkeyize</A> | "
+				body += "<A href='?src=\ref[src];monkeyone=\ref[M]'>Манкизировать</A> | "
 
 			//Corgi
 			if(iscorgi(M))
 				body += "<B>Corgized</B> | "
 			else
-				body += "<A href='?src=\ref[src];corgione=\ref[M]'>Corgize</A> | "
+				body += "<A href='?src=\ref[src];corgione=\ref[M]'>Коргизировать</A> | "
 
 			//AI / Cyborg
 			if(isAI(M))
-				body += "<B>Is an AI</B> "
+				body += "<B>Это ИИ</B> "
 			else if(ishuman(M))
-				body += {"<A href='?src=\ref[src];makeai=\ref[M]'>Make AI</A> |
-					<A href='?src=\ref[src];makerobot=\ref[M]'>Make Robot</A> |
-					<A href='?src=\ref[src];makealien=\ref[M]'>Make Alien</A> |
-					<A href='?src=\ref[src];makeslime=\ref[M]'>Make slime</A>
+				body += {"<A href='?src=\ref[src];makeai=\ref[M]'>Сделать ИИ</A> |
+					<A href='?src=\ref[src];makerobot=\ref[M]'>Сделать Роботом</A> |
+					<A href='?src=\ref[src];makealien=\ref[M]'>Сделать Чужим</A> |
+					<A href='?src=\ref[src];makeslime=\ref[M]'>Сделать Слизнем</A>
 				"}
 
 			//Simple Animals
 			if(isanimal(M))
-				body += "<A href='?src=\ref[src];makeanimal=\ref[M]'>Re-Animalize</A> | "
+				body += "<A href='?src=\ref[src];makeanimal=\ref[M]'>Переживотничать</A> | "
 			else
-				body += "<A href='?src=\ref[src];makeanimal=\ref[M]'>Animalize</A> | "
+				body += "<A href='?src=\ref[src];makeanimal=\ref[M]'>Животное</A> | "
 
 			// DNA2 - Admin Hax
 			if(M.dna && iscarbon(M))
 				body += "<br><br>"
-				body += "<b>DNA Blocks:</b><br><table border='0'><tr><th>&nbsp;</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>"
+				body += "<b>Блоки ДНК:</b><br><table border='0'><tr><th>&nbsp;</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>"
 				var/bname
 				for(var/block=1;block<=DNA_SE_LENGTH;block++)
 					if(((block-1)%5)==0)
@@ -191,38 +191,38 @@ ADMIN_VERB_ADD(/datum/admins/proc/show_player_panel, null, TRUE)
 				body += "</tr></table>"
 
 			body += {"<br><br>
-				<b>Rudimentary transformation:</b><font size=2><br>These transformations only create a new mob type and copy stuff over. They do not take into account MMIs and similar mob-specific things. The buttons in 'Transformations' are preferred, when possible.</font><br>
-				<A href='?src=\ref[src];simplemake=observer;mob=\ref[M]'>Observer</A> |
-				<A href='?src=\ref[src];simplemake=angel;mob=\ref[M]'>ANGEL</A> |
-				\[ Xenos: <A href='?src=\ref[src];simplemake=larva;mob=\ref[M]'>Larva</A>
-				<A href='?src=\ref[src];simplemake=human;species=Xenomorph Drone;mob=\ref[M]'>Drone</A>
-				<A href='?src=\ref[src];simplemake=human;species=Xenomorph Hunter;mob=\ref[M]'>Hunter</A>
+				<b>Рудиментарная трансформация:</b><br>
+				<A href='?src=\ref[src];simplemake=observer;mob=\ref[M]'>Наблюдатель</A> |
+				<A href='?src=\ref[src];simplemake=angel;mob=\ref[M]'>АНГЕЛ</A> |
+				\[ Xenos: <A href='?src=\ref[src];simplemake=larva;mob=\ref[M]'>Лярва</A>
+				<A href='?src=\ref[src];simplemake=human;species=Xenomorph Drone;mob=\ref[M]'>Дрон</A>
+				<A href='?src=\ref[src];simplemake=human;species=Xenomorph Hunter;mob=\ref[M]'>Охотник</A>
 				<A href='?src=\ref[src];simplemake=human;species=Xenomorph Sentinel;mob=\ref[M]'>Sentinel</A>
-				<A href='?src=\ref[src];simplemake=human;species=Xenomorph Queen;mob=\ref[M]'>Queen</A> \] |
-				\[ Crew: <A href='?src=\ref[src];simplemake=human;mob=\ref[M]'>Human</A>
-				<A href='?src=\ref[src];simplemake=nymph;mob=\ref[M]'>Nymph</A>
-				\[ slime: <A href='?src=\ref[src];simplemake=slime;mob=\ref[M]'>Baby</A>,
-				<A href='?src=\ref[src];simplemake=adultslime;mob=\ref[M]'>Adult</A> \]
-				<A href='?src=\ref[src];simplemake=monkey;mob=\ref[M]'>Monkey</A> |
-				<A href='?src=\ref[src];simplemake=robot;mob=\ref[M]'>Cyborg</A> |
-				<A href='?src=\ref[src];simplemake=cat;mob=\ref[M]'>Cat</A> |
-				<A href='?src=\ref[src];simplemake=runtime;mob=\ref[M]'>Runtime</A> |
-				<A href='?src=\ref[src];simplemake=corgi;mob=\ref[M]'>Corgi</A> |
-				<A href='?src=\ref[src];simplemake=ian;mob=\ref[M]'>Ian</A> |
-				<A href='?src=\ref[src];simplemake=crab;mob=\ref[M]'>Crab</A> |
-				<A href='?src=\ref[src];simplemake=coffee;mob=\ref[M]'>Coffee</A> |
-				\[ Construct: <A href='?src=\ref[src];simplemake=constructarmoured;mob=\ref[M]'>Armoured</A> ,
-				<A href='?src=\ref[src];simplemake=constructbuilder;mob=\ref[M]'>Builder</A> ,
-				<A href='?src=\ref[src];simplemake=constructwraith;mob=\ref[M]'>Wraith</A> \]
-				<A href='?src=\ref[src];simplemake=shade;mob=\ref[M]'>Shade</A>
+				<A href='?src=\ref[src];simplemake=human;species=Xenomorph Queen;mob=\ref[M]'>Королева</A> \] |
+				\[ Экипаж: <A href='?src=\ref[src];simplemake=human;mob=\ref[M]'>Человек</A>
+				<A href='?src=\ref[src];simplemake=nymph;mob=\ref[M]'>Нимфа</A>
+				\[ слизень: <A href='?src=\ref[src];simplemake=slime;mob=\ref[M]'>Ребенок</A>,
+				<A href='?src=\ref[src];simplemake=adultslime;mob=\ref[M]'>Взрослый</A> \]
+				<A href='?src=\ref[src];simplemake=monkey;mob=\ref[M]'>Обезьяна</A> |
+				<A href='?src=\ref[src];simplemake=robot;mob=\ref[M]'>Киборг</A> |
+				<A href='?src=\ref[src];simplemake=cat;mob=\ref[M]'>Кошка</A> |
+				<A href='?src=\ref[src];simplemake=runtime;mob=\ref[M]'>Рантайм</A> |
+				<A href='?src=\ref[src];simplemake=corgi;mob=\ref[M]'>Корги</A> |
+				<A href='?src=\ref[src];simplemake=ian;mob=\ref[M]'>Йан</A> |
+				<A href='?src=\ref[src];simplemake=crab;mob=\ref[M]'>Краб</A> |
+				<A href='?src=\ref[src];simplemake=coffee;mob=\ref[M]'>Коффи</A> |
+				\[ Конструктор: <A href='?src=\ref[src];simplemake=constructarmoured;mob=\ref[M]'>Бронированный</A> ,
+				<A href='?src=\ref[src];simplemake=constructbuilder;mob=\ref[M]'>Строитель</A> ,
+				<A href='?src=\ref[src];simplemake=constructwraith;mob=\ref[M]'>Жнец</A> \]
+				<A href='?src=\ref[src];simplemake=shade;mob=\ref[M]'>Тень</A>
 				<br>
 			"}
 	body += {"<br><br>
-			<b>Other actions:</b>
+			<b>Другие действия:</b>
 			<br>
-			<A href='?src=\ref[src];forcespeech=\ref[M]'>Forcesay</A>
+			<A href='?src=\ref[src];forcespeech=\ref[M]'>Заставить сказать</A>
 			"}
-	body += "<br><br><b>Languages:</b><br>"
+	body += "<br><br><b>Языки:</b><br>"
 	var/f = 1
 	for(var/k in all_languages)
 		var/datum/language/L = all_languages[k]

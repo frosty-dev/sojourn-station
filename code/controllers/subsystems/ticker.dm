@@ -235,7 +235,7 @@ SUBSYSTEM_DEF(ticker)
 
 	spawn(0)//Forking here so we dont have to wait for this to finish
 		GLOB.storyteller.set_up()
-		to_chat(world, "<FONT color='blue'><B>Enjoy the game!</B></FONT>")
+		//to_chat(world, "<FONT color='blue'><B>Enjoy the game!</B></FONT>")
 		world << sound('sound/AI/welcome.ogg') // Skie
 		//Holiday Round-start stuff	~Carn
 		Holiday_Game_Start()

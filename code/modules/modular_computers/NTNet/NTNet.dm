@@ -262,11 +262,11 @@ var/global/datum/ntnet/ntnet_global = new()
 		EA.password = GenerateKey()
 		EA.login = login
 		EA.ownerName = user.real_name
-		to_chat(user, "Your email account address is <b>[EA.login]</b> and the password is <b>[EA.password]</b>. This information has also been placed into your notes.")
+		to_chat(user, "Адресс вашей электронной почты <b>[EA.login]</b> а пароль от неё <b>[EA.password]</b>. Эта информация так-же помещена в ваши заметки.")
 		if(user.mind)
 			user.mind.initial_email_login["login"] = EA.login
 			user.mind.initial_email_login["password"] = EA.password
-			user.mind.store_memory("Your email account address is [EA.login] and the password is [EA.password].")
+			user.mind.store_memory("Адресс вашей электронной почты [EA.login] а пароль от неё [EA.password].")
 		if(ishuman(user))
 			for(var/obj/item/modular_computer/C in user.GetAllContents())
 				var/datum/computer_file/program/email_client/P = C.getProgramByType(/datum/computer_file/program/email_client)

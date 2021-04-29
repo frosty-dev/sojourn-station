@@ -33,7 +33,7 @@ SUBSYSTEM_DEF(tips)
 					var/tipsAndTricks/jobs/JT = T
 					var/datum/job/J = pick(JT.jobs_list)
 					typeText = initial(J.title)
-				to_chat(mob, SStips.formatTip(T, "Random Tip \[[typeText]\]: "))
+				to_chat(mob, SStips.formatTip(T, "Случайный совет \[[typeText]\]: "))
 
 /client/verb/showSmartTip()
 	set name = "Show Smart Tip"
@@ -42,7 +42,7 @@ SUBSYSTEM_DEF(tips)
 		if(mob)
 			var/tipsAndTricks/T = SStips.getSmartTip(mob)
 			if(T)
-				to_chat(mob, SStips.formatTip(T, "Tip for your character: "))
+				to_chat(mob, SStips.formatTip(T, "Совет для вашего персонажа: "))
 
 /datum/controller/subsystem/tips/fire()
 	for(var/mob/living/L in SSmobs.mob_list)

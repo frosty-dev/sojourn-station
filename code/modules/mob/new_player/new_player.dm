@@ -59,11 +59,12 @@
 				newpoll = 1
 				break
 
+/*
 			if(newpoll)
 				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A> (NEW!)</b></p>"
 			else
 				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A></p>"
-
+*/
 	output += "</div>"
 
 	panel = new(src, "<div align='center'><B>\[BLACK\] NAVARRO</B>","<div align='center'><B>\[BLACK\] NAVARRO</B>", 210, 280, src)
