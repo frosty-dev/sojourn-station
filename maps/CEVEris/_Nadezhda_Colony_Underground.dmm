@@ -6688,7 +6688,7 @@
 "cyF" = (/obj/structure/closet/secure_closet/personal,/turf/simulated/floor/tiled/white,/area/nadezhda/engineering/construction)
 "cyG" = (/obj/machinery/firealarm{dir = 8; pixel_x = -28},/turf/simulated/floor/tiled/techmaint,/area/nadezhda/engineering/construction)
 "cyH" = (/obj/machinery/alarm{dir = 8; icon_state = "alarm0"; pixel_x = 24},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/white,/area/nadezhda/engineering/construction)
-"cyI" = (/obj/machinery/media/jukebox,/obj/machinery/media/jukebox,/turf/simulated/floor/tiled/steel/bar_dance,/area/nadezhda/crew_quarters/bar)
+"cyI" = (/obj/machinery/media/jukebox,/turf/simulated/floor/tiled/steel/bar_dance,/area/nadezhda/crew_quarters/bar)
 "cyJ" = (/obj/machinery/door/airlock/glass_mining{name = "Disposals"; req_access = list(50)},/obj/effect/decal/cleanable/dirt,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/effect/decal/cleanable/blood/oil,/turf/simulated/floor/tiled/steel/cargo,/area/nadezhda/quartermaster/office)
 "cyK" = (/obj/effect/decal/cleanable/dirt,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/steel/orangecorner,/area/nadezhda/quartermaster/hangarsupply)
 "cyL" = (/obj/structure/table/standard,/obj/random/pack/rare/low_chance,/obj/random/voidsuit/low_chance,/obj/random/lowkeyrandom,/turf/simulated/floor/tiled/steel/brown_platform,/area/nadezhda/maintenance/undergroundfloor2west)

@@ -113,8 +113,7 @@ ADMIN_VERB_ADD(/datum/admins/proc/show_player_panel, null, TRUE)
 		<A href='?src=\ref[src];newban=\ref[M]'>Бан</A> |
 		<A href='?src=\ref[src];jobban2=\ref[M]'>Джоббан</A> |
 		<A href='?src=\ref[src];notes=show;mob=\ref[M]'>Заметки</A> |
-		<A href='?src=\ref[src];adminpmhistory=\ref[M]'>Имтория ПС</A>
-
+		<A href='?src=\ref[src];adminpmhistory=\ref[M]'>История Сообщений Админа</A>
 	"}
 
 	if(M.client)

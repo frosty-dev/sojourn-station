@@ -14,7 +14,7 @@ datum/admins/proc/notes_gethtml(var/ckey)
 		return "<font color='red'>Error: Cannot access [NOTESFILE]</font>"
 
 	if(ckey)
-		. = "<b>Notes for <a href='?src=\ref[src];notes=show'>[ckey]</a>:</b> <a href='?src=\ref[src];notes=add;ckey=[ckey]'>\[+\]</a> <a href='?src=\ref[src];notes=remove;ckey=[ckey]'>\[-\]</a><br>"
+		. = "<meta charset=UTF-8><b>Notes for <a href='?src=\ref[src];notes=show'>[ckey]</a>:</b> <a href='?src=\ref[src];notes=add;ckey=[ckey]'>\[+\]</a> <a href='?src=\ref[src];notes=remove;ckey=[ckey]'>\[-\]</a><br>"
 		notesfile.cd = "/[ckey]"
 		var/index = 1
 		while( !notesfile.eof )
@@ -104,7 +104,7 @@ datum/admins/proc/adminpmhistory_gethtml(var/ckey)
 	if(!file)
 		return "<font color='red'>Error: Cannot access [filePath]</font>"
 
-	. = "<b>AdmimPMHistory for [ckey]</b><br>"
+	. = "<meta charset=UTF-8><b>История для [ckey]</b><br>"
 
 	while( !file.eof )
 		var/note
@@ -140,9 +140,5 @@ datum/admins/proc/adminpmhistory_gethtml(var/ckey)
 
 		ckeyFromSavefile.eof = 1		//move to the end of the buffer
 		ckeyFromSavefile << logMessage
-
-
-
-
 
 	return

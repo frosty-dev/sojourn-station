@@ -714,7 +714,7 @@
 	require_perms = list(R_ADMIN)
 
 /datum/admin_topic/c_mode/Run(list/input)
-	var/dat = {"<B>What storyteller do you wish to install?</B><HR>"}
+	var/dat = {"<meta charset=UTF-8><B>What storyteller do you wish to install?</B><HR>"}
 	for(var/mode in config.storytellers)
 		dat += {"<A href='?src=\ref[source];c_mode2=[mode]'>[config.storyteller_names[mode]]</A><br>"}
 	dat += {"Now: [master_storyteller]"}
