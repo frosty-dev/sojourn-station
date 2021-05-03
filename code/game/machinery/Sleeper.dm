@@ -74,7 +74,7 @@
 			if(UNCONSCIOUS)
 				data["stat"] = "Unconscious"
 			if(DEAD)
-				data["stat"] = "<font color='red'>Dead</font>"
+				data["stat"] = "<span class='warning'>Dead</font>"
 		data["health"] = occupant.health
 		if(ishuman(occupant))
 			var/mob/living/carbon/human/H = occupant

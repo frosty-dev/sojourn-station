@@ -182,6 +182,6 @@
 
 
 	log_vote(text)
-	to_chat(world, "<font color='purple'>[text]</font>")
+	to_chat(world, "<span class='deadsay'>[text]</span>")
 /datum/poll/proc/IsAdminOnly()
 	return only_admin

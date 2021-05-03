@@ -92,11 +92,11 @@
 	if (!ishuman(M) || M.isSynthetic())
 		//these sensors are designed for organic life
 		. += "<h2>Analyzing Results for ERROR:\n\t Overall Status: ERROR</h2>"
-		. += span("highlight", "    Key: <font color='#0080ff'>Suffocation</font>/<font color='green'>Toxin</font>/<font color='#FFA500'>Burns</font>/<font color='red'>Brute</font>")
-		. += span("highlight", "    Damage Specifics: <font color='#0080ff'>?</font> - <font color='green'>?</font> - <font color='#FFA500'>?</font> - <font color='red'>?</font>")
+		. += span("highlight", "    Key: <font color='#0080ff'>Suffocation</font>/<span class='green'>Toxin</font>/<font color='#FFA500'>Burns</font>/<span class='warning'>Brute</span>")
+		. += span("highlight", "    Damage Specifics: <font color='#0080ff'>?</font> - <span class='green'>?</font> - <font color='#FFA500'>?</font> - <span class='warning'>?</span>")
 		. += span("highlight", "Body Temperature: [M.bodytemperature-T0C]&deg;C ([M.bodytemperature*1.8-459.67]&deg;F)")
 		. += SPAN_WARNING("Warning: Blood Level ERROR: --% --cl.</span> <span class='notice'>Type: ERROR")
-		. += span("highlight", "Subject's pulse: <font color='red'>-- bpm.</font>")
+		. += span("highlight", "Subject's pulse: <span class='warning'>-- bpm.</font>")
 		return
 
 	var/fake_oxy = max(rand(1, 40), M.getOxyLoss(), (300 - (M.getToxLoss() + M.getFireLoss() + M.getBruteLoss())))
@@ -110,8 +110,8 @@
 		dat += span("highlight", "Overall Status: dead")
 	else
 		dat += span("highlight", "Analyzing Results for [M]:\n\t Overall Status: [M.stat > 1 ? "dead" : "[round(M.health/M.maxHealth*100)]% healthy"]")
-	dat += span("highlight", "    Key: <font color='#0080ff'>Suffocation</font>/<font color='green'>Toxin</font>/<font color='#FFA500'>Burns</font>/<font color='red'>Brute</font>")
-	dat += span("highlight", "    Damage Specifics: <font color='#0080ff'>[OX]</font> - <font color='green'>[TX]</font> - <font color='#FFA500'>[BU]</font> - <font color='red'>[BR]</font>")
+	dat += span("highlight", "    Key: <font color='#0080ff'>Suffocation</font>/<span class='green'>Toxin</font>/<font color='#FFA500'>Burns</font>/<span class='warning'>Brute</span>")
+	dat += span("highlight", "    Damage Specifics: <font color='#0080ff'>[OX]</font> - <span class='green'>[TX]</font> - <font color='#FFA500'>[BU]</font> - <span class='warning'>[BR]</span>")
 	dat += span("highlight", "Body Temperature: [M.bodytemperature-T0C]&deg;C ([M.bodytemperature*1.8-459.67]&deg;F)")
 	if(M.tod && (M.stat == DEAD || (M.status_flags & FAKEDEATH)))
 		dat += span("highlight", "Time of Death: [M.tod]")
@@ -131,9 +131,9 @@
 			dat += span("highlight", "    Limbs are OK.")
 
 	OX = M.getOxyLoss() > 50 ? 	 "<font color='#0080ff'><b>Severe oxygen deprivation detected</b></font>" 		: 	"Subject bloodstream oxygen level normal"
-	TX = M.getToxLoss() > 50 ? 	 "<font color='green'><b>Dangerous amount of toxins detected</b></font>" 	: 	"Subject bloodstream toxin level minimal"
+	TX = M.getToxLoss() > 50 ? 	 "<span class='green'><b>Dangerous amount of toxins detected</b></span>" 	: 	"Subject bloodstream toxin level minimal"
 	BU = M.getFireLoss() > 50 ?  "<font color='#FFA500'><b>Severe burn damage detected</b></font>" 			:	"Subject burn injury status O.K"
-	BR = M.getBruteLoss() > 50 ? "<font color='red'><b>Severe anatomical damage detected</b></font>" 		: 	"Subject brute-force injury status O.K"
+	BR = M.getBruteLoss() > 50 ? "<span class='warning'><b>Severe anatomical damage detected</b></font>" 		: 	"Subject brute-force injury status O.K"
 	if(M.status_flags & FAKEDEATH)
 		OX = fake_oxy > 50 ? SPAN_WARNING("Severe oxygen deprivation detected") : "Subject bloodstream oxygen level normal"
 	dat += "[OX] | [TX] | [BU] | [BR]"

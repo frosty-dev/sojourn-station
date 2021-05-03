@@ -87,15 +87,15 @@
 
 
 	if(MS.moving_status != SHUTTLE_IDLE)
-		dat += "Location: <font color='red'>Moving</font> <br>"
+		dat += "Location: <span class='warning'>Moving</font> <br>"
 	else
 		var/area/areacheck = get_area(src)
 		dat += "Location: [areacheck.name]<br>"
 
 	if((MS.last_move + MS.cooldown*10) > world.time)
-		dat += "<font color='red'>Engines charging.</font><br>"
+		dat += "<span class='warning'>Engines charging.</font><br>"
 	else
-		dat += "<font color='green'>Engines ready.</font><br>"
+		dat += "<span class='green'>Engines ready.</span><br>"
 
 	dat += "<br><b><A href='?src=\ref[src];toggle_cloak=[1]'>Toggle cloaking field</A></b><br>"
 	dat += "<b><A href='?src=\ref[src];move_multi=[1]'>Move ship</A></b><br>"
@@ -120,7 +120,7 @@
 			if("docked")
 				dat += "<font color='[override_en? "red" : "green"]'>Docked</font>"
 
-		if(override_en) dat += " <font color='red'>(Override Enabled)</font>"
+		if(override_en) dat += " <span class='warning'>(Override Enabled)</font>"
 
 		dat += ". <A href='?src=\ref[src];refresh=[1]'>\[Refresh\]</A><br><br>"
 

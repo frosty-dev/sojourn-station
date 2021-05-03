@@ -252,8 +252,8 @@
 
 
 /obj/machinery/body_scanconsole/proc/format_occupant_data(var/list/occ)
-	var/dat = "<font color='blue'><b>Scan performed at [occ["stationtime"]]</b></font><br>"
-	dat += "<font color='blue'><b>Occupant Statistics:</b></font><br>"
+	var/dat = "<span class='notice'><b>Scan performed at [occ["stationtime"]]</b></span><br>"
+	dat += "<span class='notice'><b>Occupant Statistics:</b></span><br>"
 	var/aux
 	switch (occ["stat"])
 		if(0)
@@ -264,7 +264,7 @@
 			aux = "Dead"
 	dat += text("[]\tHealth %: [] ([])</font><br>", ("<font color='[occ["health"] > 50 ? "blue" : "red"]>"), occ["health"], aux)
 	if (occ["virus_present"])
-		dat += "<font color='red'>Viral pathogen detected in blood stream.</font><br>"
+		dat += "<span class='warning'>Viral pathogen detected in blood stream.</font><br>"
 	dat += text("[]\t-Brute Damage %: []</font><br>", ("<font color='[occ["bruteloss"] < 60  ? "blue" : "red"]'>"), occ["bruteloss"])
 	dat += text("[]\t-Respiratory Damage %: []</font><br>", ("<font color='[occ["oxyloss"] < 60  ? "blue'" : "red"]'>"), occ["oxyloss"])
 	dat += text("[]\t-Toxin Content %: []</font><br>", ("<font color='[occ["toxloss"] < 60  ? "blue" : "red"]'>"), occ["toxloss"])
@@ -395,12 +395,12 @@
 	var/list/species_organs = occ["species_organs"]
 	for(var/organ_name in species_organs)
 		if(!locate(species_organs[organ_name]) in occ["internal_organs"])
-			dat += text("<font color='red'>No [organ_name] detected.</font><BR>")
+			dat += text("<span class='warning'>No [organ_name] detected.</font><BR>")
 
 	if(occ["sdisabilities"] & BLIND)
-		dat += text("<font color='red'>Cataracts detected.</font><BR>")
+		dat += text("<span class='warning'>Cataracts detected.</font><BR>")
 	if(occ["sdisabilities"] & NEARSIGHTED)
-		dat += text("<font color='red'>Retinal misalignment detected.</font><BR>")
+		dat += text("<span class='warning'>Retinal misalignment detected.</font><BR>")
 	return dat
 
 /obj/machinery/bodyscanner/update_icon()

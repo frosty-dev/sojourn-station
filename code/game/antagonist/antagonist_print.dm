@@ -70,9 +70,9 @@
 			total_tc += contract.reward
 			num++
 
-			text += "<br><b>Contract [num]:</b> [contract.desc] <font color='green'>(+[contract.reward] TC)</font>"
+			text += "<br><b>Contract [num]:</b> [contract.desc] <span class='green'>(+[contract.reward] TC)</span>"
 
-		text += "<br><b>Total: [num] contracts, <font color='green'>[total_tc] TC</font></b><br>"
+		text += "<br><b>Total: [num] contracts, <span class='green'>[total_tc] TC</span></b><br>"
 
 	if(length(objectives))
 		var/failed = FALSE
@@ -83,17 +83,17 @@
 			if(append_success)
 				text += "[O.get_info()] "
 				if(O.check_completion())
-					text += "<font color='green'><B>Success!</B></font>"
+					text += "<span class='green'><B>Success!</B></span>"
 				else
-					text += "<font color='red'>Fail.</font>"
+					text += "<span class='warning'>Fail.</font>"
 					failed = TRUE
 			num++
 
 		if(append_success)
 			if(failed)
-				text += "<br><font color='red'><B>The [role_text] has failed.</B></font>"
+				text += "<br><span class='warning'><B>The [role_text] has failed.</B></font>"
 			else
-				text += "<br><font color='green'><B>The [role_text] was successful!</B></font>"
+				text += "<br><span class='green'><B>The [role_text] was successful!</B></span>"
 
 	return text
 

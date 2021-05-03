@@ -54,7 +54,7 @@ ADMIN_VERB_ADD(/client/proc/ToRban, R_SERVER, FALSE)
 			if(config)
 				if(config.ToRban)
 					config.ToRban = 0
-					message_admins("<font color='red'>ToR banning disabled.</font>")
+					message_admins("<span class='warning'>ToR banning disabled.</font>")
 				else
 					config.ToRban = 1
 					message_admins("<font colot='green'>ToR banning enabled.</font>")
@@ -80,9 +80,9 @@ ADMIN_VERB_ADD(/client/proc/ToRban, R_SERVER, FALSE)
 			var/input = input(src,"Please input an IP address to search for:","Find ToR ban",null) as null|text
 			if(input)
 				if(ToRban_isbanned(input))
-					to_chat(src, "<font color='green'><b>Address is a known ToR address</b></font>")
+					to_chat(src, "<span class='green'><b>Address is a known ToR address</b></span>")
 				else
-					to_chat(src, "<font color='red'><b>Address is not a known ToR address</b></font>")
+					to_chat(src, "<span class='warning'><b>Address is not a known ToR address</b></font>")
 	return
 
 #undef TORFILE

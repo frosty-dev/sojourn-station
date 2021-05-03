@@ -78,7 +78,7 @@
 		to_chat(attacker, SPAN_DANGER("You cannot locate any eyes on [target]!"))
 		return
 
-	attacker.attack_log += text("\[[time_stamp()]\] <font color='red'>Attacked [target.name]'s eyes using grab ([target.ckey])</font>")
+	attacker.attack_log += text("\[[time_stamp()]\] <span class='warning'>Attacked [target.name]'s eyes using grab ([target.ckey])</font>")
 	target.attack_log += text("\[[time_stamp()]\] <font color='orange'>Had eyes attacked by [attacker.name]'s grab ([attacker.ckey])</font>")
 	msg_admin_attack("[key_name(attacker)] attacked [key_name(target)]'s eyes using a grab action.")
 
@@ -104,7 +104,7 @@
 		target.visible_message(SPAN_DANGER("[target] [target.form.knockout_message]"))
 
 	playsound(attacker.loc, "swing_hit", 25, 1, -1)
-	attacker.attack_log += text("\[[time_stamp()]\] <font color='red'>Headbutted [target.name] ([target.ckey])</font>")
+	attacker.attack_log += text("\[[time_stamp()]\] <span class='warning'>Headbutted [target.name] ([target.ckey])</font>")
 	target.attack_log += text("\[[time_stamp()]\] <font color='orange'>Headbutted by [attacker.name] ([attacker.ckey])</font>")
 	msg_admin_attack("[key_name(attacker)] has headbutted [key_name(target)]")
 

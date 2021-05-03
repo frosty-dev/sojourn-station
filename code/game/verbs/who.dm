@@ -29,7 +29,7 @@
 						entry += " - <font color='black'><b>МЁРТВ</b></font>"
 
 			if(is_special_character(C.mob))
-				entry += " - <b><font color='red'>Антагонист</font></b>"
+				entry += " - <b><span class='warning'>Антагонист</font></b>"
 
 			if(C.is_afk())
 				entry += " (AFK - [C.inactivity2text()])"

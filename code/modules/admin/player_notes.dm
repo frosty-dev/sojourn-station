@@ -11,7 +11,7 @@ datum/admins/proc/notes_show(var/ckey)
 datum/admins/proc/notes_gethtml(var/ckey)
 	var/savefile/notesfile = new(NOTESFILE)
 	if(!notesfile)
-		return "<font color='red'>Error: Cannot access [NOTESFILE]</font>"
+		return "<span class='warning'>Error: Cannot access [NOTESFILE]</font>"
 
 	if(ckey)
 		. = "<meta charset=UTF-8><b>Notes for <a href='?src=\ref[src];notes=show'>[ckey]</a>:</b> <a href='?src=\ref[src];notes=add;ckey=[ckey]'>\[+\]</a> <a href='?src=\ref[src];notes=remove;ckey=[ckey]'>\[-\]</a><br>"
@@ -102,7 +102,7 @@ datum/admins/proc/adminpmhistory_gethtml(var/ckey)
 	var/filePath = "data/player_saves/[copytext(ckey,1,2)]/[ckey]/adminPMHistory.sav"
 	var/savefile/file = new(filePath)
 	if(!file)
-		return "<font color='red'>Error: Cannot access [filePath]</font>"
+		return "<span class='warning'>Error: Cannot access [filePath]</font>"
 
 	. = "<meta charset=UTF-8><b>История для [ckey]</b><br>"
 
@@ -127,7 +127,7 @@ datum/admins/proc/adminpmhistory_gethtml(var/ckey)
 	var/ckeyToFile = "data/player_saves/[copytext(ckeyTo,1,2)]/[ckeyTo]/adminPMHistory.sav"
 	var/savefile/ckeyToSavefile = new(ckeyToFile)
 	if(!ckeyToSavefile)
-		return "<font color='red'>Error: Cannot access [ckeyToFile]</font>"
+		return "<span class='warning'>Error: Cannot access [ckeyToFile]</font>"
 
 	ckeyToSavefile.eof = 1		//move to the end of the buffer
 	ckeyToSavefile << logMessage
@@ -136,7 +136,7 @@ datum/admins/proc/adminpmhistory_gethtml(var/ckey)
 		var/ckeyFromFile = "data/player_saves/[copytext(ckeyFrom,1,2)]/[ckeyFrom]/adminPMHistory.sav"
 		var/savefile/ckeyFromSavefile = new(ckeyFromFile)
 		if(!ckeyFromSavefile)
-			return "<font color='red'>Error: Cannot access [ckeyFromFile]</font>"
+			return "<span class='warning'>Error: Cannot access [ckeyFromFile]</font>"
 
 		ckeyFromSavefile.eof = 1		//move to the end of the buffer
 		ckeyFromSavefile << logMessage

@@ -11,7 +11,7 @@ var/const/commandos_possible = 6 //if more Commandos are needed in the future
 		return
 
 	if(world.time < 6000)
-		usr << "<font color='red'>There are [(6000-world.time)/10] seconds remaining before it may be called.</font>"
+		usr << "<span class='warning'>There are [(6000-world.time)/10] seconds remaining before it may be called.</font>"
 		return
 
 	var/datum/antagonist/deathsquad/team
@@ -29,7 +29,7 @@ var/const/commandos_possible = 6 //if more Commandos are needed in the future
 			return
 
 	if(team.deployed)
-		usr << "<font color='red'>Someone is already sending a team.</font>"
+		usr << "<span class='warning'>Someone is already sending a team.</font>"
 		return
 
 	if(alert("Do you want to send in a strike team? Once enabled, this is irreversible.",,"Yes","No")!="Yes")

@@ -174,7 +174,7 @@
 			P.name = "paper - Patient Diagnostic Report"
 			P.info = {"
 				[virology_letterhead("Patient Diagnostic Report")]
-				<center><small><font color='red'><b>CONFIDENTIAL MEDICAL REPORT</b></font></small></center><br>
+				<center><small><span class='warning'><b>CONFIDENTIAL MEDICAL REPORT</b></font></small></center><br>
 				<large><u>Sample:</u></large> [sample.name]<br>
 "}
 

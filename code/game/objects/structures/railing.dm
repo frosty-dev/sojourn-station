@@ -213,7 +213,7 @@
 			take_damage(8)
 			visible_message(SPAN_DANGER("[user] slams [target]'s face against \the [src]!"))
 			target.attack_log += "\[[time_stamp()]\] <font color='orange'>Has been slammed by [user.name] ([user.ckey] against \the [src])</font>"
-			user.attack_log += "\[[time_stamp()]\] <font color='red'>Slammed [target.name] ([target.ckey] against over \the [src])</font>"
+			user.attack_log += "\[[time_stamp()]\] <span class='warning'>Slammed [target.name] ([target.ckey] against over \the [src])</font>"
 			msg_admin_attack("[user] slammed a [target] against \the [src].")
 			playsound(loc, 'sound/effects/grillehit.ogg', 50, 1)
 		else
@@ -227,7 +227,7 @@
 		target.Weaken(5)
 		visible_message(SPAN_DANGER("[user] throws [target] over \the [src]!"))
 		target.attack_log += "\[[time_stamp()]\] <font color='orange'>Has been throwed by [user.name] ([user.ckey] over \the [src])</font>"
-		user.attack_log += "\[[time_stamp()]\] <font color='red'>Throwed [target.name] ([target.ckey] over \the [src])</font>"
+		user.attack_log += "\[[time_stamp()]\] <span class='warning'>Throwed [target.name] ([target.ckey] over \the [src])</font>"
 		msg_admin_attack("[user] throwed a [target] over \the [src].")
 	return TRUE
 

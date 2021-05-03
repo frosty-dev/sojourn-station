@@ -84,7 +84,7 @@
 					body += "<a href='?src=\ref[src];viewlogs="+ref+"'>LOGS</a> - "
 					body += "<a href='?src=\ref[src];adminobservejump="+ref+"'>JMP</a><br>"
 					if(antagonist > 0)
-						body += "<font size='2'><a href='?src=\ref[src];check_antagonist=1'><font color='red'><b>Antagonist</b></font></a></font>";
+						body += "<font size='2'><a href='?src=\ref[src];check_antagonist=1'><span class='warning'><b>Antagonist</b></font></a></font>";
 
 					body += "</td></tr></table>";
 
@@ -143,7 +143,7 @@
 						return;
 					locked_tabs.push(id);
 					var notice_span = document.getElementById(notice_span_id);
-					notice_span.innerHTML = "<font color='red'>Locked</font> ";
+					notice_span.innerHTML = "<span class='warning'>Locked</font> ";
 					//link.setAttribute("onClick","attempt('"+id+"','"+link_id+"','"+notice_span_id+"');");
 					//document.write("removeFromLocked('"+id+"','"+link_id+"','"+notice_span_id+"')");
 					//document.write("aa - "+link.getAttribute("onClick"));

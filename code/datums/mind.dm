@@ -144,7 +144,7 @@
 	out += "<b>Make_antagonist: </b><br>"
 	for(var/A in GLOB.all_antag_selectable_types)
 		var/datum/antagonist/antag = GLOB.all_antag_selectable_types[A]
-		var/antag_name = (antag.bantype in GLOB.all_antag_selectable_types) ? antag.bantype : "<font color='red'>[antag.bantype]</font>"
+		var/antag_name = (antag.bantype in GLOB.all_antag_selectable_types) ? antag.bantype : "<span class='warning'>[antag.bantype]</font>"
 		out += "<a href='?src=\ref[src];add_antagonist=[antag.bantype]'>[antag_name]</a><br>"
 	out += "<br>"
 

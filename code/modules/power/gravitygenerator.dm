@@ -263,7 +263,7 @@ var/const/GRAV_NEEDS_WRENCH = 3
 
 	if(href_list["gentoggle"])
 		breaker = !breaker
-		investigate_log("was toggled [breaker ? "<font color='green'>ON</font>" : "<font color='red'>OFF</font>"] by [usr.key].", "gravity")
+		investigate_log("was toggled [breaker ? "<span class='green'>ON</font>" : "<span class='warning'>OFF</span>"] by [usr.key].", "gravity")
 		set_power()
 		src.updateUsrDialog()
 

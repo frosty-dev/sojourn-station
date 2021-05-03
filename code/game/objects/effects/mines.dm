@@ -41,7 +41,7 @@
 
 	if(ishuman(M))
 		for(var/mob/O in viewers(world.view, src.loc))
-			to_chat(O, "<font color='red'>[M] triggered the \icon[src] [src]</font>")
+			to_chat(O, "<span class='warning'>[M] triggered the \icon[src] [src]</font>")
 		triggered = 1
 		call(src,triggerproc)(M)
 
