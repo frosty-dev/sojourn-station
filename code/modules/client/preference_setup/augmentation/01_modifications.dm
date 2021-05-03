@@ -121,7 +121,7 @@
 
 /datum/preferences/proc/modifications_allowed()
 	for(var/category in setup_options)
-		if(!get_option(category).allow_modifications)
+		if(!get_option(category)?.allow_modifications)
 			return FALSE
 	return TRUE
 

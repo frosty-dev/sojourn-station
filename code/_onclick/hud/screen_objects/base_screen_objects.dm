@@ -333,7 +333,7 @@
 	name = "health"
 	icon = 'icons/mob/screen/ErisStyle.dmi'
 	icon_state = "health0"
-	screen_loc = "15,7"
+	screen_loc = "14,7"
 	process_flag = TRUE
 
 /obj/screen/health/New()
@@ -504,7 +504,7 @@
 	name = "nutrition"
 	icon = 'icons/mob/screen/ErisStyle.dmi'
 	icon_state = "blank"
-	screen_loc = "15,6"
+	screen_loc = "14,6"
 	process_flag = TRUE
 
 /obj/screen/nutrition/New()
@@ -541,7 +541,7 @@
 	name = "bodytemp"
 	icon = 'icons/mob/screen/ErisStyle.dmi'
 	icon_state = "blank"
-	screen_loc = "15,8"
+	screen_loc = "14,8"
 	process_flag = TRUE
 
 
@@ -610,7 +610,7 @@
 	name = "pressure"
 	icon = 'icons/mob/screen/ErisStyle.dmi'
 	icon_state = "blank"
-	screen_loc = "15,13"
+	screen_loc = "14,13"
 	process_flag = TRUE
 
 /obj/screen/pressure/New()
@@ -642,7 +642,7 @@
 	name = "toxin"
 	icon = 'icons/mob/screen/ErisStyle.dmi'
 	icon_state = "tox0"
-	screen_loc = "15,10"
+	screen_loc = "14,10"
 	process_flag = 1
 
 /obj/screen/toxin/New()
@@ -673,7 +673,7 @@
 	name = "oxygen"
 	icon = 'icons/mob/screen/ErisStyle.dmi'
 	icon_state = "oxy0"
-	screen_loc = "15,12"
+	screen_loc = "14,12"
 	process_flag = TRUE
 
 /obj/screen/oxygen/New()
@@ -704,7 +704,7 @@
 	name = "fire"
 	icon = 'icons/mob/screen/ErisStyle.dmi'
 	icon_state = "blank"
-	screen_loc = "15,9"
+	screen_loc = "14,9"
 	process_flag = TRUE
 
 
@@ -737,7 +737,7 @@ obj/screen/fire/DEADelize()
 	name = "internal"
 	icon = 'icons/mob/screen/ErisStyle.dmi'
 	icon_state = "blank"
-	screen_loc = "15,14"
+	screen_loc = "14,14"
 
 /obj/screen/internal/New()
 	..()
@@ -895,7 +895,7 @@ obj/screen/fire/DEADelize()
 	name = "pull"
 	icon = 'icons/mob/screen/ErisStyle.dmi'
 	icon_state = "pull0"
-	screen_loc = "14,2"
+	screen_loc = "13,2"
 
 /obj/screen/pull/New()
 	..()
@@ -918,7 +918,7 @@ obj/screen/fire/DEADelize()
 	name = "throw"
 	icon = 'icons/mob/screen/ErisStyle.dmi'
 	icon_state = "act_throw_off"
-	screen_loc = "15,2"
+	screen_loc = "14,2"
 
 /obj/screen/HUDthrow/New()
 	/*if(usr)
@@ -946,7 +946,7 @@ obj/screen/fire/DEADelize()
 	name = "drop"
 	icon = 'icons/mob/screen/ErisStyle.dmi'
 	icon_state = "act_drop"
-	screen_loc = "15:-16,2"
+	screen_loc = "14:-16,2"
 	layer = HUD_LAYER
 	plane = HUD_PLANE
 
@@ -960,7 +960,7 @@ obj/screen/fire/DEADelize()
 	name = "resist"
 	icon = 'icons/mob/screen/ErisStyle.dmi'
 	icon_state = "act_resist"
-	screen_loc = "14:16,2"
+	screen_loc = "13:16,2"
 	layer = HUD_LAYER
 	plane = HUD_PLANE
 
@@ -986,7 +986,7 @@ obj/screen/fire/DEADelize()
 	name = "mov_intent"
 	icon = 'icons/mob/screen/ErisStyle.dmi'
 	icon_state = "running"
-	screen_loc = "14,1"
+	screen_loc = "13,1"
 
 
 /obj/screen/mov_intent/Click()

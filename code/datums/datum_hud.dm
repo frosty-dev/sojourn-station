@@ -100,9 +100,9 @@
 
 
 	HUDoverlays = list(
-		"flash"      = list("type" = /obj/screen/full_1_tile_overlay, "loc" = "WEST,SOUTH-1 to EAST+1,NORTH", "minloc" = "WEST,SOUTH to EAST,NORTH", "icon_state" = "blank"),
-		"pain"       = list("type" = /obj/screen/full_1_tile_overlay, "loc" = "WEST,SOUTH-1 to EAST+1,NORTH", "minloc" = "WEST,SOUTH to EAST,NORTH", "icon_state" = "blank"),
-		"drugeffect" = list("type" = /obj/screen/drugoverlay,         "loc" = "WEST,SOUTH-1 to EAST+1,NORTH", "minloc" = "WEST,SOUTH to EAST,NORTH", "icon_state" = "blank"),
+		"flash"      = list("type" = /obj/screen/full_1_tile_overlay, "loc" = "WEST,SOUTH-1 to EAST,NORTH", "minloc" = "WEST,SOUTH to EAST,NORTH", "icon_state" = "blank"),
+		"pain"       = list("type" = /obj/screen/full_1_tile_overlay, "loc" = "WEST,SOUTH-1 to EAST,NORTH", "minloc" = "WEST,SOUTH to EAST,NORTH", "icon_state" = "blank"),
+		"drugeffect" = list("type" = /obj/screen/drugoverlay,         "loc" = "WEST,SOUTH-1 to EAST,NORTH", "minloc" = "WEST,SOUTH to EAST,NORTH", "icon_state" = "blank"),
 
 		"damageoverlay"  = list("type" = /obj/screen/damageoverlay,   "loc" = "1,1:-32", "icon" =  'icons/mob/screen1_full.dmi'),
 		"glassesoverlay" = list("type" = /obj/screen/glasses_overlay, "loc" = "1,1:-32", "icon_state" = "blank"),
@@ -110,30 +110,30 @@
 
 	HUDneed = list(
 //status
-	"nutrition"          = list("type" = /obj/screen/nutrition,         "loc" = "EAST+1:1,BOTTOM+3:25",   "minloc" = "RIGHT:1,5:26",  "background" = "back17"),
-	"neural system accumulation" = list("type" = /obj/screen/nsa,       "loc" = "EAST+1:1,BOTTOM+4:6",    "minloc" = "RIGHT:1,6:7",   "background" = "back17"),
-	"body temperature"   = list("type" = /obj/screen/bodytemp,          "loc" = "EAST+1:1,BOTTOM+4:19",   "minloc" = "RIGHT:1,6:20",  "background" = "back17"),
-	"health"             = list("type" = /obj/screen/health,            "loc" = "EAST+1,BOTTOM+5",        "minloc" = "RIGHT,7",       "background" = "back1"),
-	"sanity"             = list("type" = /obj/screen/sanity,            "loc" = "EAST+1,BOTTOM+6",        "minloc" = "RIGHT,8:-2",    "background" = "back1"),
-	"oxygen"             = list("type" = /obj/screen/oxygen,            "loc" = "EAST+1:1,BOTTOM+7",      "minloc" = "RIGHT:1,9:-3",  "background" = "back18"),
-	"fire"               = list("type" = /obj/screen/fire,              "loc" = "EAST+1:16,BOTTOM+7",     "minloc" = "RIGHT:16,9:-3", "background" = "back18"),
-	"pressure"           = list("type" = /obj/screen/pressure,          "loc" = "EAST+1:1,BOTTOM+7:15",   "minloc" = "RIGHT:1,9:12",  "background" = "back18"),
-	"toxin"              = list("type" = /obj/screen/toxin,             "loc" = "EAST+1:16,BOTTOM+7:15",  "minloc" = "RIGHT:16,9:12", "background" = "back18"),
-	"internal"           = list("type" = /obj/screen/internal,          "loc" = "EAST+1,BOTTOM+8:-2",     "minloc" = "RIGHT,10:-5",   "background" = "back15"),
+	"nutrition"          = list("type" = /obj/screen/nutrition,         "loc" = "EAST,BOTTOM+3:25",   "minloc" = "RIGHT:1,5:26",  "background" = "back17"),
+	"neural system accumulation" = list("type" = /obj/screen/nsa,       "loc" = "EAST,BOTTOM+4:6",    "minloc" = "RIGHT:1,6:7",   "background" = "back17"),
+	"body temperature"   = list("type" = /obj/screen/bodytemp,          "loc" = "EAST,BOTTOM+4:19",   "minloc" = "RIGHT:1,6:20",  "background" = "back17"),
+	"health"             = list("type" = /obj/screen/health,            "loc" = "EAST,BOTTOM+5",        "minloc" = "RIGHT,7",       "background" = "back1"),
+	"sanity"             = list("type" = /obj/screen/sanity,            "loc" = "EAST,BOTTOM+6",        "minloc" = "RIGHT,8:-2",    "background" = "back1"),
+	"oxygen"             = list("type" = /obj/screen/oxygen,            "loc" = "EAST:1,BOTTOM+7",      "minloc" = "RIGHT:1,9:-3",  "background" = "back18"),
+	"fire"               = list("type" = /obj/screen/fire,              "loc" = "EAST:16,BOTTOM+7",     "minloc" = "RIGHT:16,9:-3", "background" = "back18"),
+	"pressure"           = list("type" = /obj/screen/pressure,          "loc" = "EAST:1,BOTTOM+7:15",   "minloc" = "RIGHT:1,9:12",  "background" = "back18"),
+	"toxin"              = list("type" = /obj/screen/toxin,             "loc" = "EAST:16,BOTTOM+7:15",  "minloc" = "RIGHT:16,9:12", "background" = "back18"),
+	"internal"           = list("type" = /obj/screen/internal,          "loc" = "EAST,BOTTOM+8:-2",     "minloc" = "RIGHT,10:-5",   "background" = "back15"),
 //corner buttons
-	"jump"               = list("type" = /obj/screen/jump,              "loc" = "EAST+1,BOTTOM+1:-6",     "minloc" = "RIGHT,3:-6",   "background" = "back17-1"),
-	"look up"            = list("type" = /obj/screen/look_up,           "loc" = "EAST,BOTTOM:13",         "minloc" = "RIGHT-1,2:13", "background" = "back17-1"),
-	"throw"              = list("type" = /obj/screen/HUDthrow,          "loc" = "EAST+1,BOTTOM:13",       "minloc" = "RIGHT,2:13",   "background" = "back17-1"),
-	"pull"               = list("type" = /obj/screen/pull,              "loc" = "EAST-1,BOTTOM:13",       "minloc" = "RIGHT-2,2:13", "background" = "back17-1"),
-	"drop"               = list("type" = /obj/screen/drop,              "loc" = "EAST+1,BOTTOM",          "minloc" = "RIGHT,2",      "background" = "back17-1"),
-	"resist"             = list("type" = /obj/screen/resist,            "loc" = "EAST-1,BOTTOM",          "minloc" = "RIGHT-2,2",    "background" = "back17-1"),
-	"rest"               = list("type" = /obj/screen/rest,              "loc" = "EAST,BOTTOM",            "minloc" = "RIGHT-1,2",    "background" = "back17-1"),
-	"move intent"        = list("type" = /obj/screen/mov_intent,        "loc" = "EAST,BOTTOM-1",          "minloc" = "RIGHT-1,1",    "background" = "back1"),
-	"implant bionics"    = list("type" = /obj/screen/implant_bionics,   "loc" = "EAST-2,BOTTOM-1",        "minloc" = "12,1",         "background" = "back13"),
-	"craft menu"         = list("type" = /obj/screen/craft_menu,        "loc" = "EAST-2:16,BOTTOM-1",     "minloc" = "12:16,1",      "background" = "back13"),
-	"wield"              = list("type" = /obj/screen/wield,             "loc" = "EAST-2:16,BOTTOM",       "minloc" = "12:16,2",      "background" = "back13"),
-	"intent"             = list("type" = /obj/screen/intent,            "loc" = "EAST-1,BOTTOM-1",        "minloc" = "13,1",         "background" = "back1"),
-	"damage zone"        = list("type" = /obj/screen/zone_sel,          "loc" = "EAST+1,BOTTOM-1",        "minloc" = "RIGHT,1",      "background" = "back1"),
+	"jump"               = list("type" = /obj/screen/jump,              "loc" = "EAST,BOTTOM+1:-6",     "minloc" = "RIGHT,3:-6",   "background" = "back17-1"),
+	"look up"            = list("type" = /obj/screen/look_up,           "loc" = "EAST-1,BOTTOM:13",         "minloc" = "RIGHT-1,2:13", "background" = "back17-1"),
+	"throw"              = list("type" = /obj/screen/HUDthrow,          "loc" = "EAST,BOTTOM:13",       "minloc" = "RIGHT,2:13",   "background" = "back17-1"),
+	"pull"               = list("type" = /obj/screen/pull,              "loc" = "EAST-2,BOTTOM:13",       "minloc" = "RIGHT-2,2:13", "background" = "back17-1"),
+	"drop"               = list("type" = /obj/screen/drop,              "loc" = "EAST,BOTTOM",          "minloc" = "RIGHT,2",      "background" = "back17-1"),
+	"resist"             = list("type" = /obj/screen/resist,            "loc" = "EAST-2,BOTTOM",          "minloc" = "RIGHT-2,2",    "background" = "back17-1"),
+	"rest"               = list("type" = /obj/screen/rest,              "loc" = "EAST-1,BOTTOM",            "minloc" = "RIGHT-1,2",    "background" = "back17-1"),
+	"move intent"        = list("type" = /obj/screen/mov_intent,        "loc" = "EAST-1,BOTTOM-1",          "minloc" = "RIGHT-1,1",    "background" = "back1"),
+	"implant bionics"    = list("type" = /obj/screen/implant_bionics,   "loc" = "EAST-3,BOTTOM-1",        "minloc" = "12,1",         "background" = "back13"),
+	"craft menu"         = list("type" = /obj/screen/craft_menu,        "loc" = "EAST-3,BOTTOM",     "minloc" = "12:16,1",      "background" = "back13"),
+	"wield"              = list("type" = /obj/screen/wield,             "loc" = "EAST-3:16,BOTTOM",       "minloc" = "12:16,2",      "background" = "back13"),
+	"intent"             = list("type" = /obj/screen/intent,            "loc" = "EAST-2,BOTTOM-1",        "minloc" = "13,1",         "background" = "back1"),
+	"damage zone"        = list("type" = /obj/screen/zone_sel,          "loc" = "EAST,BOTTOM-1",        "minloc" = "RIGHT,1",      "background" = "back1"),
 //hand buttons
 	"equip"              = list("type" = /obj/screen/equip,             "loc" = "8,1",                "minloc" = "7,2",          "background" = "back14-l"),
 	"swap hand"          = list("type" = /obj/screen/swap,              "loc" = "8,1",                "minloc" = "7,2"),
@@ -181,11 +181,11 @@
 		list("loc" = "12,0", "icon_state" = "frame3-2"),
 		list("loc" = "12,0", "icon_state" = "frame0-2"),
 		list("loc" = "12,0", "icon_state" = "frame0-3"),
-		list("loc" = "EAST+1,BOTTOM+2:25", "icon_state" = "frame1-1"),
-		list("loc" = "EAST+1,BOTTOM+2:25", "icon_state" = "frame3-3"),
-		list("loc" = "EAST+1,BOTTOM+2:25", "icon_state" = "frame0-4"),
-		list("loc" = "EAST+1,BOTTOM+8:14", "icon_state" = "frame0-1"),
-		list("loc" = "EAST+1,BOTTOM+8:14", "icon_state" = "frame3-1")
+		list("loc" = "EAST,BOTTOM+2:25", "icon_state" = "frame1-1"),
+		list("loc" = "EAST,BOTTOM+2:25", "icon_state" = "frame3-3"),
+		list("loc" = "EAST,BOTTOM+2:25", "icon_state" = "frame0-4"),
+		list("loc" = "EAST,BOTTOM+8:14", "icon_state" = "frame0-1"),
+		list("loc" = "EAST,BOTTOM+8:14", "icon_state" = "frame3-1")
 		)
 		//list("loc" = "2,3", "icon_state" = "block",  "hideflag" = TOGGLE_INVENTORY_FLAG),
 
