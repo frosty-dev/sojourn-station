@@ -67,7 +67,7 @@
 */
 	output += "</div>"
 
-	panel = new(src, "<div align='center'><B>NAVARRO</B>","NAVARRO", 210, 280, src)
+	panel = new(src, "new_player_panel_ass","<center>NAVARRO</center>", 210, 280, src)
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
