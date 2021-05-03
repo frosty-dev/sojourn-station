@@ -54,11 +54,10 @@
 
 	has_resources = 1
 
-/turf/simulated/mineral/Initialize()
-	..()
+/turf/simulated/mineral/New()
 	icon_state = "rock[rand(0,4)]"
-	spawn(0)
-		MineralSpread()
+	//spawn(0)
+	//	MineralSpread()
 
 /turf/simulated/mineral/can_build_cable()
 	return !density
