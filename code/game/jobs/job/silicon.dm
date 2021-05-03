@@ -6,7 +6,7 @@
 	faction = MAP_FACTION
 	total_positions = 0 // Not used for AI, see is_position_available below and modules/mob/living/silicon/ai/latejoin.dm
 	spawn_positions = 1
-	selection_color = "#b5b7cb"
+	selection_color = "#1f3744"
 	supervisors = "your laws and the Soteria Research Overseer"
 	difficulty = "Гипер сложно."
 	req_admin_notify = 1
@@ -51,7 +51,7 @@
 	//alt_titles = list("Drone", "Cyborg")
 	supervisors = "your laws and the AI"
 	difficulty = "Средне."
-	selection_color = "#cdcfe0"
+	selection_color = "#1f3744"
 	account_allowed = 0
 	wage = WAGE_NONE
 

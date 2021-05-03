@@ -10,7 +10,7 @@
 	faction = MAP_FACTION
 	department = "Civilian"
 	supervisors = "nobody! Enjoy your time off"
-	selection_color = "#9b633e"
+	selection_color = "#503421"
 	access = list(access_maint_tunnels)
 //	minimal_access = list(access_maint_tunnels)
 	outfit_type = /decl/hierarchy/outfit/job/assistant
@@ -32,7 +32,7 @@
 	faction = MAP_FACTION
 	department = "Cargo"
 	supervisors = "nobody! Enjoy your time off"
-	selection_color = "#9b633e"
+	selection_color = "#503421"
 	access = list(access_maint_tunnels)
 //	minimal_access = list(access_maint_tunnels)
 	outfit_type = /decl/hierarchy/outfit/job/assistant
@@ -51,7 +51,7 @@
 	faction = MAP_FACTION
 	department = "Engineering"
 	supervisors = "nobody! Enjoy your time off"
-	selection_color = "#5B4D20"
+	selection_color = "#372e14"
 	access = list(access_maint_tunnels, access_external_airlocks, access_construction)
 //	minimal_access = list(access_maint_tunnels, access_external_airlocks)
 	outfit_type = /decl/hierarchy/outfit/job/assistant
@@ -101,7 +101,7 @@
 	faction = MAP_FACTION
 	department = "Security"
 	supervisors = "nobody! Enjoy your time off"
-	selection_color = "#601C1C"
+	selection_color = "#2c0c0c"
 	access = list(access_maint_tunnels)
 //	minimal_access = list(access_maint_tunnels)
 	outfit_type = /decl/hierarchy/outfit/job/assistant
@@ -120,7 +120,7 @@
 	faction = MAP_FACTION
 	department = "Command"
 	supervisors = "nobody! Enjoy your time off"
-	selection_color = "#2F2F7F"
+	selection_color = "#121238"
 	access = list(access_maint_tunnels, access_external_airlocks)
 //	minimal_access = list(access_maint_tunnels, access_external_airlocks)
 	outfit_type = /decl/hierarchy/outfit/job/assistant

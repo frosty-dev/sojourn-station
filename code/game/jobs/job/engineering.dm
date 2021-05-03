@@ -9,7 +9,7 @@
 	spawn_positions = 1
 	supervisors = "the Nadezhda Council"
 	difficulty = "Средне."
-	selection_color = "#c7b97b"
+	selection_color = "#363220"
 	req_admin_notify = 1
 	also_known_languages = list(LANGUAGE_CYRILLIC = 100, LANGUAGE_SERBIAN = 25)
 	wage = WAGE_COMMAND
@@ -71,7 +71,7 @@
 	spawn_positions = 4
 	supervisors = "the Guild Master"
 	difficulty = "Средне."
-	selection_color = "#d5c88f"
+	selection_color = "#645d3d"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 100, LANGUAGE_SERBIAN = 5)
 	wage = WAGE_PROFESSIONAL
 

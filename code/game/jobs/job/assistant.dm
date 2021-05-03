@@ -8,7 +8,7 @@
 	spawn_positions = -1
 	supervisors = "anyone who pays you"
 	difficulty = "Очень легко."
-	selection_color = "#dddddd"
+	selection_color = "#222222"
 	initial_balance	= 800
 	wage = WAGE_NONE //Get a job ya lazy bum
 	//alt_titles = list("Visitor", "Refugee","Guild Novice","Soteria Intern","Lonestar Intern")

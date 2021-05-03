@@ -9,7 +9,7 @@
 	spawn_positions = 1
 	supervisors = "the Nadezhda Council"
 	difficulty = "Сложно."
-	selection_color = "#97b0be"
+	selection_color = "#233946"
 	req_admin_notify = 1
 	wage = WAGE_NONE
 	also_known_languages = list(LANGUAGE_CYRILLIC = 60, LANGUAGE_SERBIAN = 100)
@@ -61,7 +61,7 @@
 	spawn_positions = 1
 	supervisors = "the Foreman"
 	difficulty = "Средне."
-	selection_color = "#a7bbc6"
+	selection_color = "#1d3542"
 	wage = WAGE_NONE
 	also_known_languages = list(LANGUAGE_CYRILLIC = 30)
 
@@ -104,7 +104,7 @@
 	spawn_positions = 2
 	supervisors = "the Foreman"
 	difficulty = "Средне."
-	selection_color = "#a7bbc6"
+	selection_color = "#172a35"
 	wage = WAGE_NONE
 	also_known_languages = list(LANGUAGE_CYRILLIC = 30)
 

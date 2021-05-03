@@ -9,7 +9,7 @@
 	spawn_positions = 1
 	supervisors = "the Nadezhda Council"
 	difficulty = "Средне."
-	selection_color = "#b39aaf"
+	selection_color = "#491e42"
 	req_admin_notify = 1
 	wage = WAGE_COMMAND
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 25)
@@ -68,7 +68,7 @@
 	spawn_positions = 5
 	supervisors = "the Chief Research Overseer"
 	difficulty = "Средне."
-	selection_color = "#bdb1bb"
+	selection_color = "#411b3a"
 	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10)
 
@@ -114,7 +114,7 @@
 	spawn_positions = 2
 	supervisors = "the Chief Research Overseer"
 	difficulty = "Средне."
-	selection_color = "#bdb1bb"
+	selection_color = "#3f1838"
 	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10)
 

@@ -8,7 +8,7 @@
 	spawn_positions = 2
 	supervisors = "the Chief Executive Officer"
 	difficulty = "Легко."
-	selection_color = "#dddddd"
+	selection_color = "#333333"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 15, LANGUAGE_JIVE = 80)
 	access = list(access_hydroponics, access_maint_tunnels, access_bar, access_kitchen)
 	initial_balance = 3000
@@ -42,7 +42,7 @@
 	spawn_positions = 2
 	supervisors = "the Chief Executive Officer"
 	difficulty = "Легко."
-	selection_color = "#dddddd"
+	selection_color = "#333333"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10, LANGUAGE_JIVE = 60)
 	access = list(access_hydroponics, access_maint_tunnels, access_bar, access_kitchen)
 	initial_balance = 750
@@ -77,7 +77,7 @@
 	spawn_positions = 2
 	supervisors = "the Chief Executive Officer"
 	difficulty = "Легко."
-	selection_color = "#dddddd"
+	selection_color = "#333333"
 	//alt_titles = list("Hydroponicist")
 	also_known_languages = list(LANGUAGE_CYRILLIC = 15, LANGUAGE_JIVE = 80)
 	access = list(access_hydroponics, access_maint_tunnels, access_bar, access_kitchen)
@@ -113,7 +113,7 @@
 	spawn_positions = 2
 	supervisors = "the Chief Executive Officer"
 	difficulty = "Легко."
-	selection_color = "#dddddd"
+	selection_color = "#333333"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 15, LANGUAGE_SERBIAN = 5, LANGUAGE_JIVE = 80)
 	access = list(access_maint_tunnels, access_theatre)
 	outfit_type = /decl/hierarchy/outfit/job/service/actor
@@ -147,7 +147,7 @@
 	spawn_positions = 2
 	supervisors = "the Chief Executive Officer"
 	difficulty = "Легко."
-	selection_color = "#dddddd"
+	selection_color = "#333333"
 	//alt_titles = list("Custodian","Sanitation Technician")
 	also_known_languages = list(LANGUAGE_CYRILLIC = 15, LANGUAGE_JIVE = 80)
 	access = list(access_janitor, access_maint_tunnels, access_morgue, access_crematorium, access_mailsorting, access_cargo)

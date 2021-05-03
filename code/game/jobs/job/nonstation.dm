@@ -9,7 +9,7 @@
 	spawn_positions = 5
 	department = "Aborigines"
 	supervisors = "nobody! Enjoy your time off"
-	selection_color = "#9b633e"
+	selection_color = "#332216"
 //	minimal_access = list(access_maint_tunnels)
 	outfit_type = /decl/hierarchy/outfit/aborigine
 

@@ -1,6 +1,6 @@
 /obj/screen/item_action/top_bar/gun
 	icon = 'icons/mob/screen/gun_actions.dmi'
-	screen_loc = "8,1:13"
+	screen_loc = "8,2:13"
 	minloc = "7,2:13"
 
 /obj/screen/item_action/top_bar/gun/safety

@@ -9,7 +9,7 @@
 	spawn_positions = 1
 	supervisors = "the Council"
 	difficulty = "Очень сложно."
-	selection_color = "#97b0be"
+	selection_color = "#254558"
 	req_admin_notify = 1
 	wage = WAGE_COMMAND
 	also_known_languages = list(LANGUAGE_CYRILLIC = 60, LANGUAGE_SERBIAN = 60)
@@ -66,7 +66,7 @@
 	spawn_positions = 1
 	supervisors = "the Council"
 	difficulty = "Очень сложно."
-	selection_color = "#97b0be"
+	selection_color = "#254558"
 	req_admin_notify = 1
 	wage = WAGE_COMMAND
 	also_known_languages = list(LANGUAGE_CYRILLIC = 60, LANGUAGE_SERBIAN = 60)
@@ -120,7 +120,7 @@
 	spawn_positions = 1
 	supervisors = "the Warrant Officer"
 	difficulty = "Сложно."
-	selection_color = "#a7bbc6"
+	selection_color = "#1f3744"
 	department_account_access = TRUE
 	wage = WAGE_LABOUR_HAZARD
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 25)
@@ -167,7 +167,7 @@
 	spawn_positions = 1
 	supervisors = "the Militia Commander"
 	difficulty = "Сложно."
-	selection_color = "#a7bbc6"
+	selection_color = "#1f3744"
 	wage = WAGE_LABOUR_HAZARD
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 25)
 	minimum_character_age = 25
@@ -216,7 +216,7 @@
 	spawn_positions = 2
 	supervisors = "the Warrant Officer"
 	difficulty = "Сложно."
-	selection_color = "#a7bbc6"
+	selection_color = "#1f3744"
 	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 50, LANGUAGE_SERBIAN = 50)
 
@@ -264,7 +264,7 @@
 	spawn_positions = 2
 	supervisors = "the Militia Commander"
 	difficulty = "Сложно."
-	selection_color = "#a7bbc6"
+	selection_color = "#1f3744"
 	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 5)
 
@@ -309,7 +309,7 @@
 	supervisors = "the Militia Commander"
 	difficulty = "Сложно."
 	//alt_titles = list("Blackshield Junior Trooper")
-	selection_color = "#a7bbc6"
+	selection_color = "#1f3744"
 	wage = WAGE_LABOUR_HAZARD
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 25)
 
@@ -355,7 +355,7 @@
 	supervisors = "the Warrant Officer"
 	difficulty = "Сложно."
 	//alt_titles = list("Marshal Junior Operative")
-	selection_color = "#a7bbc6"
+	selection_color = "#1f3744"
 	wage = WAGE_LABOUR_HAZARD
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 25)
 

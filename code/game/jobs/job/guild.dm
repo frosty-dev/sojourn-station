@@ -10,7 +10,7 @@
 	spawn_positions = 1
 	supervisors = "the Nadezhda Council"
 	difficulty = "Средне."
-	selection_color = "#b3a68c"
+	selection_color = "#584d37"
 	wage = WAGE_NONE	//Guild merchant draws a salary from the guild account
 	also_known_languages = list(LANGUAGE_CYRILLIC = 80, LANGUAGE_SERBIAN = 100, LANGUAGE_JIVE = 80)
 	access = list(
@@ -64,7 +64,7 @@
 	spawn_positions = 4
 	supervisors = "the Chief Executive Officer"
 	difficulty = "Легко."
-	selection_color = "#c3b9a6"
+	selection_color = "#524836"
 	wage = WAGE_LABOUR_DUMB
 	department_account_access = TRUE
 	outfit_type = /decl/hierarchy/outfit/job/cargo/cargo_tech
@@ -112,7 +112,7 @@
 	spawn_positions = 4
 	supervisors = "the Chief Executive Officer"
 	difficulty = "Легко."
-	selection_color = "#c3b9a6"
+	selection_color = "#574d3b"
 	wage = WAGE_LABOUR_HAZARD //The miners union is stubborn
 	also_known_languages = list(LANGUAGE_CYRILLIC = 15, LANGUAGE_SERBIAN = 5, LANGUAGE_JIVE = 80)
 
