@@ -10,7 +10,7 @@ html, body {
 	color: #a4bad6;
 }
 body {
-	background: #171717;
+	background: #101010;
     font-family: Verdana, sans-serif;
     font-size: 9pt;
 	font-color: #a4bad6;
@@ -99,7 +99,7 @@ a.popt {text-decoration: none;}
     font-weight: bold;
 	color: #a4bad6;
 }
-#newMessages:hover {background: #171717;}
+#newMessages:hover {background: #191919;}
 #newMessages i {vertical-align: middle; padding-left: 3px;}
 #ping {
 	position: fixed;
