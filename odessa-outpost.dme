@@ -1606,6 +1606,7 @@
 #include "code\modules\flufftext\Dreaming.dm"
 #include "code\modules\flufftext\TextFilters.dm"
 #include "code\modules\food\recipes_microwave.dm"
+#include "code\modules\fullscreen\fullscreen.dm"
 #include "code\modules\games\boardgame.dm"
 #include "code\modules\games\cah.dm"
 #include "code\modules\games\cah_black_cards.dm"

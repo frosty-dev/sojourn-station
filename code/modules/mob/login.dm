@@ -42,6 +42,10 @@
 	sight |= SEE_SELF
 	..()
 
+    if(client?.prefs?.fullscreen)
+        winset(client, "mainwindow", "is-maximized=false;can-resize=false;titlebar=false;menu=\"\"")
+        winset(client, "mainwindow", "is-maximized=true")
+
 	if(loc && !isturf(loc))
 		client.eye = loc
 		client.perspective = EYE_PERSPECTIVE
