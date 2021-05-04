@@ -55,7 +55,7 @@
 	s["roundduration"] = roundduration2text()
 
 	s["stationname"] = station_name
-	s["storyteller"] = "[get_storyteller() ? get_storyteller().name : "None. Somehow."]"
+	s["storyteller"] = "[get_storyteller() ? get_storyteller().name : "LOBBY"]"
 
 	var/decl/security_state/security_state = decls_repository.get_decl(maps_data.security_state)
 	s["securitylevel"] = "[security_state.current_security_level.name]" 
