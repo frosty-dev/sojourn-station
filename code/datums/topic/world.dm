@@ -63,7 +63,10 @@
 	//this entire part is dedicated to getting shuttle status and ETA.
 	//It could've been a one-liner, but it would be an unreadable mess.
 	var/shuttle_status = "Idle"
-	if(evacuation_controller.has_eta())
+	//evacuation_controller.has_eta() sometimes runtimes with "cannot execute null.has_eta()".
+	//i have no data on the regularity of this except "it happened before".
+	//i still believe (yet) in bay coders' ability not to fuck shit up, so i am going to assume this line runtimes only when topic is called in round init. 
+	if(evacuation_controller?.has_eta()) 
 		if(evacuation_controller.is_arriving())
 			shuttle_status = "ETA:"
 		else if(evacuation_controller.is_prepared())
