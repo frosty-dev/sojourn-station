@@ -488,7 +488,7 @@
 		return
 
 	if(src.occupant)
-		to_chat(usr, "<span class='notice'><B>\The [src] is in use.</B></span>")
+		to_chat(usr, "<span class='notice'><B>[src] уже используется.</B></span>")
 		return
 
 	for(var/mob/living/carbon/slime/M in range(1,usr))
@@ -496,7 +496,7 @@
 			to_chat(usr, "You're too busy getting your life sucked out of you.")
 			return
 
-	visible_message("[usr] starts climbing into \the [src].")
+	visible_message("[usr] вы начинаете забираться в [src].")
 
 	if(do_after(usr, 20, src))
 
@@ -504,7 +504,7 @@
 			return
 
 		if(src.occupant)
-			to_chat(usr, "<span class='notice'><B>\The [src] is in use.</B></span>")
+			to_chat(usr, "<span class='notice'><B>[src] уже используется.</B></span>")
 			return
 
 		usr.stop_pulling()
@@ -526,7 +526,7 @@
 	set_occupant(null)
 
 	spawn(30)
-		state("Please remember to check inside the cryopod if any belongings are missing.")
+		state("Не забудьте проверить криокапсулу на наличие каких-либо вещей.")
 		playsound(loc, "robot_talk_light", 100, 0, 0)
 
 //Notifications is set false when someone spawns in here

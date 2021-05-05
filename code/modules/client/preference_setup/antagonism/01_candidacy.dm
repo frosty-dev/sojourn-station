@@ -46,13 +46,13 @@
 		bantypes += antag.bantype
 		. += "<tr><td>[antag.bantype]: </td><td>"
 		if(jobban_isbanned(preference_mob(), antag.bantype) || (antag.id == ROLE_MALFUNCTION && jobban_isbanned(preference_mob(), "AI")))
-			. += "<span class='danger'>\[BANNED\]</span><br>"
+			. += "<span class='danger'>\[БАН\]</span><br>"
 		else if(antag.bantype in pref.be_special_role)
-			. += "<span class='linkOn'>Yes</span> <a href='?src=\ref[src];add_never=[antag.bantype]'>Never</a></br>"
+			. += "<span class='linkOn'>Yes</span> <a href='?src=\ref[src];add_never=[antag.bantype]'>Никогда</a></br>"
 		else if(antag.bantype in pref.never_be_special_role)
-			. += "<a href='?src=\ref[src];add_special=[antag.bantype]'>Yes</a> <span class='linkOn'>Never</span></br>"
+			. += "<a href='?src=\ref[src];add_special=[antag.bantype]'>Да</a> <span class='linkOn'>Никогда</span></br>"
 		else
-			. += "<a href='?src=\ref[src];add_special=[antag.bantype]'>Yes</a> <a href='?src=\ref[src];add_never=[antag.bantype]'>Never</a></br>"
+			. += "<a href='?src=\ref[src];add_special=[antag.bantype]'>Да</a> <a href='?src=\ref[src];add_never=[antag.bantype]'>Никогда</a></br>"
 		. += "</td></tr>"
 
 	var/list/ghost_traps = get_ghost_traps()
@@ -63,15 +63,15 @@
 
 		. += "<tr><td>[ghost_trap.ghost_trap_role]: </td><td>"
 		if(banned_from_ghost_role(preference_mob(), ghost_trap))
-			. += "<span class='danger'>\[BANNED\]</span><br>"
+			. += "<span class='danger'>\[БАН\]</span><br>"
 		else if(ghost_trap.pref_check in pref.be_special_role)
-			. += "<span class='linkOn'>Yes</span>  <a href='?src=\ref[src];add_never=[ghost_trap.pref_check]'>Never</a></br>"
+			. += "<span class='linkOn'>Да</span>  <a href='?src=\ref[src];add_never=[ghost_trap.pref_check]'>Никогда</a></br>"
 		else if(ghost_trap.pref_check in pref.never_be_special_role)
-			. += "<a href='?src=\ref[src];add_special=[ghost_trap.pref_check]'>Yes</a>  <span class='linkOn'>Never</span></br>"
+			. += "<a href='?src=\ref[src];add_special=[ghost_trap.pref_check]'>Да</a>  <span class='linkOn'>Никогда</span></br>"
 		else
-			. += "<a href='?src=\ref[src];add_special=[ghost_trap.pref_check]'>Yes</a><a href='?src=\ref[src];add_never=[ghost_trap.pref_check]'>Never</a></br>"
+			. += "<a href='?src=\ref[src];add_special=[ghost_trap.pref_check]'>Да</a><a href='?src=\ref[src];add_never=[ghost_trap.pref_check]'>Никогда</a></br>"
 		. += "</td></tr>"
-	. += "<tr><td>Select All: </td><td><a href='?src=\ref[src];select_all=1'>Yes</a> <a href='?src=\ref[src];select_all=0'>Never</a></td></tr>"
+	. += "<tr><td>Select All: </td><td><a href='?src=\ref[src];select_all=1'>Да</a> <a href='?src=\ref[src];select_all=0'>Никогда</a></td></tr>"
 	. += "</table>"
 	. = jointext(.,null)
 

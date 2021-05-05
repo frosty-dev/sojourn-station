@@ -10,8 +10,8 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "your heart and wisdom"
-	difficulty = "Very Hard."
-	selection_color = "#ccccff"
+	difficulty = "Очень сложно."
+	selection_color = "#333366"
 	req_admin_notify = 1
 	wage = WAGE_NONE //The captain doesn't get paid, he's the one who does the paying
 	//The colony account is his, and he's free to draw as much salary as he likes
@@ -73,8 +73,8 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Premier"
-	difficulty = "Hard."
-	selection_color = "#ddddff"
+	difficulty = "Сложно."
+	selection_color = "#444466"
 	req_admin_notify = 1
 	wage = WAGE_COMMAND
 	also_known_languages = list(LANGUAGE_CYRILLIC = 20, LANGUAGE_SERBIAN = 15)

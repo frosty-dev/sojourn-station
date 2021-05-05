@@ -29,21 +29,21 @@
 
 
 /mob/new_player/proc/new_player_panel_proc()
-	var/output = "<div align='center'><B>New Player Options</B>"
+	var/output = "<div align='center'><B>Добро пожаловать!</B>"
 	output +="<hr>"
-	output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>Setup Character</A></p>"
+	output += "<p><a href='byond://?src=\ref[src];show_preferences=1'>Настройки Персонажа</A></p>"
 
 	if(SSticker.current_state <= GAME_STATE_PREGAME)
 		if(ready)
-			output += "<p>\[ <span class='linkOn'><b>Ready</b></span> | <a href='byond://?src=\ref[src];ready=0'>Not Ready</a> \]</p>"
+			output += "<p>\[ <span class='linkOn'><b>Готов</b></span> | <a href='byond://?src=\ref[src];ready=0'>Не готов</a> \]</p>"
 		else
-			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Ready</a> | <span class='linkOn'><b>Not Ready</b></span> \]</p>"
+			output += "<p>\[ <a href='byond://?src=\ref[src];ready=1'>Готов</a> | <span class='linkOn'><b>Не готов</b></span> \]</p>"
 
 	else
-		output += "<a href='byond://?src=\ref[src];manifest=1'>View the Crew Manifest</A><br><br>"
-		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Join Game!</A></p>"
+		output += "<a href='byond://?src=\ref[src];manifest=1'>Список экипажа</A><br><br>"
+		output += "<p><a href='byond://?src=\ref[src];late_join=1'>Присоединиться!</A></p>"
 
-	output += "<p><a href='byond://?src=\ref[src];observe=1'>Observe</A></p>"
+	output += "<p><a href='byond://?src=\ref[src];observe=1'>Наблюдать</A></p>"
 
 	if(!IsGuestKey(src.key))
 		establish_db_connection()
@@ -54,19 +54,20 @@
 			// TODO: reimplement database interaction
 			var/DBQuery/query = dbcon.NewQuery("SELECT id FROM erro_poll_question WHERE [(isadmin ? "" : "adminonly = false AND")] Now() BETWEEN starttime AND endtime AND id NOT IN (SELECT pollid FROM erro_poll_vote WHERE ckey = \"[ckey]\") AND id NOT IN (SELECT pollid FROM erro_poll_textreply WHERE ckey = \"[ckey]\")")
 			query.Execute()
-			var/newpoll = 0
+			//var/newpoll = 0
 			while(query.NextRow())
-				newpoll = 1
+				//newpoll = 1
 				break
 
+/*
 			if(newpoll)
 				output += "<p><b><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A> (NEW!)</b></p>"
 			else
 				output += "<p><a href='byond://?src=\ref[src];showpoll=1'>Show Player Polls</A></p>"
-
+*/
 	output += "</div>"
 
-	panel = new(src, "Welcome","Welcome", 210, 280, src)
+	panel = new(src, "new_player_panel_ass","<center>NAVARRO</center>", 210, 280, src)
 	panel.set_window_options("can_close=0")
 	panel.set_content(output)
 	panel.open()
@@ -77,9 +78,9 @@
 
 	if(statpanel("Status"))
 		if(SSticker.current_state == GAME_STATE_PREGAME)
-			stat("Storyteller:", "[master_storyteller]") // Old setting for showing the game mode
-			stat("Time To Start:", "[SSticker.pregame_timeleft][round_progressing ? "" : " (DELAYED)"]")
-			stat("Players: [totalPlayers]", "Players Ready: [totalPlayersReady]")
+			stat("Расказчик:", "[master_storyteller]") // Old setting for showing the game mode
+			stat("Времени до начала:", "[SSticker.pregame_timeleft][round_progressing ? "" : " (DELAYED)"]")
+			stat("Игроки: [totalPlayers]", "Игроков готово: [totalPlayersReady]")
 			totalPlayers = 0
 			totalPlayersReady = 0
 			for(var/mob/new_player/player in GLOB.player_list)
@@ -301,12 +302,12 @@
 	dat += "Round Duration: [roundduration2text()]<br>"
 
 	if(evacuation_controller.has_evacuated()) //In case Arasaka decides reposess CentComm's shuttles.
-		dat += "<font color='red'><b>The vessel has been evacuated.</b></font><br>"
+		dat += "<span class='warning'><b>The vessel has been evacuated.</b></font><br>"
 	else if(evacuation_controller.is_evacuating())
 		if(evacuation_controller.emergency_evacuation) // Emergency shuttle is past the point of no recall
-			dat += "<font color='red'>The vessel is currently undergoing evacuation procedures.</font><br>"
+			dat += "<span class='warning'>The vessel is currently undergoing evacuation procedures.</font><br>"
 		else                                           // Crew transfer initiated
-			dat += "<font color='red'>The vessel is currently undergoing crew transfer procedures.</font><br>"
+			dat += "<span class='warning'>The vessel is currently undergoing crew transfer procedures.</font><br>"
 
 	dat += "Choose from the following open/valid positions:<br>"
 	for(var/datum/job/job in SSjob.occupations)

@@ -125,22 +125,22 @@
 		. += "<a href='?src=\ref[src];job_info=[rank]'>\[?\]</a>"
 		var/bad_message = ""
 		if(job.total_positions == 0 && job.spawn_positions == 0)
-			bad_message = "<b> \[UNAVAILABLE]</b>"
+			bad_message = "<b> \[НЕДОСТУПНО]</b>"
 		else if(jobban_isbanned(user, rank))
-			bad_message = "<b> \[BANNED]</b>"
+			bad_message = "<b> \[БАН]</b>"
 		/*else if(!job.player_old_enough(user.client))
 			var/available_in_days = job.available_in_days(user.client)
 			bad_message = "\[IN [(available_in_days)] DAYS]"*/
 		else if(job.minimum_character_age && user.client && (user.client.prefs.age < job.minimum_character_age))
-			bad_message = "\[MINIMUM CHARACTER AGE: [job.minimum_character_age]]"
+			bad_message = "\[МИНИМАЛЬНЫЙ ВОЗРАСТ: [job.minimum_character_age]]"
 		else if(user.client && job.is_setup_restricted(user.client.prefs.setup_options))
-			bad_message = "\[SETUP RESTRICTED]"
+			bad_message = "\[НЕДОСТУПНО]"
 
 		if(("Assistant" in pref.job_low) && (rank != "Assistant"))
-			. += "<a href='?src=\ref[src];set_skills=[rank]'><font color=grey>[rank]</font></a></td><td></td></tr>"
+			. += "<a href='?src=\ref[src];set_skills=[rank]'><font color=#aaaaaa>[rank]</font></a></td><td></td></tr>"
 			continue
 		if(bad_message)
-			. += "<a href='?src=\ref[src];set_skills=[rank]'><del>[rank]</del></a></td><td><font color=black>[bad_message]</font></td></tr>"
+			. += "<a href='?src=\ref[src];set_skills=[rank]'><del>[rank]</del></a></td><td><font color=#aaaaaa>[bad_message]</font></td></tr>"
 			continue
 
 		//. += (unspent && (current_level != JOB_LEVEL_NEVER) ? "<a class='Points' href='?src=\ref[src];set_skills=[rank]'>" : "<a href='?src=\ref[src];set_skills=[rank]'>")
@@ -154,17 +154,17 @@
 
 		if(rank == "Assistant")//Assistant is special
 			. += "<a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_LOW]'>"
-			. += "[(rank in pref.job_low) ? "<font color=#55cc55>" : ""]\[Yes\][(rank in pref.job_low) ? "</font>" : ""]"
+			. += "[(rank in pref.job_low) ? "<font color=#55cc55>" : ""]\[Да\][(rank in pref.job_low) ? "</font>" : ""]"
 			//. += "\[Yes\]"
 			. += "</a>"
 			. += "<a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_NEVER]'>"
-			. += "[!(rank in pref.job_low) ? "<font color=black>" : ""]\[No\][!(rank in pref.job_low) ? "</font>" : ""]"
+			. += "[!(rank in pref.job_low) ? "<font color=#aaaaaa>" : ""]\[Нет\][!(rank in pref.job_low) ? "</font>" : ""]"
 			. += "</a>"
 		else
-			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_HIGH]'>[current_level == JOB_LEVEL_HIGH ? "<font color=55cc55>" : ""]\[High][current_level == JOB_LEVEL_HIGH ? "</font>" : ""]</a>"
-			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_MEDIUM]'>[current_level == JOB_LEVEL_MEDIUM ? "<font color=eecc22>" : ""]\[Medium][current_level == JOB_LEVEL_MEDIUM ? "</font>" : ""]</a>"
-			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_LOW]'>[current_level == JOB_LEVEL_LOW ? "<font color=cc5555>" : ""]\[Low][current_level == JOB_LEVEL_LOW ? "</font>" : ""]</a>"
-			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_NEVER]'>[current_level == JOB_LEVEL_NEVER ? "<font color=black>" : ""]\[NEVER][current_level == JOB_LEVEL_NEVER ? "</font>" : ""]</a>"
+			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_HIGH]'>[current_level == JOB_LEVEL_HIGH ? "<font color=#55cc55>" : ""]\[Высокий][current_level == JOB_LEVEL_HIGH ? "</font>" : ""]</a>"
+			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_MEDIUM]'>[current_level == JOB_LEVEL_MEDIUM ? "<font color=#eecc22>" : ""]\[Средний][current_level == JOB_LEVEL_MEDIUM ? "</font>" : ""]</a>"
+			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_LOW]'>[current_level == JOB_LEVEL_LOW ? "<font color=#cc5555>" : ""]\[Низкий][current_level == JOB_LEVEL_LOW ? "</font>" : ""]</a>"
+			. += " <a href='?src=\ref[src];set_job=[rank];set_level=[JOB_LEVEL_NEVER]'>[current_level == JOB_LEVEL_NEVER ? "<font color=#aaaaaa>" : ""]\[НИКОГДА][current_level == JOB_LEVEL_NEVER ? "</font>" : ""]</a>"
 
 		if(job.alt_titles)
 			. += "</td></tr><tr bgcolor='[lastJob.selection_color]'><td width='40%' align='center'>&nbsp</td><td><a href='?src=\ref[src];select_alt_title=\ref[job]'>\[[pref.GetPlayerAltTitle(job)]\]</a></td></tr>"
@@ -283,17 +283,9 @@
 
 	desc_set = TRUE
 
-	job_desc = "<div class = 'roleDescription' style = 'height:270px;'>"
-
-
-
+	job_desc = "<div class = 'roleDescription' style = 'height:370px;'>"
 
 	job_desc += "<table style='float:left;  table-layout: fixed;' cellpadding='0' cellspacing='0'>"
-
-	//At the top of the table, there's a coloured stripe
-	job_desc += "<tr><td colspan='2'><p style='margin-top: 0px;margin-bottom: 0px; background-color: [job.selection_color];'><br></td></tr>"
-
-
 
 	job_desc += "<tr><td style='width: 220px;overflow: hidden;display: inline-block; white-space: nowrap;'>"
 	//The mannequin and its buttons are in their own little mini table, within a fixed width 200px cell
@@ -301,7 +293,7 @@
 	var/icon/job_icon = getFlatIcon(mannequin, job_icon_dir)
 	job_icon.Scale(job_icon.Width() * 2.5, job_icon.Height() * 2.5)
 	send_rsc(user, job_icon, "job_icon_[job_icon_dir].png")
-	job_desc += "<table style='float:left; height = 270px; table-layout: fixed; vertical-align:top' cellpadding='0' cellspacing='0'><tr><td><img src=job_icon_[job_icon_dir].png width=220 height=220 style='float:left;'></td></tr>"
+	job_desc += "<table style='float:left; height = 370px; table-layout: fixed; vertical-align:top' cellpadding='0' cellspacing='0'><tr><td><img src=job_icon_[job_icon_dir].png width=220 height=220 style='float:left;'></td></tr>"
 	job_desc += "<tr><td><center><a href='?src=\ref[src];rotate=right'>&lt;&lt;</a> <a href='?src=\ref[src];rotate=left'>&gt;&gt;</a></center></td></tr></table>"
 
 	job_desc += "</td>"
@@ -311,24 +303,24 @@
 	//Width 100% needed otherwise a huge gap is left between this and the previous cell
 	job_desc += "<td style = 'width: 100%;'>"
 
-	//Capped at 240px height. I couldn't figure out how to set this height on the table row or cell.
+	//Capped at 360px height. I couldn't figure out how to set this height on the table row or cell.
 	//It only works when set directly on this div
-	job_desc += "<div style = 'overflow: auto;height: 240px;'>"
+	job_desc += "<div style = 'overflow: auto;height: 360px;'>"
 
 	//Header job title
 	job_desc += "<h1 style='text-align: center; padding-top: 5px;padding-bottom: 0px;'>[job.title]</h1>"
 	job_desc += "<hr>"
 
 	//Here we have a right-floating textbox that shows user's stats
-	job_desc +="<div style='border: 1px solid grey; float: right; margin-right: 20px; padding: 8px; line-height: 120%;'> <h1 style='padding: 0px;'>Stats:</h1>"
+	job_desc +="<div style='border: 1px solid #000000; float: right; margin-right: 20px; padding: 8px; line-height: 120%;'> <h1 style='padding: 0px;'>Навыки:</h1>"
 	if (job.stat_modifiers.len)
 		job_desc += "<ul>"
 		for (var/a in job.stat_modifiers)
 			job_desc += "<li>[a]: [job.stat_modifiers[a]]</li>"
 		job_desc += "</ul>"
 	else
-		job_desc += "None"
-	job_desc += "<h1 style='padding: 0px;'>Perks:</h1>"
+		job_desc += "Нет"
+	job_desc += "<h1 style='padding: 0px;'>Перки:</h1>"
 	if (job.perks.len)
 		job_desc += "<ul>"
 		for (var/a in job.perks)
@@ -336,17 +328,17 @@
 			job_desc += "<li>[initial(P.name)]</li>"
 		job_desc += "</ul>"
 	else
-		job_desc += "None"
+		job_desc += "Нет"
 	job_desc +="</div>"
 
 	if(job.alt_titles)
-		job_desc += "<i><b>Alternative titles:</b> [english_list(job.alt_titles)].</i>"
+		job_desc += "<i><b>Альтернативные названия:</b> [english_list(job.alt_titles)].</i>"
 	if(job.department)
-		job_desc += "<b>Department:</b> [job.department]. <b>Difficulty:</b> [job.difficulty]<br>"
+		job_desc += "<b>Отдел:</b> [job.department]. <b>Сложность:</b> [job.difficulty]<br>"
 		if(job.head_position)
 			job_desc += "You are in charge of this department."
 	job_desc += "<br>"
-	job_desc += "You answer to <b>[job.supervisors]</b> normally."
+	job_desc += "Вы подчиняетесь <b>[job.supervisors]</b>."
 
 
 

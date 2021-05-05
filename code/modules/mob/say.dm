@@ -95,7 +95,7 @@
 		to_chat(usr, SPAN_DANGER("You have deadchat muted."))
 		return
 
-	say_dead_direct("[pick("complains", "moans", "whines", "laments", "blubbers")], <span class='message'>\"[emoji_parse(message)]\"</span>", src)
+	say_dead_direct("[pick("жалуется", "мычит", "ноет", "бухтит", "хлюпает")], <span class='message'>\"[emoji_parse(message)]\"</span>", src)
 
 /mob/proc/say_understands(var/mob/other, var/datum/language/speaking = null)
 
@@ -139,12 +139,12 @@
 */
 
 /mob/proc/say_quote(var/message, var/datum/language/speaking = null)
-	var/verb = "says"
+	var/verb = "говорит"
 	var/ending = copytext(message, length(message))
 	if(ending=="!")
-		verb=pick("exclaims", "shouts", "yells")
+		verb=pick("восклицает", "кричит", "вскрикивает")
 	else if(ending=="?")
-		verb="asks"
+		verb="спрашивает"
 
 	return verb
 

@@ -8,8 +8,8 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Nadezhda Council"
-	difficulty = "Hard."
-	selection_color = "#94a87f"
+	difficulty = "Сложно."
+	selection_color = "#2f3b22"
 	req_admin_notify = 1
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10, LANGUAGE_SERBIAN = 5)
 	wage = WAGE_COMMAND
@@ -64,8 +64,8 @@
 	total_positions = 5
 	spawn_positions = 5
 	supervisors = "the Chief Biolab Overseer"
-	difficulty = "Medium."
-	selection_color = "#a8b69a"
+	difficulty = "Средне."
+	selection_color = "#4a573d"
 	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10)
 	minimum_character_age = 25
@@ -110,8 +110,8 @@
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Chief Biolab Overseer"
-	difficulty = "Medium."
-	selection_color = "#a8b69a"
+	difficulty = "Средне."
+	selection_color = "#4a573d"
 	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10)
 
@@ -157,8 +157,8 @@
 	spawn_positions = 1
 	wage = WAGE_PROFESSIONAL
 	supervisors = "the Soteria Biolab Overseer"
-	difficulty = "Easy To Medium."
-	selection_color = "#a8b69a"
+	difficulty = "Легко."
+	selection_color = "#4a573d"
 	also_known_languages = list(LANGUAGE_CYRILLIC = 10)
 
 	outfit_type = /decl/hierarchy/outfit/job/medical/psychiatrist
@@ -201,8 +201,8 @@
 	total_positions = 3
 	spawn_positions = 3
 	supervisors = "the Soteria Biolab Overseer"
-	difficulty = "Medium."
-	selection_color = "#a8b69a"
+	difficulty = "Средне."
+	selection_color = "#4a573d"
 	wage = WAGE_LABOUR_HAZARD
 	also_known_languages = list(LANGUAGE_CYRILLIC = 20, LANGUAGE_SERBIAN = 15)
 

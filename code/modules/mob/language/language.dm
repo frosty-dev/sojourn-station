@@ -7,11 +7,11 @@
 /datum/language
 	var/name = "an unknown language"  			// Fluff name of language if any.
 	var/desc = "A language."          			// Short description for 'Check Languages'.
-	var/list/speech_verb = list("says")	   		// 'says', 'hisses', 'farts'.
-	var/list/ask_verb = list("asks")       		// Used when sentence ends in a ?
-	var/list/exclaim_verb = list("exclaims")	// Used when sentence ends in a !
-	var/list/whisper_verb = list("whispers")	// Optional. When not specified speech_verb + quietly/softly is used instead.
-	var/list/signlang_verb = list("signs") 		// list of emotes that might be displayed if this language has NONVERBAL or SIGNLANG flags
+	var/list/speech_verb = list("говорит")	   		// 'says', 'hisses', 'farts'.
+	var/list/ask_verb = list("спрашивает")       		// Used when sentence ends in a ?
+	var/list/exclaim_verb = list("восклицает")	// Used when sentence ends in a !
+	var/list/whisper_verb = list("шепчет")	// Optional. When not specified speech_verb + quietly/softly is used instead.
+	var/list/signlang_verb = list("показывает") 		// list of emotes that might be displayed if this language has NONVERBAL or SIGNLANG flags
 	var/colour = "body"               			// CSS style to use for strings in this language.
 	var/key = "x"                     			// Character used to speak in language eg. :o for Unathi.
 	var/flags = 0                     			// Various language flags.
@@ -199,7 +199,7 @@
 	set category = "IC"
 	set src = usr
 
-	var/dat = "<b><font size = 5>Known Languages</font></b><br/><br/>"
+	var/dat = "<b><font size = 5>Известные языки</font></b><br/><br/>"
 
 	for(var/datum/language/L in languages)
 		if(!(L.flags & NONGLOBAL))
@@ -209,17 +209,17 @@
 	return
 
 /mob/living/check_languages()
-	var/dat = "<b><font size = 5>Known Languages</font></b><br/><br/>"
+	var/dat = "<b><font size = 5>Известные языки</font></b><br/><br/>"
 
 	if(default_language)
-		dat += "Current default language: [default_language] - <a href='byond://?src=\ref[src];default_lang=reset'>reset</a><br/><br/>"
+		dat += "Текущий язык: [default_language] - <a href='byond://?src=\ref[src];default_lang=reset'>сбросить</a><br/><br/>"
 
 	for(var/datum/language/L in languages)
 		if(!(L.flags & NONGLOBAL))
 			if(L == default_language)
-				dat += "<b>[L.name] ([get_language_prefix()][L.key])</b> - default - <a href='byond://?src=\ref[src];default_lang=reset'>reset</a><br/>[L.desc]<br/><br/>"
+				dat += "<b>[L.name] ([get_language_prefix()][L.key])</b> - default - <a href='byond://?src=\ref[src];default_lang=reset'>сбросить</a><br/>[L.desc]<br/><br/>"
 			else
-				dat += "<b>[L.name] ([get_language_prefix()][L.key])</b> - <a href='byond://?src=\ref[src];default_lang=\ref[L]'>set default</a><br/>[L.desc]<br/><br/>"
+				dat += "<b>[L.name] ([get_language_prefix()][L.key])</b> - <a href='byond://?src=\ref[src];default_lang=\ref[L]'>сделать текущим</a><br/>[L.desc]<br/><br/>"
 
 	src << browse(dat, "window=checklanguage")
 

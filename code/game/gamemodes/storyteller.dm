@@ -106,7 +106,7 @@ GLOBAL_DATUM(storyteller, /datum/storyteller)
 	return FALSE
 
 /datum/storyteller/proc/announce()
-	to_chat(world, "<b><font size=3>Storyteller is [name].</font> <br>[welcome]</b>")
+	to_chat(world, "<b><font size=3>Текущий рассказчик - [name].</font> <br>[welcome]</b>")
 
 /datum/storyteller/proc/set_up()
 	build_event_pools()

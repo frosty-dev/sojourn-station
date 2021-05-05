@@ -59,6 +59,19 @@
 	icon_state = "syndicate"
 	siemens_coefficient = 0.8
 
+/obj/item/clothing/under/rank/traumateam
+	name = "traumateam jumpsuit"
+	desc = "A durable corpsman's jumpsuit, designed to provide moderate combat protection."
+	icon_state = "traumateam"
+	item_state = "ba_suit"
+	siemens_coefficient = 0.8
+
+/obj/item/clothing/under/rank/miltech_agent
+	name = "miltech agent jumpsuit"
+	desc = "A rugged grey jumpsuit designed for security work."
+	icon_state = "greyutility"
+	item_state = "greyutility"
+
 /*
  * Detective
  */

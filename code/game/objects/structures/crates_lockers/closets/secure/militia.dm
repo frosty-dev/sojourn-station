@@ -91,14 +91,14 @@
 	new /obj/item/weapon/storage/firstaid/ifak(src)
 
 /obj/structure/closet/secure_closet/personal/trooper
-	name = "blackshield trooper's locker"
+	name = "miltech agent's locker"
 	req_access = list(access_hos)
 	access_occupy = list(access_brig)
 	icon_state = "trooper"
 
 /obj/structure/closet/secure_closet/personal/trooper/populate_contents()
 	if(prob(50))
-		new /obj/item/clothing/suit/armor/platecarrier(src)
+		new /obj/item/clothing/suit/armor/platecarrier/miltech(src)
 	else
 		new /obj/item/clothing/suit/armor/platecarrier/militia(src)
 	if(prob(50))
@@ -161,7 +161,7 @@
 	new /obj/item/weapon/grenade/smokebomb(src)
 
 /obj/structure/closet/secure_closet/personal/corpsman
-	name = "blackshield medical corpsman locker"
+	name = "traumateam corpsman locker"
 	req_access = list(access_medspec)
 	icon_state = "corpsman"
 /obj/item/clothing/glasses/hud/health

@@ -123,14 +123,14 @@
 		if(!new_ckey)
 			return
 		if(new_ckey in admin_datums)
-			to_chat(usr, "<font color='red'>Error: Topic 'editrights': [new_ckey] is already an admin</font>")
+			to_chat(usr, "<span class='warning'>Error: Topic 'editrights': [new_ckey] is already an admin</font>")
 			return
 		adm_ckey = new_ckey
 		task = "rank"
 	else if(task != "show")
 		adm_ckey = ckey(input["ckey"])
 		if(!adm_ckey)
-			to_chat(usr, "<font color='red'>Error: Topic 'editrights': No valid ckey</font>")
+			to_chat(usr, "<span class='warning'>Error: Topic 'editrights': No valid ckey</font>")
 			return
 
 	var/datum/admins/D = admin_datums[adm_ckey]
@@ -164,7 +164,7 @@
 				if(config.admin_legacy_system)
 					new_rank = ckeyEx(new_rank)
 				if(!new_rank)
-					to_chat(usr, "<font color='red'>Error: Topic 'editrights': Invalid rank</font>")
+					to_chat(usr, "<span class='warning'>Error: Topic 'editrights': Invalid rank</font>")
 					return
 				if(config.admin_legacy_system)
 					if(admin_ranks.len)
@@ -714,7 +714,7 @@
 	require_perms = list(R_ADMIN)
 
 /datum/admin_topic/c_mode/Run(list/input)
-	var/dat = {"<B>What storyteller do you wish to install?</B><HR>"}
+	var/dat = {"<meta charset=UTF-8><B>What storyteller do you wish to install?</B><HR>"}
 	for(var/mode in config.storytellers)
 		dat += {"<A href='?src=\ref[source];c_mode2=[mode]'>[config.storyteller_names[mode]]</A><br>"}
 	dat += {"Now: [master_storyteller]"}
@@ -937,7 +937,7 @@
 		var/antag = ""
 		for(var/datum/antagonist/A in M.mind.antagonist)
 			antag += "[A.role_text], "
-		special_role_description = "Role: <b>[M.mind.assigned_role]</b>; Antagonist: <font color='red'><b>[get_player_antag_name(M.mind)]</b></font>;"
+		special_role_description = "Role: <b>[M.mind.assigned_role]</b>; Antagonist: <span class='warning'><b>[get_player_antag_name(M.mind)]</b></font>;"
 	else
 		special_role_description = "Role: <i>Mind datum missing</i> Antagonist: <i>Mind datum missing</i>; Has been rev: <i>Mind datum missing</i>;"
 
@@ -951,7 +951,7 @@
 			if (1)
 				status = "<font color='orange'><b>Unconscious</b></font>"
 			if (2)
-				status = "<font color='red'><b>Dead</b></font>"
+				status = "<span class='warning'><b>Dead</b></font>"
 		health_description = "Status = [status]"
 		health_description += "<BR>Oxy: [L.getOxyLoss()] - Tox: [L.getToxLoss()] - Fire: [L.getFireLoss()] - Brute: [L.getBruteLoss()] - Clone: [L.getCloneLoss()] - Brain: [L.getBrainLoss()]"
 	else
@@ -962,7 +962,7 @@
 		if(MALE,FEMALE)
 			gender_description = "[M.gender]"
 		else
-			gender_description = "<font color='red'><b>[M.gender]</b></font>"
+			gender_description = "<span class='warning'><b>[M.gender]</b></font>"
 
 	to_chat(source.owner, "<b>Info about [M.name]:</b> ")
 	to_chat(source.owner, "Mob type = [M.type]; Gender = [gender_description] Damage = [health_description]")

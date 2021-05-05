@@ -119,7 +119,7 @@ var/list/channel_to_radio_key = new
 		volume ++
 	return volume
 
-/mob/living/say(var/message, var/datum/language/speaking = null, var/verb="says", var/alt_name="")
+/mob/living/say(var/message, var/datum/language/speaking = null, var/verb="говорит", var/alt_name="")
 	if(client)
 		if(client.prefs.muted&MUTE_IC)
 			to_chat(src, "\red You cannot speak in IC (Muted).")
@@ -423,10 +423,10 @@ var/list/channel_to_radio_key = new
 			heardword = copytext(heardword, 2)
 		if(copytext(heardword, -1) in punctuation)
 			heardword = copytext(heardword, 1, length(heardword))
-		heard = "<span class = 'game_say'>...You hear something about...[heardword]</span>"
+		heard = "<span class = 'game_say'>...Вы слышите что-то про...[heardword]</span>"
 
 	else
-		heard = "<span class = 'game_say'>...<i>You almost hear someone talking</i>...</span>"
+		heard = "<span class = 'game_say'>...<i>Вы что-то слышите, но не можете разобрать что</i>...</span>"
 
 	to_chat(src, heard)
 

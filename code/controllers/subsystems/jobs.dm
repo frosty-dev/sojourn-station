@@ -363,7 +363,7 @@ SUBSYSTEM_DEF(job)
 					return H
 				if("Premier")
 					var/sound/announce_sound = (SSticker.current_state <= GAME_STATE_SETTING_UP)? null : sound('sound/misc/boatswain.ogg', volume=20)
-					captain_announcement.Announce("Premier [H.real_name] has signed in.", new_sound=announce_sound)
+					captain_announcement.Announce("Премьер [H.real_name] назначен на должность.", new_sound=announce_sound)
 
 		if(istype(H)) //give humans wheelchairs, if they need them.
 			var/obj/item/organ/external/l_leg = H.get_organ(BP_L_LEG)
@@ -376,13 +376,13 @@ SUBSYSTEM_DEF(job)
 				W.buckled_mob = H
 				W.add_fingerprint(H)
 
-		to_chat(H, "<B>You are [job.total_positions == 1 ? "the" : "a"] [alt_title ? alt_title : rank].</B>")
+		to_chat(H, "<B>Вы [alt_title ? alt_title : rank].</B>")
 
 		if(job.supervisors)
-			to_chat(H, "<b>As the [alt_title ? alt_title : rank] you answer directly to [job.supervisors]. Special circumstances may change this.</b>")
+			to_chat(H, "<b>Как [alt_title ? alt_title : rank] вы подчиняетесь [job.supervisors]. Особые условия могут это изменить.</b>")
 
 		if(job.req_admin_notify)
-			to_chat(H, "<b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b>")
+			to_chat(H, "<b>Вы выбрали должность, важную для ролевой сессии. Если вы захотите отключиться, пожалуйста, предупредите администрацию через АХ.</b>")
 
 		//Gives glasses to the vision impaired
 		if(H.disabilities & NEARSIGHTED)

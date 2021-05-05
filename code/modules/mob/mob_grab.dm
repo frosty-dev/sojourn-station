@@ -260,12 +260,12 @@
 		if(!affecting.lying)
 			assailant.visible_message(SPAN_WARNING("[assailant] has grabbed [affecting] aggressively!"))
 			affecting.attack_log += "\[[time_stamp()]\] <font color='orange'>Has been grabbed by [assailant.name] ([assailant.ckey])</font>"
-			assailant.attack_log += "\[[time_stamp()]\] <font color='red'>Grabbed [affecting.name] ([affecting.ckey])</font>"
+			assailant.attack_log += "\[[time_stamp()]\] <span class='warning'>Grabbed [affecting.name] ([affecting.ckey])</font>"
 			msg_admin_attack("[assailant] grabbed a [affecting].")
 		else
 			assailant.visible_message(SPAN_WARNING("[assailant] pins [affecting] down to the ground!"))
 			affecting.attack_log += "\[[time_stamp()]\] <font color='orange'>Has been pinned by [assailant.name] ([assailant.ckey])</font>"
-			assailant.attack_log += "\[[time_stamp()]\] <font color='red'>Pinned [affecting.name] ([affecting.ckey])</font>"
+			assailant.attack_log += "\[[time_stamp()]\] <span class='warning'>Pinned [affecting.name] ([affecting.ckey])</font>"
 			msg_admin_attack("[assailant] pinned down [affecting].")
 			apply_pinning(affecting, assailant)
 
@@ -283,7 +283,7 @@
 		icon_state = "grabbed+1"
 		assailant.set_dir(get_dir(assailant, affecting))
 		affecting.attack_log += "\[[time_stamp()]\] <font color='orange'>Has had their neck grabbed by [assailant.name] ([assailant.ckey])</font>"
-		assailant.attack_log += "\[[time_stamp()]\] <font color='red'>Grabbed the neck of [affecting.name] ([affecting.ckey])</font>"
+		assailant.attack_log += "\[[time_stamp()]\] <span class='warning'>Grabbed the neck of [affecting.name] ([affecting.ckey])</font>"
 		msg_admin_attack("[key_name(assailant)] grabbed the neck of [key_name(affecting)]")
 		hud.icon_state = "kill"
 		hud.name = "kill"
@@ -296,7 +296,7 @@
 		state = GRAB_KILL
 		assailant.visible_message(SPAN_DANGER("[assailant] has tightened \his grip on [affecting]'s neck!"))
 		affecting.attack_log += "\[[time_stamp()]\] <font color='orange'>Has been strangled (kill intent) by [assailant.name] ([assailant.ckey])</font>"
-		assailant.attack_log += "\[[time_stamp()]\] <font color='red'>Strangled (kill intent) [affecting.name] ([affecting.ckey])</font>"
+		assailant.attack_log += "\[[time_stamp()]\] <span class='warning'>Strangled (kill intent) [affecting.name] ([affecting.ckey])</font>"
 		msg_admin_attack("[key_name(assailant)] strangled (kill intent) [key_name(affecting)]")
 
 		affecting.setClickCooldown(10)
@@ -371,7 +371,7 @@
 					if(force_down)
 						to_chat(assailant, SPAN_WARNING("You are no longer pinning [affecting] to the ground."))
 						affecting.attack_log += "\[[time_stamp()]\] <font color='orange'>No longer pinned down by [assailant.name] ([assailant.ckey])</font>"
-						assailant.attack_log += "\[[time_stamp()]\] <font color='red'>Released from pin [affecting.name] ([affecting.ckey])</font>"
+						assailant.attack_log += "\[[time_stamp()]\] <span class='warning'>Released from pin [affecting.name] ([affecting.ckey])</font>"
 						msg_admin_attack("[key_name(assailant)] Released from pin [key_name(affecting)]")
 						force_down = 0
 						return
@@ -404,7 +404,7 @@
 	if(state == GRAB_KILL)
 		assailant.visible_message(SPAN_WARNING("[assailant] lost \his tight grip on [affecting]'s neck!"))
 		affecting.attack_log += "\[[time_stamp()]\] <font color='orange'>No longer gripped by [assailant.name] ([assailant.ckey] neck.)</font>"
-		assailant.attack_log += "\[[time_stamp()]\] <font color='red'>Lost his grip on [affecting.name] ([affecting.ckey] neck.)</font>"
+		assailant.attack_log += "\[[time_stamp()]\] <span class='warning'>Lost his grip on [affecting.name] ([affecting.ckey] neck.)</font>"
 		msg_admin_attack("[key_name(assailant)] lost his tight grip on [key_name(affecting)] neck.")
 		hud.icon_state = "kill"
 		state = GRAB_NECK

@@ -205,7 +205,7 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 		if(inoperable(MAINT)) return
 		if(screen == RCS_MESSAUTH)
 			var/obj/item/weapon/card/id/T = O
-			msgVerified = text("<font color='green'><b>Verified by [T.registered_name] ([T.assignment])</b></font>")
+			msgVerified = text("<span class='green'><b>Verified by [T.registered_name] ([T.assignment])</b></span>")
 			updateUsrDialog()
 		if(screen == RCS_ANNOUNCE)
 			var/obj/item/weapon/card/id/ID = O
@@ -220,7 +220,7 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 		if(inoperable(MAINT)) return
 		if(screen == RCS_MESSAUTH)
 			var/obj/item/weapon/stamp/T = O
-			msgStamped = text("<font color='blue'><b>Stamped with the [T.name]</b></font>")
+			msgStamped = text("<span class='notice'><b>Stamped with the [T.name]</b></span>")
 			updateUsrDialog()
 	return
 

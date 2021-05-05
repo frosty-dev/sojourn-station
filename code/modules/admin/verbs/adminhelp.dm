@@ -9,7 +9,7 @@
 
 	//handle muting and automuting
 	if(prefs.muted & MUTE_ADMINHELP)
-		to_chat(src, "<font color='red'>Error: Admin-PM: You cannot send adminhelps (Muted).</font>")
+		to_chat(src, "<span class='warning'>Error: Admin-PM: You cannot send adminhelps (Muted).</font>")
 		return
 
 	adminhelped = 1 //Determines if they get the message to reply by clicking the name.
@@ -31,7 +31,7 @@
 		return
 
 	//show it to the person adminhelping too
-	to_chat(src, "<font color='blue'>PM to-<b>Staff </b>: [msg]</font>")
+	to_chat(src, "<span class='notice'>PM to-<b>Staff </b>: [msg]</span>")
 	log_admin("HELP: [key_name(src)]: [msg]")
 
 	var/mentor_msg = "\blue <b><font color=red>Request for Help: </font>[get_options_bar(mob, 4, 1, 1, 0)]:</b> [msg]"

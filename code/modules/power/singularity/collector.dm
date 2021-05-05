@@ -33,7 +33,7 @@ GLOBAL_LIST_EMPTY(rad_collectors)
 
 	if(P)
 		if(P.air_contents.gas["plasma"] == 0)
-			investigate_log("<font color='red'>out of fuel</font>.","singulo")
+			investigate_log("<span class='warning'>out of fuel</font>.","singulo")
 			eject()
 		else
 			P.air_contents.adjust_gas("plasma", -0.001*drainratio)
@@ -48,7 +48,7 @@ GLOBAL_LIST_EMPTY(rad_collectors)
 				SPAN_NOTICE("[user] turns [src] [active? "on" : "off"]."),
 				SPAN_NOTICE("You turn [src] [active ? "on" : "off"].")
 				)
-			investigate_log("turned [active?"<font color='green'>on</font>":"<font color='red'>off</font>"] by [user.key]. [P?"Fuel: [round(P.air_contents.gas["plasma"]/0.29)]%":"<font color='red'>It is empty</font>"].","singulo")
+			investigate_log("turned [active?"<span class='green'>on</font>":"<span class='warning'>off</font>"] by [user.key]. [P?"Fuel: [round(P.air_contents.gas["plasma"]/0.29)]%":"<font color='red'>It is empty</span>"].","singulo")
 		else
 			to_chat(user, SPAN_WARNING("The controls are locked!"))
 		return

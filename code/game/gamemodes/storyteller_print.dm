@@ -51,33 +51,33 @@
 
 
 /datum/storyteller/proc/storyteller_panel()
-	var/data = "<center><font size='3'><b>STORYTELLER PANEL</b></font></center>"
+	var/data = "<meta charset=UTF-8><center><font size='3'><b>ПАНЕЛЬ УПРАВЛЕНИЯ СОБЫТИЯМИ</b></font></center>"
 
-	data += "<b><a href='?src=\ref[src];panel=1'>\[UPDATE\]</a></b>"
+	data += "<b><a href='?src=\ref[src];panel=1'>\[ОБНОВИТЬ\]</a></b>"
 	data += "<table><tr><td>"
-	data += "[src.name] (<A href='?src=\ref[src];c_mode=1'>Change</A>)"
-	data += "<br>Round duration: <b>[round(world.time / 36000)]:[add_zero(world.time / 600 % 60, 2)]:[world.time / 100 % 6][world.time / 100 % 10]</b>"
-	data += "<br>Debug mode: <b><a href='?src=\ref[src];toggle_debug=1'>\[[debug_mode?"ON":"OFF"]\]</a></b>"
-	data += "<br>One role per player: <b><a href='?src=\ref[src];toggle_orpp=1'>\[[one_role_per_player?"YES":"NO"]\]</a></b>"
+	data += "[src.name] (<A href='?src=\ref[src];c_mode=1'>Сменить</A>)"
+	data += "<br>Раунд длится: <b>[round(world.time / 36000)]:[add_zero(world.time / 600 % 60, 2)]:[world.time / 100 % 6][world.time / 100 % 10]</b>"
+	data += "<br>Режим отладки: <b><a href='?src=\ref[src];toggle_debug=1'>\[[debug_mode?"ВКЛ":"ВЫКЛ"]\]</a></b>"
+	data += "<br>Одна роль на игрока: <b><a href='?src=\ref[src];toggle_orpp=1'>\[[one_role_per_player?"ДА":"НЕТ"]\]</a></b>"
 	data += "</td><td style=\"padding-left: 40px\">"
 
-	data += "Heads: [heads] "
+	data += "Главы: [heads] "
 	if(debug_mode)
 		data += "<a href='?src=\ref[src];edit_heads=1'>\[EDIT\]</a>"
-	data += "<br>Ironhammer: [sec] "
+	data += "<br>МилТек: [sec] "
 	if(debug_mode)
 		data += "<a href='?src=\ref[src];edit_sec=1'>\[EDIT\]</a>"
 	data += "<br>Technomancers: [eng] "
 	if(debug_mode)
 		data += "<a href='?src=\ref[src];edit_eng=1'>\[EDIT\]</a>"
-	data += "<br>Medical: [med] "
+	data += "<br>Врачи: [med] "
 	if(debug_mode)
 		data += "<a href='?src=\ref[src];edit_med=1'>\[EDIT\]</a>"
-	data += "<br>Science: [sci] "
+	data += "<br>Учёные: [sci] "
 	if(debug_mode)
 		data += "<a href='?src=\ref[src];edit_sci=1'>\[EDIT\]</a>"
 	data += "<br>ARA Disciples: [disciples.len] "
-	data += "<br><b>Total: [crew]</b> "
+	data += "<br><b>Всего: [crew]</b> "
 	if(debug_mode)
 		data += "<a href='?src=\ref[src];edit_crew=1'>\[EDIT\]</a>"
 
@@ -91,26 +91,26 @@
 
 	data += "</td></tr></table>"
 	data += "<hr>"
-	data += "<b>Settings:</b>"
+	data += "<b>Настройки:</b>"
 	data += "[storyteller_panel_extra()]"
 	data += "<hr>"
-	data += "<b><a href='?src=\ref[src];force_spawn=1'>\[FORCE ROLE SPAWN\]</a></b>"
+	data += "<b><a href='?src=\ref[src];force_spawn=1'>\[СПАВН РОЛИ\]</a></b>"
 	data += "<hr>"
-	data += "<B>Evacuation</B>"
+	data += "<B>Эвакуация</B>"
 	if (!evacuation_controller.is_idle())
-		data += "<a href='?src=\ref[src];call_shuttle=1'>Call Evacuation</a><br>"
+		data += "<a href='?src=\ref[src];call_shuttle=1'>Начать эвакуацию</a><br>"
 	else
 		var/timeleft = evacuation_controller.get_eta()
 		if (evacuation_controller.waiting_to_leave())
 			data += "ETA: [(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]<BR>"
-			data += "<a href='?src=\ref[src];call_shuttle=2'>Send Back</a><br>"
+			data += "<a href='?src=\ref[src];call_shuttle=2'>Отправить назад</a><br>"
 	data += "<br><a href='?src=\ref[src];delay_round_end=1'>[SSticker.delay_end ? "End Round Normally" : "Delay Round End"]</a>"
 
 	data += "<hr><b>Current antags:</b><div style=\"border:1px solid black;\"><ul>"
 
 	if (current_antags.len)
 		for(var/datum/antagonist/A in current_antags)
-			var/act = "<font color=red>DEAD</font>"
+			var/act = "<meta charset=UTF-8><font color=red>МЁРТВ</font>"
 			if(!A.is_dead())
 				if(!A.is_active())
 					act = "<font color=silver>AFK</font>"

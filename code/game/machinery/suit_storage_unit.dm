@@ -124,14 +124,14 @@
 		dat += "<HEAD><TITLE>Suit storage unit: Maintenance panel</TITLE></HEAD>"
 		dat += "<B>Maintenance panel controls</B><HR>"
 		dat += "A small dial with a small lambda symbol on it. It's pointing towards a gauge that reads [issuperUV ? "15nm" : "185nm"]</font>.<BR> <font color='blue'><A href='?src=\ref[src];toggleUV=1'> Turn towards [issuperUV ? "185nm" : "15nm"]</A><BR>"
-		dat += "A thick old-style button, with 2 grimy LED lights next to it. The <B>[safeties? "<font color='green'>GREEN</font>" : "<font color='red'>RED</font>"]</B> LED is on.</font><BR><font color ='blue'><A href='?src=\ref[src];togglesafeties=1'>Press button</a>"
+		dat += "A thick old-style button, with 2 grimy LED lights next to it. The <B>[safeties? "<span class='green'>GREEN</font>" : "<span class='warning'>RED</font>"]</B> LED is on.</span><BR><font color ='blue'><A href='?src=\ref[src];togglesafeties=1'>Press button</a>"
 	else if(isUV) //The thing is running its cauterisation cycle. You have to wait.
 		dat += "<HEAD><TITLE>Suit storage unit</TITLE></HEAD>"
 		dat += "<font color ='red'><B>Unit is cauterising contents with selected UV ray intensity. Please wait.</font></B><BR>"
 
 	else
 		dat += "<HEAD><TITLE>Suit storage unit</TITLE></HEAD>"
-		dat += "<font color='blue'><font size = 4><B>Suit Storage Unit</B></FONT><HR>"
+		dat += "<span class='notice'><font size = 4><B>Suit Storage Unit</B></span><HR>"
 		dat += "Helmet storage compartment: <B>[HELMET ? HELMET.name : "<font color ='grey'>No helmet detected.</font>"]</B><BR>"
 		if(HELMET && isopen)
 			dat += "<A href='?src=\ref[src];dispense_helmet=1'>Dispense helmet</A><BR>"
@@ -258,10 +258,10 @@
 	if(isUV || isopen) //I'm bored of all these sanity checks
 		return
 	if(OCCUPANT && safeties)
-		to_chat(user, "<font color='red'><B>WARNING:</B> Biological entity detected in the confines of the Unit's storage. Cannot initiate cycle.</font>")
+		to_chat(user, "<span class='warning'><B>WARNING:</B> Biological entity detected in the confines of the Unit's storage. Cannot initiate cycle.</font>")
 		return
 	if(!HELMET && !MASK && !SUIT && !OCCUPANT) //shit's empty yo
-		to_chat(user, "<font color='red'>Unit storage bays empty. Nothing to disinfect -- Aborting.</font>")
+		to_chat(user, "<span class='warning'>Unit storage bays empty. Nothing to disinfect -- Aborting.</font>")
 		return
 	to_chat(user, SPAN_NOTICE("You start the cauterisation cycle."))
 	src.isUV = 1
@@ -317,9 +317,9 @@
 
 	if (OCCUPANT.client)
 		if(user != OCCUPANT)
-			to_chat(OCCUPANT, "<font color='blue'>The machine kicks you out!</font>")
+			to_chat(OCCUPANT, "<span class='notice'>The machine kicks you out!</span>")
 		if(user.loc != src.loc)
-			to_chat(OCCUPANT, "<font color='blue'>You leave the not-so-cozy confines of the SSU.</font>")
+			to_chat(OCCUPANT, "<span class='notice'>You leave the not-so-cozy confines of the SSU.</span>")
 
 		OCCUPANT.client.eye = OCCUPANT.client.mob
 		OCCUPANT.client.perspective = MOB_PERSPECTIVE

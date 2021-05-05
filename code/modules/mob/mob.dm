@@ -332,9 +332,9 @@
 		var/msg = trim(replacetext(flavor_text, "\n", " "))
 		if(!msg) return ""
 		if(length(msg) <= 40)
-			return "<font color='blue'>[msg]</font>"
+			return "<span class='notice'>[msg]</span>"
 		else
-			. += "<font color='blue'>[copytext_preserve_html(msg, 1, 37)]... <a href='byond://?src=\ref[src];flavor_more=1'>More...</a></font>"
+			. += "<span class='notice'>[copytext_preserve_html(msg, 1, 37)]... <a href='byond://?src=\ref[src];flavor_more=1'>More...</a></span>"
 	if (ooc_text && ooc_text != "")
 		. += "<br><a href='byond://?src=\ref[src];ooc_text=1'>\[OOC Notes\]</a>"
 

@@ -38,7 +38,7 @@
 	var/mob/living/carbon/human/H = holder.wearer
 
 	if(FALSE) //TODO: INSERT NINJA FULL SKILL CHECK HERE
-		to_chat(H, "<font color='blue'><b>You are now invisible to normal detection.</b></font>")
+		to_chat(H, "<span class='notice'><b>You are now invisible to normal detection.</b></span>")
 		H.invisibility = INVISIBILITY_LEVEL_TWO
 		H.alpha = 64
 	else if(FALSE) //TODO: INSERT NINJA NOVICE SKILL CHECK HERE

@@ -32,10 +32,10 @@
 
 /datum/category_item/player_setup_item/physical/flavor/content(var/mob/user)
 	. = list()
-	. += "<b>Flavor:</b><br>"
-	. += "<a href='?src=\ref[src];flavor_text=open'>Set Flavor Text</a><br/>"
-	. += "<a href='?src=\ref[src];ooc_text=open'>Set OOC Notes</a><br/>"
-	. += "<a href='?src=\ref[src];flavour_text_robot=open'>Set Robot Flavor Text</a><br/>"
+	. += "<b>Описание:</b><br>"
+	. += "<a href='?src=\ref[src];flavor_text=open'>Указать описание персонажа</a><br/>"
+	. += "<a href='?src=\ref[src];ooc_text=open'>Указать OOC заметки</a><br/>"
+	. += "<a href='?src=\ref[src];flavour_text_robot=open'>Установить описание робота</a><br/>"
 	return jointext(.,null)
 
 /datum/category_item/player_setup_item/physical/flavor/OnTopic(var/href,var/list/href_list, var/mob/user)

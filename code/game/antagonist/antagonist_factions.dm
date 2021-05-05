@@ -191,16 +191,16 @@
 	for(var/datum/objective/O in objectives)
 		text += "<br><b>Objective [num]:</b> [O.explanation_text] "
 		if(O.check_completion())
-			text += "<font color='green'><B>Success!</B></font>"
+			text += "<span class='green'><B>Success!</B></span>"
 		else
-			text += "<font color='red'>Fail.</font>"
+			text += "<span class='warning'>Fail.</font>"
 			failed = TRUE
 		num++
 
 	if(failed)
-		text += "<br><font color='red'><B>The members of the [name] failed their tasks.</B></font>"
+		text += "<br><span class='warning'><B>The members of the [name] failed their tasks.</B></font>"
 	else
-		text += "<br><font color='green'><B>The members of the [name] accomplished their tasks!</B></font>"
+		text += "<br><span class='green'><B>The members of the [name] accomplished their tasks!</B></span>"
 
 	// Display the results.
 	return text

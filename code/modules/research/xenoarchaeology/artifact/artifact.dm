@@ -73,9 +73,9 @@
 								var/obj/machinery/artifact/X = O
 								if(X.my_effect)
 									X.my_effect.artifact_id = artifact_find.artifact_id
-							src.visible_message("<font color='red'><b>[src] suddenly crumbles away.</b></font>")
+							src.visible_message("<span class='warning'><b>[src] suddenly crumbles away.</b></font>")
 						else
-							user.visible_message("<font color='red'><b>[src] suddenly crumbles away.</b></font>",\
+							user.visible_message("<span class='warning'><b>[src] suddenly crumbles away.</b></font>",\
 							"\blue [src] has been whittled away under your careful excavation, but there was nothing of interest inside.")
 						qdel(src)
 					return

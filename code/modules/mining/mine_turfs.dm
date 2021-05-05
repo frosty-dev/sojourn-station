@@ -54,11 +54,10 @@
 
 	has_resources = 1
 
-/turf/simulated/mineral/Initialize()
-	..()
+/turf/simulated/mineral/New()
 	icon_state = "rock[rand(0,4)]"
-	spawn(0)
-		MineralSpread()
+	//spawn(0)
+	//	MineralSpread()
 
 /turf/simulated/mineral/can_build_cable()
 	return !density
@@ -305,7 +304,7 @@
 		if(prob(50))
 			pain = 1
 		for(var/mob/living/M in range(src, 200))
-			to_chat(M, "<font color='red'><b>[pick("A high pitched [pick("keening","wailing","whistle")]","A rumbling noise like [pick("thunder","heavy machinery")]")] somehow penetrates your mind before fading away!</b></font>")
+			to_chat(M, "<span class='warning'><b>[pick("A high pitched [pick("keening","wailing","whistle")]","A rumbling noise like [pick("thunder","heavy machinery")]")] somehow penetrates your mind before fading away!</b></font>")
 			if(pain)
 				if (M.HUDtech.Find("pain"))
 					flick("pain",M.HUDtech["pain"])

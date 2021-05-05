@@ -55,7 +55,7 @@
 	s["roundduration"] = roundduration2text()
 
 	s["stationname"] = station_name
-	s["storyteller"] = "[get_storyteller() ? get_storyteller().name : "None. Somehow."]"
+	s["storyteller"] = "[get_storyteller() ? get_storyteller().name : "LOBBY"]"
 
 	var/decl/security_state/security_state = decls_repository.get_decl(maps_data.security_state)
 	s["securitylevel"] = "[security_state.current_security_level.name]" 
@@ -261,8 +261,8 @@
 	if(!rank)
 		rank = "Admin"
 
-	var/message =	"<font color='red'>IRC-[rank] PM from <b><a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a></b>: [input["msg"]]</font>"
-	var/amessage =  "<font color='blue'>IRC-[rank] PM from <a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a> to <b>[key_name(C)]</b> : [input["msg"]]</font>"
+	var/message =	"<span class='warning'>IRC-[rank] PM from <b><a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a></b>: [input["msg"]]</font>"
+	var/amessage =  "<span class='notice'>IRC-[rank] PM from <a href='?irc_msg=[input["sender"]]'>IRC-[input["sender"]]</a> to <b>[key_name(C)]</b> : [input["msg"]]</span>"
 
 	C.received_irc_pm = world.time
 	C.irc_admin = input["sender"]
@@ -359,7 +359,7 @@
 	var/rank = "Discord Admin"
 	var/response = html_encode(input["response"])
 
-	var/message = "<font color='red'>[rank] PM from <b>[input["admin"]]</b>: [response]</font>"
+	var/message = "<span class='warning'>[rank] PM from <b>[input["admin"]]</b>: [response]</font>"
 	var/amessage =  "<span class='info'>[rank] PM from [input["admin"]] to <b>[key_name(C)]</b> : [response])]</span>"
 	webhook_send_ahelp("[input["admin"]] -> [req_ckey]", response)
 

@@ -9,7 +9,7 @@
 	new /obj/item/clothing/head/rank/captain/cap(src)
 	new /obj/item/clothing/under/rank/captain(src)
 	new /obj/item/clothing/suit/armor/vest(src)
-	new /obj/item/clothing/head/helmet(src)
+	new /obj/item/clothing/head/helmet/ballistic(src)
 	new /obj/item/clothing/shoes/color/brown(src)
 	new /obj/item/device/radio/headset/heads/captain(src)
 	new /obj/item/clothing/gloves/captain(src)
@@ -121,7 +121,7 @@
 	new /obj/item/clothing/suit/armor/commander/marshal_coat_ss(src)
 
 /obj/structure/closet/secure_closet/personal/security
-	name = "marshal officer's locker"
+	name = "miltech officer's locker"
 	req_access = list(access_hos)
 	access_occupy = list(access_brig)
 	icon_state = "sec"
@@ -166,10 +166,10 @@
 	new /obj/item/clothing/glasses/sechud/tactical(src)
 	new /obj/item/weapon/storage/pouch/pistol_holster(src)
 	new /obj/item/weapon/storage/pouch/baton_holster(src)
-	new /obj/item/clothing/suit/armor/platecarrier/ih(src)
+	new /obj/item/clothing/suit/armor/platecarrier/miltech(src)
 	new /obj/item/taperoll/police(src)
 	new /obj/item/clothing/head/seccap(src)
-	new /obj/item/clothing/suit/armor/commander/marshal_coat(src)
+	new /obj/item/clothing/head/helmet/ballistic(src)
 
 /obj/structure/closet/secure_closet/medspec
 	name = "corpsman's locker"
@@ -180,7 +180,7 @@
 	new /obj/item/clothing/glasses/sechud/tactical(src)
 	new /obj/item/clothing/mask/gas/ihs(src)
 	new /obj/item/taperoll/police(src)
-	new /obj/item/clothing/under/rank/medspec(src)
+	new /obj/item/clothing/under/rank/traumateam(src)
 	new /obj/item/device/radio/headset/headset_sec(src)
 	new /obj/item/weapon/storage/belt/security(src)
 	new /obj/item/clothing/shoes/reinforced(src)

@@ -34,7 +34,7 @@
 	pass_flags = PASSTABLE
 	mob_size = MOB_SMALL
 
-	speak_emote = list("squawks","says","yells")
+	speak_emote = list("кряхтит","говорит","кричит")
 	emote_see = list("flutters its wings","squawks","bawks")
 
 	speak_chance = 1//1% (1 in 100) chance every tick; So about once per 150 seconds, assuming an average tick is 1.5s
@@ -683,11 +683,11 @@
 	name = "Poly"
 	desc = "Poly the Parrot. An expert on quantum cracker theory."
 	speak = list(
-		"Poly wanna cracker!",
-		":e Check the singlo, you chucklefucks!",
-		":e Wire the solars, you lazy bums!",
-		":e WHO TOOK THE DAMN HARDSUITS?",
-		":e OH GOD ITS FREE CALL THE SHUTTLE"
+		"Поли хочет креккер!",
+		":e ЕРП - кринж!",
+		":e Проверьте р-реактор!",
+		":e Поли считает отто-дикс кр-р-руто, сква!",
+		":e Бог покинул нас! Покинул!"
 	)
 
 /mob/living/simple_animal/parrot/Poly/New()
@@ -700,7 +700,7 @@
 	if(stat)
 		return
 
-	var/verb = "says"
+	var/verb = "говорит"
 	if(speak_emote.len)
 		verb = pick(speak_emote)
 

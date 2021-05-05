@@ -10,7 +10,7 @@ html, body {
 	color: #a4bad6;
 }
 body {
-	background: #171717;
+	background: #101010;
     font-family: Verdana, sans-serif;
     font-size: 9pt;
 	font-color: #a4bad6;
@@ -99,7 +99,7 @@ a.popt {text-decoration: none;}
     font-weight: bold;
 	color: #a4bad6;
 }
-#newMessages:hover {background: #171717;}
+#newMessages:hover {background: #191919;}
 #newMessages i {vertical-align: middle; padding-left: 3px;}
 #ping {
 	position: fixed;
@@ -439,3 +439,59 @@ em						{font-style: normal;	font-weight: bold;}
 /* HELPER CLASSES */
 .text-normal {font-weight: normal; font-style: normal;}
 .hidden {display: none; visibility: hidden;}
+
+.log_message			{color: #526bb8;	font-weight: bold;}
+
+/* OOC */
+.ooc .looc				{color: #5fc9c9;}
+.ooc .elevated			{color: #4b77b1;}
+.ooc .moderator			{color: #4976aa;}
+.ooc .developer			{color: #4ab952;}
+.ooc .admin				{color: #c4603e;}
+
+/* Admin: Private Messages */
+.pm  .howto				{color: #c95b5b;	font-weight: bold;		font-size: 200%;}
+.pm  .in				{color: #c25656;}
+.pm  .out				{color: #d36262;}
+.pm  .other				{color: #5d5dd5;}
+
+/* Admin: Channels */
+.mod_channel			{color: #735638;	font-weight: bold;}
+.mod_channel .admin		{color: #b82e00;	font-weight: bold;}
+.admin_channel			{color: #9f49c7;	font-weight: bold;}
+
+/* Radio: Misc */
+.angelsay				{color: #ebbf67;}
+.deptradio				{color: #ee69ee;}	/* when all other department colors fail */
+.newscaster				{color: #f16464;}
+
+/* Radio Channels */
+.comradio				{color: #6693ec;}
+.centradio				{color: #5C5C8A;}
+
+.engradio				{color: #c79955;}
+.medradio				{color: #54c2a7;}
+.supradio				{color: #c29850;}
+
+/* Game Messages */
+
+.moderate				{color: #d45555;}
+
+.alium					{color: #49b849;}
+.revolution				{color: #bb4d6b; font-weight: bold; font-style: italic;}
+
+.reflex_shoot			{color: #4a4ac2; font-style: italic;}
+
+/* Languages */
+
+.monkey					{color: #5d5dbe;}
+.rough					{font-family: Trebuchet MS, cursive, sans-serif;}
+.say_quote				{font-family: Georgia, Verdana, sans-serif;}
+.russian				{color: #a8a150}
+.serbian				{color: #ca9651}
+.jive					{color: #b37777}
+
+.good                   {color: #7dac5c; font-weight: bold;}
+.bad                    {color: #c75a5a; font-weight: bold;}
+.neutral 				{color: #949494; font-weight: bold;}
+

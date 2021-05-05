@@ -15,7 +15,7 @@
 		if(extra)
 			dat += "[extra]"
 	else
-		dat += "<br><a href='?src=\ref[src];del_datum=1'><b><font color='red'>\[DELETE DATUM\]</font></b></a>"
+		dat += "<br><a href='?src=\ref[src];del_datum=1'><b><span class='warning'>\[DELETE DATUM\]</font></b></a>"
 
 	dat += "<br>"
 
@@ -36,9 +36,9 @@
 		for(var/datum/objective/O in objectives)
 			dat += "<b>Objective #[num]:</b>"
 			if(O.completed)
-				dat += "(<font color='green'>complete</font>)"
+				dat += "(<span class='green'>complete</span>)"
 			else
-				dat += "(<font color='red'>incomplete</font>)"
+				dat += "(<span class='warning'>incomplete</font>)"
 			dat += " <a href='?src=\ref[src];obj_completed=\ref[O]'>\[toggle\]</a>"
 			dat += " <a href='?src=\ref[src];obj_delete=\ref[O]'>\[remove\]</a><br>"
 			dat += "<div>[O.get_panel_entry()]</div>"

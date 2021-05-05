@@ -28,7 +28,8 @@ GLOBAL_LIST_INIT(music_tracks, list(
 	"Every Day Is Night" = /music_track/edin,
 	"Go! Go! Streaming Chan!" = /music_track/gogostream,
 	"Ponpon shit" = /music_track/ponponshit,
-	"Chippin’ In by SAMURAI" = /music_track/chippinin
+	"Chippin’ In by SAMURAI" = /music_track/chippinin,
+	"Cyberia Theme" = /music_track/cyberia
 ))
 
 /proc/setup_music_tracks(var/list/tracks)

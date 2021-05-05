@@ -55,7 +55,7 @@
 	set name = "hotkeys-help"
 	set category = "OOC"
 
-	var/admin = {"<font color='purple'>
+	var/admin = {"<span class='deadsay'>
 Admin:
 \tF5 = Aghost (admin-ghost)
 \tF6 = player-panel
@@ -63,9 +63,9 @@ Admin:
 \tF8 = Invisimin
 Admin Ghost:
 \tShift + Ctrl + Click = View Variables
-</font>"}
+</span>"}
 
-	var/hotkey_mode = {"<font color='purple'>
+	var/hotkey_mode = {"<span class='deadsay'>
 Hotkey-Mode: (hotkey-mode must be on)
 \tTAB = toggle hotkey-mode
 \ta = left
@@ -88,9 +88,9 @@ Hotkey-Mode: (hotkey-mode must be on)
 \t4 = harm-intent
 \tCtrl = drag
 \tShift = examine
-</font>"}
+</span>"}
 
-	var/other = {"<font color='purple'>
+	var/other = {"<span class='deadsay'>
 Any-Mode: (hotkey doesn't need to be on)
 \tCtrl+a = left
 \tCtrl+s = down
@@ -117,9 +117,9 @@ Any-Mode: (hotkey doesn't need to be on)
 \tPGUP = swap-hand
 \tPGDN = activate held object
 \tEND = throw
-</font>"}
+</span>"}
 
-	var/robot_hotkey_mode = {"<font color='purple'>
+	var/robot_hotkey_mode = {"<span class='deadsay'>
 Hotkey-Mode: (hotkey-mode must be on)
 \tTAB = toggle hotkey-mode
 \ta = left
@@ -139,9 +139,9 @@ Hotkey-Mode: (hotkey-mode must be on)
 \t5 = emote
 \tCtrl = drag
 \tShift = examine
-</font>"}
+</span>"}
 
-	var/robot_other = {"<font color='purple'>
+	var/robot_other = {"<span class='deadsay'>
 Any-Mode: (hotkey doesn't need to be on)
 \tCtrl+a = left
 \tCtrl+s = down
@@ -164,7 +164,7 @@ Any-Mode: (hotkey doesn't need to be on)
 \tINS = toggle intents
 \tPGUP = cycle active modules
 \tPGDN = activate held object
-</font>"}
+</span>"}
 
 	if(isrobot(src.mob))
 		to_chat(src, robot_hotkey_mode)

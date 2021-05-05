@@ -79,10 +79,10 @@
 	backpack_overrides.Cut()
 
 /decl/hierarchy/outfit/job/security/medspec
-	name = OUTFIT_JOB_NAME("Blackshield - Corpsman")
+	name = OUTFIT_JOB_NAME("TraumaTeam - Corpsman")
 	l_pocket = /obj/item/device/flash
 	id_type = /obj/item/weapon/card/id/medcpec
-	uniform = /obj/item/clothing/under/rank/corpsman
+	uniform = /obj/item/clothing/under/rank/traumateam
 	head = /obj/item/clothing/head/rank/corpsman/beret
 	pda_type = /obj/item/modular_computer/pda/forensics
 	belt = /obj/item/weapon/storage/belt/medical/emt
@@ -90,13 +90,14 @@
 	backpack_contents = list(/obj/item/weapon/gun/energy/gun/martin = 1, /obj/item/weapon/cell/small/high = 1)
 
 /decl/hierarchy/outfit/job/security/ihoper
-	name = OUTFIT_JOB_NAME("Marshal - Marshal Officer")
+	name = OUTFIT_JOB_NAME("Miltech - Marshal Officer")
 	l_pocket = /obj/item/device/flash
-	uniform = /obj/item/clothing/under/rank/security
-	mask = /obj/item/clothing/mask/balaclava/tactical
-	glasses = /obj/item/clothing/glasses/sechud/tactical
-	head = /obj/item/clothing/head/helmet
+	uniform = /obj/item/clothing/under/rank/miltech_agent
+//	mask = /obj/item/clothing/mask/balaclava/tactical
+//	glasses = /obj/item/clothing/glasses/sechud/tactical
+//	head = /obj/item/clothing/head/helmet
 	gloves = /obj/item/clothing/gloves/thick
+	suit = /obj/item/clothing/suit/armor/platecarrier/miltech
 	backpack_contents = list(/obj/item/weapon/handcuffs = 1, /obj/item/device/lighting/toggleable/flashlight/seclite = 1, /obj/item/weapon/cell/small/high = 2, /obj/item/weapon/gun/energy/gun/martin = 1)
 
 /decl/hierarchy/outfit/job/security/troop

@@ -121,7 +121,7 @@
 	set_storyteller(config.pick_storyteller(master_storyteller), announce = !(pregame)) //This does the actual work //Even if master storyteller is null, this will pick the default
 	if (pregame)
 		round_progressing = TRUE
-		to_chat(world, "<b>The game will start in [SSticker.pregame_timeleft] seconds.</b>")
+		to_chat(world, "<b>Игра начнется через [SSticker.pregame_timeleft] с.</b>")
 		spawn(10 SECONDS)
 			var/tipsAndTricks/T = SStips.getRandomTip()
 			if(T)
@@ -144,7 +144,7 @@
 					var/tipsAndTricks/jobs/JT = T
 					var/datum/job/J = pick(JT.jobs_list)
 					typeText = initial(J.title)
-				to_chat(world, SStips.formatTip(T, "Random Tip \[[typeText]\]: "))
+				to_chat(world, SStips.formatTip(T, "Случайный совет \[[typeText]\]: "))
 	pregame = FALSE
 
 /datum/vote_choice/storyteller

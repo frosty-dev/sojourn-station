@@ -4,7 +4,7 @@ ADMIN_VERB_ADD(/client/proc/cmd_admin_pm_context, R_ADMIN|R_MOD|R_MENTOR, FALSE)
 	set category = null
 	set name = "Admin PM Mob"
 	if(!holder)
-		to_chat(src, "<font color='red'>Error: Admin-PM-Context: Only administrators may use this command.</font>")
+		to_chat(src, "<span class='warning'>Error: Admin-PM-Context: Only administrators may use this command.</font>")
 		return
 	if( !ismob(M) || !M.client )	return
 	cmd_admin_pm(M.client,null)
@@ -15,7 +15,7 @@ ADMIN_VERB_ADD(/client/proc/cmd_admin_pm_panel, R_ADMIN|R_MOD|R_MENTOR, FALSE)
 	set category = "Admin"
 	set name = "Admin PM"
 	if(!holder)
-		to_chat(src, "<font color='red'>Error: Admin-PM-Panel: Only administrators may use this command.</font>")
+		to_chat(src, "<span class='warning'>Error: Admin-PM-Panel: Only administrators may use this command.</font>")
 		return
 	var/list/client/targets[0]
 	for(var/client/T)
@@ -39,12 +39,12 @@ ADMIN_VERB_ADD(/client/proc/cmd_admin_pm_panel, R_ADMIN|R_MOD|R_MENTOR, FALSE)
 
 /client/proc/cmd_admin_pm(var/client/C, var/msg = null)
 	if(prefs.muted & MUTE_ADMINHELP)
-		to_chat(src, "<font color='red'>Error: Private-Message: You are unable to use PM-s (muted).</font>")
+		to_chat(src, "<span class='warning'>Error: Private-Message: You are unable to use PM-s (muted).</font>")
 		return
 
 	if(!istype(C,/client))
-		if(holder)	to_chat(src, "<font color='red'>Error: Private-Message: Client not found.</font>")
-		else		to_chat(src, "<font color='red'>Error: Private-Message: Client not found. They may have lost connection, so try using an adminhelp!</font>")
+		if(holder)	to_chat(src, "<span class='warning'>Error: Private-Message: Client not found.</font>")
+		else		to_chat(src, "<span class='warning'>Error: Private-Message: Client not found. They may have lost connection, so try using an adminhelp!</font>")
 		return
 
 	//get message text, limit it's length.and clean/escape html
@@ -53,8 +53,8 @@ ADMIN_VERB_ADD(/client/proc/cmd_admin_pm_panel, R_ADMIN|R_MOD|R_MENTOR, FALSE)
 
 		if(!msg)	return
 		if(!C)
-			if(holder)	to_chat(src, "<font color='red'>Error: Admin-PM: Client not found.</font>")
-			else		to_chat(src, "<font color='red'>Error: Private-Message: Client not found. They may have lost connection, so try using an adminhelp!</font>")
+			if(holder)	to_chat(src, "<span class='warning'>Error: Admin-PM: Client not found.</font>")
+			else		to_chat(src, "<span class='warning'>Error: Private-Message: Client not found. They may have lost connection, so try using an adminhelp!</font>")
 			return
 
 	if (src.handle_spam_prevention(msg,MUTE_ADMINHELP))
@@ -75,7 +75,7 @@ ADMIN_VERB_ADD(/client/proc/cmd_admin_pm_panel, R_ADMIN|R_MOD|R_MENTOR, FALSE)
 				recieve_pm_type = holder.rank
 
 	else if(!C.holder)
-		to_chat(src, "<font color='red'>Error: Admin-PM: Non-admin to non-admin PM communication is forbidden.</font>")
+		to_chat(src, "<span class='warning'>Error: Admin-PM: Non-admin to non-admin PM communication is forbidden.</font>")
 		return
 
 	var/recieve_message
@@ -122,7 +122,7 @@ ADMIN_VERB_ADD(/client/proc/cmd_admin_pm_panel, R_ADMIN|R_MOD|R_MENTOR, FALSE)
 
 /client/proc/cmd_admin_irc_pm(sender)
 	if(prefs.muted & MUTE_ADMINHELP)
-		to_chat(src, "<font color='red'>Error: Private-Message: You are unable to use PM-s (muted).</font>")
+		to_chat(src, "<span class='warning'>Error: Private-Message: You are unable to use PM-s (muted).</font>")
 		return
 
 	var/msg = input(src,"Message:", "Reply private message to [sender] on IRC / 400 character limit") as text|null

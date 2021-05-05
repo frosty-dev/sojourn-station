@@ -81,7 +81,7 @@
 		dat += "[selected_option.desc]<br>"
 		dat += "<br>"
 		if(selected_option.stat_modifiers.len)
-			dat += "Stats:<br>"
+			dat += "Навыки:<br>"
 			for(var/stat in selected_option.stat_modifiers)
 				dat += "[stat] [selected_option.stat_modifiers[stat]]<br>"
 			dat += "<br>"
@@ -101,7 +101,7 @@
 			dat += "<br>"
 
 		if(selected_option.perks.len)
-			dat += "Perks:<br>"
+			dat += "Перки:<br>"
 			for(var/perk in selected_option.perks)
 				var/datum/perk/P = perk
 				if(initial(P.icon))
@@ -118,7 +118,7 @@
 	if(get_pref_option() == selected_option)
 		dat += "<a class='linkOff'>Selected</a>"
 	else
-		dat += "<a href='?src=\ref[src];option_set=[selected_option]'>Select</a>"
+		dat += "<a href='?src=\ref[src];option_set=[selected_option]'>Выбрать</a>"
 
 	dat += "</td></tr></table>"
 	var/datum/browser/popup = new(preference_mob(), name, get_title(), 640, 480, src)

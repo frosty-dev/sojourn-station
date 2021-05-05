@@ -4,19 +4,19 @@
 var/const/CHARACTER_PREFERENCE_INPUT_TITLE = "Character Preference"
 
 /datum/category_group/player_setup_category/physical_preferences
-	name = "General"
+	name = "Общее"
 	sort_order = 1
 	update_preview_icon = TRUE
 	category_item_type = /datum/category_item/player_setup_item/physical
 
 /datum/category_group/player_setup_category/augmentation
-	name = "Augmentation"
+	name = "Аугментации"
 	sort_order = 2
 	update_preview_icon = TRUE
 	category_item_type = /datum/category_item/player_setup_item/augmentation
 
 /datum/category_group/player_setup_category/background_preferences
-	name = "Background"
+	name = "Предыстория"
 	sort_order = 3
 	category_item_type = /datum/category_item/player_setup_item/background
 
@@ -26,33 +26,33 @@ var/const/CHARACTER_PREFERENCE_INPUT_TITLE = "Character Preference"
 		. += "[PI.content(user)]<br>"
 
 /datum/category_group/player_setup_category/occupation_preferences
-	name = "Occupation"
+	name = "Предпочтительные должности"
 	sort_order = 4
 	category_item_type = /datum/category_item/player_setup_item/occupation
 
 /datum/category_group/player_setup_category/appearance_preferences
-	name = "Roles"
+	name = "Роли"
 	sort_order = 5
 	category_item_type = /datum/category_item/player_setup_item/antagonism
 
 /datum/category_group/player_setup_category/relations_preferences
-	name = "Matchmaking"
+	name = "Связи"
 	sort_order = 6
 	category_item_type = /datum/category_item/player_setup_item/relations
 
 /datum/category_group/player_setup_category/loadout_preferences
-	name = "Loadout"
+	name = "Экипировка"
 	update_preview_icon = TRUE
 	sort_order = 7
 	category_item_type = /datum/category_item/player_setup_item/loadout
 
 /datum/category_group/player_setup_category/global_preferences
-	name = "Global"
+	name = "Глобальные Настройки"
 	sort_order = 8
 	category_item_type = /datum/category_item/player_setup_item/player_global
 
 /datum/category_group/player_setup_category/law_pref
-	name = "Laws"
+	name = "Законы"
 	sort_order = 9
 	category_item_type = /datum/category_item/player_setup_item/law_pref
 

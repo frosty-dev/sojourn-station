@@ -73,7 +73,7 @@
 		return 0
 
 	H.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been handcuffed by [user.name] ([user.ckey])</font>")
-	user.attack_log += text("\[[time_stamp()]\] <font color='red'>Handcuff [H.name] ([H.ckey])</font>")
+	user.attack_log += text("\[[time_stamp()]\] <span class='warning'>Handcuff [H.name] ([H.ckey])</font>")
 	msg_admin_attack("[key_name(user)] handcuff [key_name(H)]")
 
 
@@ -110,7 +110,7 @@ var/last_chew = 0
 
 	var/s = SPAN_WARNING("[H.name] chews on \his [O.name]!")
 	H.visible_message(s, SPAN_WARNING("You chew on your [O.name]!"))
-	H.attack_log += text("\[[time_stamp()]\] <font color='red'>[s] ([H.ckey])</font>")
+	H.attack_log += text("\[[time_stamp()]\] <span class='warning'>[s] ([H.ckey])</font>")
 	log_attack("[s] ([H.ckey])")
 
 	if(O.take_damage(3,0,1,1,"teeth marks"))

@@ -8,8 +8,8 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Council"
-	difficulty = "Very Hard."
-	selection_color = "#97b0be"
+	difficulty = "Очень сложно."
+	selection_color = "#254558"
 	req_admin_notify = 1
 	wage = WAGE_COMMAND
 	also_known_languages = list(LANGUAGE_CYRILLIC = 60, LANGUAGE_SERBIAN = 60)
@@ -38,7 +38,7 @@
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
 
-	description = "Вы - коммандир ЧВК Черный Щит. Вы командуете своими бойцами и следите за безопасностью на колонии.<br>\
+	description = "Вы - коммандир ЧВК МилТек. Вы командуете своими бойцами и следите за безопасностью на колонии.<br>\
 	Ваша компания была нанята, чтобы защищать экипаж от любых проблем. Помните, вы не служба безопасности.<br>\
 	Ваша цель - обеспечить максимальную безопасность всех проживающих в колонии и устранить любые угрозы безопасности<br>\
 	Вы и ваша компания фактически является спецназом, который в свободное время помогает dutiesть офицерам."
@@ -65,8 +65,8 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Council"
-	difficulty = "Very Hard."
-	selection_color = "#97b0be"
+	difficulty = "Очень сложно."
+	selection_color = "#254558"
 	req_admin_notify = 1
 	wage = WAGE_COMMAND
 	also_known_languages = list(LANGUAGE_CYRILLIC = 60, LANGUAGE_SERBIAN = 60)
@@ -119,8 +119,8 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Warrant Officer"
-	difficulty = "Hard."
-	selection_color = "#a7bbc6"
+	difficulty = "Сложно."
+	selection_color = "#1f3744"
 	department_account_access = TRUE
 	wage = WAGE_LABOUR_HAZARD
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 25)
@@ -166,8 +166,8 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Militia Commander"
-	difficulty = "Hard."
-	selection_color = "#a7bbc6"
+	difficulty = "Сложно."
+	selection_color = "#1f3744"
 	wage = WAGE_LABOUR_HAZARD
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 25)
 	minimum_character_age = 25
@@ -215,8 +215,8 @@
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Warrant Officer"
-	difficulty = "Hard."
-	selection_color = "#a7bbc6"
+	difficulty = "Сложно."
+	selection_color = "#1f3744"
 	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 50, LANGUAGE_SERBIAN = 50)
 
@@ -263,8 +263,8 @@
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the Militia Commander"
-	difficulty = "Hard."
-	selection_color = "#a7bbc6"
+	difficulty = "Сложно."
+	selection_color = "#1f3744"
 	wage = WAGE_PROFESSIONAL
 	also_known_languages = list(LANGUAGE_CYRILLIC = 5)
 
@@ -287,8 +287,8 @@
 							 /datum/computer_file/program/chem_catalog,
 							 /datum/computer_file/program/camera_monitor)
 
-	description = "Вы высоко натренированный мед-специалист. Вы являетесь частью Черного Щита и служите Коммандеру.<br>\
-	В первую очередь - вы полевой медик. Ваша основная задача лечить бойцов на поле боя, но вы так же можете и держать оружие в руках.<br>\
+	description = "Вы высоко натренированный мед-специалист. Вы являетесь частью ТравмаТим и служите Корпоративным законам.<br>\
+	В первую очередь - вы полевой медик. Ваша основная задача лечить клиентов на поле боя, но вы так же можете и держать оружие в руках.<br>\
 	Ваша вторая задача - это лечить заключенных в бриге. Если они попытаются сбежать и получат ранения - вы должны будете их вылечить.<br>\
 	Помните, что вы в первую очередь полевой медик, а во вторую боец."
 
@@ -307,9 +307,9 @@
 	total_positions = 3
 	spawn_positions = 3
 	supervisors = "the Militia Commander"
-	difficulty = "Hard."
+	difficulty = "Сложно."
 	//alt_titles = list("Blackshield Junior Trooper")
-	selection_color = "#a7bbc6"
+	selection_color = "#1f3744"
 	wage = WAGE_LABOUR_HAZARD
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 25)
 
@@ -329,8 +329,8 @@
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
-	description = "Труперы формируют всю мощь Черного Щита на фронту. Вы невероятно опытный солдат, с отличными навыками ведения боя.<br>\
-	Вы являетесь солдатом Черного Щита и основная ваша задача - выполнять приказы вышестоящего офицера. Вы не имеете никакого отношения к Маршалам.<br>\
+	description = "Пехотинцы формируют всю мощь Черного Щита на фронте. Вы невероятно опытный солдат, с отличными навыками ведения боя.<br>\
+	Вы являетесь пехотинцем Черного Щита и основная ваша задача - выполнять приказы вышестоящего офицера. Вы не имеете никакого отношения к Маршалам.<br>\
 	В свободное время от работы, вы можете патрулировать колонию и изредка оказывать помощь Маршалам, если те попросят.<br>\
 	Внимательно следите за центральными воротами и за периметром вокруг колонии."
 
@@ -353,9 +353,9 @@
 	total_positions = 4
 	spawn_positions = 4
 	supervisors = "the Warrant Officer"
-	difficulty = "Hard."
+	difficulty = "Сложно."
 	//alt_titles = list("Marshal Junior Operative")
-	selection_color = "#a7bbc6"
+	selection_color = "#1f3744"
 	wage = WAGE_LABOUR_HAZARD
 	also_known_languages = list(LANGUAGE_CYRILLIC = 25, LANGUAGE_SERBIAN = 25)
 

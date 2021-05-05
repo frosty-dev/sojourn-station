@@ -17,10 +17,10 @@
 		return
 
 	if(I.use_tool(user, src, WORKTIME_INSTANT, QUALITY_WIRE_CUTTING, FAILCHANCE_EASY, required_stat = STAT_MEC))
-		usr << "<font color='blue'>These cables are too tough to be cut with those.</font>"
+		usr << "<span class='notice'>These cables are too tough to be cut with those.</span>"
 		return
 	else if(istype(I, /obj/item/stack/cable_coil))
-		usr << "<font color='blue'>You will need heavier cables to connect to these.</font>"
+		usr << "<span class='notice'>You will need heavier cables to connect to these.</span>"
 		return
 	else
 		..()
@@ -53,10 +53,10 @@
 		return
 
 	if(I.use_tool(user, src, WORKTIME_INSTANT, QUALITY_WIRE_CUTTING, FAILCHANCE_EASY, required_stat = STAT_MEC))
-		usr << "<font color='blue'>These cables are too tough to be cut with those.</font>"
+		usr << "<span class='notice'>These cables are too tough to be cut with those.</span>"
 		return
 	else if(istype(I, /obj/item/stack/cable_coil))
-		usr << "<font color='blue'>You will need heavier cables to connect to these.</font>"
+		usr << "<span class='notice'>You will need heavier cables to connect to these.</span>"
 		return
 	else
 		..()

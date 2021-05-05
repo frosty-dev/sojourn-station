@@ -1,7 +1,7 @@
 var/datum/appearance_test/appearance_test = new
 
-#define TOGGLE(var) var ? "<font color='green'>ON</font>" : "<font color='red'>OFF</font>"
-#define TRUEORFALSE(var) var ? "<font color='green'>TRUE</font>" : "<font color='red'>FALSE</font>"
+#define TOGGLE(var) var ? "<span class='green'>ON</font>" : "<span class='warning'>OFF</span>"
+#define TRUEORFALSE(var) var ? "<span class='green'>TRUE</font>" : "<span class='warning'>FALSE</span>"
 
 /datum/appearance_test
 	var/build_body = TRUE

@@ -18,6 +18,7 @@
 	S.cd = "/"
 
 	S["version"] >> savefile_version
+	S["fullscreen"] >> fullscreen
 	player_setup.load_preferences(S)
 	loaded_preferences = S
 	return 1
@@ -33,6 +34,7 @@
 	S.cd = "/"
 
 	S["version"] << SAVEFILE_VERSION_MAX
+	S["fullscreen"] << fullscreen
 	player_setup.save_preferences(S)
 	loaded_preferences = S
 	return 1

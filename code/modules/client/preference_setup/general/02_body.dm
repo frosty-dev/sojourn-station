@@ -94,12 +94,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	var/datum/species_form/mob_species_form = GLOB.all_species_form_list[pref.species_form]
 	. += "<style>span.color_holder_box{display: inline-block; width: 20px; height: 8px; border:1px solid #000; padding: 0px;}</style>"
 	. += "<hr>"
-	. += "<table><tr style='vertical-align:top; width: 100%'><td width=65%><b>Body</b> "
+	. += "<table><tr style='vertical-align:top; width: 100%'><td width=65%><b>Тело</b> "
 	. += "(<a href='?src=\ref[src];random=1'>&reg;</A>)"
 	. += "<br>"
 	var/speciesstring
 	var/datum/species/cspecies = global.all_species[pref.species]
-	speciesstring = "<b>Species:</b> <a href='?src=\ref[src];select_species=[cspecies.name]'>[cspecies.name]</a>"
+	speciesstring = "<b>Раса:</b> <a href='?src=\ref[src];select_species=[cspecies.name]'>[cspecies.name]</a>"
 	. += speciesstring
 	. += "<br>"
 	var/formstring = ""
@@ -116,36 +116,36 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		formstring = "<a href='?src=\ref[src];[mode]'>[prefix][cform.name]</a>" + formstring
 		if(cform.name == cform.variantof || cform.name == cspecies.default_form && cspecies.obligate_form) break
 		cform = GLOB.all_species_form_list[cform.variantof]
-	formstring = "<b>Form:</b> " + formstring
+	formstring = "<b>Телосложение:</b> " + formstring
 	. += formstring
 	. += "<br>"
-	. += "<b>Hair:</b> <a href='?src=\ref[src];cycle_hair=right'>&lt;&lt;</a><a href='?src=\ref[src];cycle_hair=left'>&gt;&gt;</a><a href='?src=\ref[src];hair_style=1'>[pref.h_style]</a>"
+	. += "<b>Волосы:</b> <a href='?src=\ref[src];cycle_hair=right'>&lt;&lt;</a><a href='?src=\ref[src];cycle_hair=left'>&gt;&gt;</a><a href='?src=\ref[src];hair_style=1'>[pref.h_style]</a>"
 	if(has_flag(mob_species_form, HAS_HAIR_COLOR))
 		. += "<a href='?src=\ref[src];hair_color=1'><span class='color_holder_box' style='background-color:[pref.hair_color]'></span></a>"
 	. += "<br>"
 
-	. += "<b>Gradient:</B><a href='?src=\ref[src];grad_style=1'>[pref.grad_style]</a>"
+	. += "<b>Градиент:</B><a href='?src=\ref[src];grad_style=1'>[pref.grad_style]</a>"
 	. += "<a href='?src=\ref[src];grad_color=1'><span class='color_holder_box' style='background-color:[pref.grad_color]'></span></a>"
 	. += "<br>"
 
-	. += "<b>Facial:</b> <a href='?src=\ref[src];cycle_facial_hair=right'>&lt;&lt;</a><a href='?src=\ref[src];cycle_facial_hair=left'>&gt;&gt;</a><a href='?src=\ref[src];facial_style=1'>[pref.f_style]</a>"
+	. += "<b>Лицо:</b> <a href='?src=\ref[src];cycle_facial_hair=right'>&lt;&lt;</a><a href='?src=\ref[src];cycle_facial_hair=left'>&gt;&gt;</a><a href='?src=\ref[src];facial_style=1'>[pref.f_style]</a>"
 	if(has_flag(mob_species_form, HAS_HAIR_COLOR))
 		. += "<a href='?src=\ref[src];facial_color=1'><span class='color_holder_box' style='background-color:[pref.facial_color]'></span></a>"
 	. += "<br>"
 
 	if(has_flag(mob_species_form, HAS_EYE_COLOR))
-		. += "<b>Eyes: </b><a href='?src=\ref[src];eye_color=1'><span class='color_holder_box' style='background-color:[pref.eyes_color]'></span></a><br>"
+		. += "<b>Глаза: </b><a href='?src=\ref[src];eye_color=1'><span class='color_holder_box' style='background-color:[pref.eyes_color]'></span></a><br>"
 
 	if(has_flag(mob_species_form, HAS_SKIN_COLOR))
-		. += "<b>Body Color: </b><a href='?src=\ref[src];skin_color=1'><span class='color_holder_box' style='background-color:[pref.skin_color]'></span></a><br>"
+		. += "<b>Цвет тела: </b><a href='?src=\ref[src];skin_color=1'><span class='color_holder_box' style='background-color:[pref.skin_color]'></span></a><br>"
 	else if(has_flag(mob_species_form, HAS_SKIN_TONE))
-		. += "<b>Skin Tone: </b><a href='?src=\ref[src];skin_tone=1'>[-pref.s_tone + 35]/220</a><br>"
+		. += "<b>Тон кожи: </b><a href='?src=\ref[src];skin_tone=1'>[-pref.s_tone + 35]/220</a><br>"
 
-	. += "</td><td style = 'text-align:center;' width = 35%><b>Preview</b><br>"
+	. += "</td><td style = 'text-align:center;' width = 35%><b>Предосмотр</b><br>"
 	. += "<div style ='padding-bottom:-2px;' class='statusDisplay'><img src=previewicon.png width=[pref.preview_icon.Width()] height=[pref.preview_icon.Height()]></div>"
-	. += "<br><a href='?src=\ref[src];cycle_bg=1'>Cycle background</a>"
-	. += "<br><a href='?src=\ref[src];toggle_preview_value=[EQUIP_PREVIEW_LOADOUT]'>[pref.equip_preview_mob & EQUIP_PREVIEW_LOADOUT ? "Hide loadout" : "Show loadout"]</a>"
-	. += "<br><a href='?src=\ref[src];toggle_preview_value=[EQUIP_PREVIEW_JOB]'>[pref.equip_preview_mob & EQUIP_PREVIEW_JOB ? "Hide job gear" : "Show job gear"]</a>"
+	. += "<br><a href='?src=\ref[src];cycle_bg=1'>Сменить фон</a>"
+	. += "<br><a href='?src=\ref[src];toggle_preview_value=[EQUIP_PREVIEW_LOADOUT]'>[pref.equip_preview_mob & EQUIP_PREVIEW_LOADOUT ? "Спрятать Экипировку" : "Показать Экипировку"]</a>"
+	. += "<br><a href='?src=\ref[src];toggle_preview_value=[EQUIP_PREVIEW_JOB]'>[pref.equip_preview_mob & EQUIP_PREVIEW_JOB ? "Спрятать Экипировку должности" : "Показать Экипировку должности"]</a>"
 	. += "</td></tr></table>"
 
 

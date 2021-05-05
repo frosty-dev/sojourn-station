@@ -1,6 +1,6 @@
 /datum/storyteller/sleeper
 	config_tag = "sleeper"
-	name = "The Sleeper"
+	name = "Соня"
 	welcome = "Welcome to the Nadezhda colony! It's going to be a quiet day"
 	description = "A passive storyteller that does almost nothing. It will be a very uneventful day."
 
