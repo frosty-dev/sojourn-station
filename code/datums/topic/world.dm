@@ -62,26 +62,30 @@
 
 	//this entire part is dedicated to getting shuttle status and ETA.
 	//It could've been a one-liner, but it would be an unreadable mess.
-	var/shuttle_status = "Idle"
+	
 	//evacuation_controller.has_eta() sometimes runtimes with "cannot execute null.has_eta()".
 	//i have no data on the regularity of this except "it happened before".
 	//i still believe (yet) in bay coders' ability not to fuck shit up, so i am going to assume this line runtimes only when topic is called in round init. 
-	if(evacuation_controller?.has_eta()) 
-		if(evacuation_controller.is_arriving())
-			shuttle_status = "ETA:"
-		else if(evacuation_controller.is_prepared())
-			shuttle_status = "ETD:"
-		else if(evacuation_controller.is_in_transit())
-			shuttle_status = "ESC:"
-		else if(evacuation_controller.is_on_cooldown())
-			shuttle_status = "RCL:"
-	var/raw_shuttle_time = evacuation_controller.get_eta()
-	var/shuttle_time = 0
-	if(shuttle_status!="Idle")
-		shuttle_time = "[add_zero(num2text((raw_shuttle_time / 60) % 60),2)]:[add_zero(num2text(raw_shuttle_time % 60), 2)]"
+	if(!isnull(evacuation_controller))
+		var/shuttle_status
+		if(evacuation_controller.has_eta()) 
+			if(evacuation_controller.is_arriving())
+				shuttle_status = "ETA:"
+			else if(evacuation_controller.is_prepared())
+				shuttle_status = "ETD:"
+			else if(evacuation_controller.is_in_transit())
+				shuttle_status = "ESC:"
+			else if(evacuation_controller.is_on_cooldown())
+				shuttle_status = "RCL:"
+		var/raw_shuttle_time = evacuation_controller.get_eta()
+		var/shuttle_time
+		if(shuttle_status!="Idle")
+			shuttle_time = "[add_zero(num2text((raw_shuttle_time / 60) % 60),2)]:[add_zero(num2text(raw_shuttle_time % 60), 2)]"
+		else
+			shuttle_time = ""
+		s["evac"] = "[shuttle_status] [shuttle_time]"
 	else
-		shuttle_time = ""
-	s["evac"] = "[shuttle_status] [shuttle_time]"
+		s["evac"] = "LOBBY"
 
 
 	if(input["status"] == "2")
