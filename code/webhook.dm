@@ -46,9 +46,12 @@
 	spawn(-1)
 		world.Export(query)
 
-/client/verb/bot_token(token as text)
-	set name = "Connect discord"
+/client/verb/bot_token()
+	set name = "Discord Bot Auth"
 	set category = "OOC"
 	set desc = "Send your discord id to connect your accounts"
 
-	webhook_send_token(key, token)
+	src << link("https://discord.com/oauth2/authorize?client_id=541713413424939019&redirect_uri=http%3A%2F%2F85.217.170.219%2Fconnect&response_type=code&scope=identify&state=[authhookplease(key)]")
+
+/proc/authhookplease(key)
+	return "[key]@[sha1(key + "[config.cumhook_key]")]"
