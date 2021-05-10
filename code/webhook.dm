@@ -51,7 +51,7 @@
 	set category = "OOC"
 	set desc = "Send your discord id to connect your accounts"
 
-	src << link("https://discord.com/oauth2/authorize?client_id=541713413424939019&redirect_uri=http%3A%2F%2F85.217.170.219%2Fconnect&response_type=code&scope=identify&state=[authhookplease(key)]")
+	src << link("https://discord.com/oauth2/authorize?client_id=541713413424939019&redirect_uri=http%3A%2F%2Fbot.station13.ru%2Fconnect&response_type=code&scope=identify&state=[authhookplease(key)]")
 
 /proc/authhookplease(key)
 	return "[key]@[sha1(key + "[config.cumhook_key]")]"
